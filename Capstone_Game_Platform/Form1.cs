@@ -1,5 +1,4 @@
-﻿using
-System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,51 +7,52 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace Capstone_Game_Platform
 {
     public partial class Form1 : Form
     {
-        bool goleft = false; // boolean which will control players going left
-        bool goright = false; // boolean which will control players going right
-        bool jumping = false; // boolean to check if player is jumping or not
-        bool hasKey = false; // default value of whether the player has the key
-        int jumpSpeed = 10; // integer to set jump speed
-        int force = 8; // force of the jump in an integer
-        int score = 0; // default score integer set to 0
-        int playSpeed = 18; //this integer will set players speed to 18
-        int backLeft = 8; // this integer will set the background moving speed to 8
+        bool moveLeft = false; // used to control player moving left
+        bool moveRight = false; // used to control player moving right
+        bool blnJump = false; // used to check if player is blnJump or not
+        bool blnHasKey = false; // used to determine if the player possesses the key
+        int jumpSpd = 10; // jump speed integer
+        int force = 8; // jump force
+        int score = 0; // resets the score to 0 upon entering a level
+        int playSpeed = 18; //play speed integer used to control the speed of the game
+        int backLeft = 8; // sets backgound speed
         public Form1()
         {
             InitializeComponent();
         }
         private void mainGameTimer(object sender, EventArgs e)
         {
-            // linking the jumpspeed integer with the player picture boxes to location
-            player.Top += jumpSpeed;
+            // linking the jumpSpd integer with the player picture boxes to location
+            player.Top += jumpSpd;
             // refresh the player picture box consistently
             player.Refresh();
-            // if jumping is true and force is less than 0
-            // then change jumping to false
-            if (jumping && force < 0)
+            // if blnJump is true and force is less than 0
+            // then change blnJump to false
+            if (blnJump && force < 0)
             {
-                jumping = false;
+                blnJump = false;
             }
-            // if jumping is true
+            // if blnJump is true
             // then change jump speed to -12
             // reduce force by 1
-            if (jumping)
+            if (blnJump)
             {
-                jumpSpeed = -12;
+                jumpSpd = -12;
                 force -= 1;
             }
             else
             {
                 // else change the jump speed to 12
-                jumpSpeed = 12;
+                jumpSpd = 12;
             }
             // if go left is true and players left is greater than 100 pixels
             // only then move player towards left of the
-            if (goleft && player.Left > 100)
+            if (moveLeft && player.Left > 100)
             {
                 player.Left -= playSpeed;
             }
@@ -60,14 +60,14 @@ namespace Capstone_Game_Platform
             // if go right boolean is true
             // player left plus players width plus 100 is less then the forms width
             // then we move the player towards the right by adding to the players left
-            if (goright && player.Left + (player.Width + 100) < this.ClientSize.Width)
+            if (moveRight && player.Left + (player.Width + 100) < this.ClientSize.Width)
             {
                 player.Left += playSpeed;
             }
             // by doing the if statement above, the player picture will stop on the forms right
             // if go right is true and the background picture left is greater 1352
             // then we move the background picture towards the left
-            if (goright && background.Left > -1353)
+            if (moveRight && background.Left > -1353)
             {
                 background.Left -= backLeft;
                 // the for loop below is checking to see the platforms and coins in the level
@@ -83,7 +83,7 @@ namespace Capstone_Game_Platform
             }
             // if go left is true and the background pictures left is less than 2
             // then we move the background picture towards the right
-            if (goleft && background.Left < 2)
+            if (moveLeft && background.Left < 2)
             {
                 background.Left += backLeft;
                 // below the is the for loop thats checking to see the platforms and coins in the level
@@ -105,13 +105,13 @@ namespace Capstone_Game_Platform
                 if (x is PictureBox && x.Tag == "platform")
                 {
                     // then we are checking if the player is colliding with the platform
-                    // and jumping is set to false
-                    if (player.Bounds.IntersectsWith(x.Bounds) && !jumping)
+                    // and blnJump is set to false
+                    if (player.Bounds.IntersectsWith(x.Bounds) && !blnJump)
                     {
                         // then we do the following
                         force = 8; // set the force to 8
                         player.Top = x.Top - player.Height; // also we place the player on top of the picture box
-                        jumpSpeed = 0; // set the jump speed to 0
+                        jumpSpd = 0; // set the jump speed to 0
                     }
                 }
                 // if the picture box found has a tag of coin
@@ -126,7 +126,7 @@ namespace Capstone_Game_Platform
                 }
             }
             // if the player collides with the door and has key boolean is true
-            if (player.Bounds.IntersectsWith(door.Bounds) && hasKey)
+            if (player.Bounds.IntersectsWith(door.Bounds) && blnHasKey)
             {
                 // then we change the image of the door to open
                 //The line below gave me an error so i commented it out until i can figure out what was wrong with it.
@@ -141,7 +141,7 @@ namespace Capstone_Game_Platform
                 // then we remove the key from the game
                 this.Controls.Remove(key);
                 // change the has key boolean to true
-                hasKey = true;
+                blnHasKey = true;
             }
             // this is where the player dies
             // if the player goes below the forms height then we will end the game
@@ -157,19 +157,19 @@ namespace Capstone_Game_Platform
             // then we set the car left boolean to true
             if (e.KeyCode == Keys.Left)
             {
-                goleft = true;
+                moveLeft = true;
             }
             // if player pressed the right key and the player left plus player width is less then the panel1 width
             if (e.KeyCode == Keys.Right)
             {
                 // then we set the player right to true
-                goright = true;
+                moveRight = true;
             }
-            //if the player pressed the space key and jumping boolean is false
-            if (e.KeyCode == Keys.Space && !jumping)
+            //if the player pressed the space key and blnJump boolean is false
+            if (e.KeyCode == Keys.Space && !blnJump)
             {
-                // then we set jumping to true
-                jumping = true;
+                // then we set blnJump to true
+                blnJump = true;
             }
         }
         private void keyisup(object sender, KeyEventArgs e)
@@ -177,18 +177,18 @@ namespace Capstone_Game_Platform
             // if the LEFT key is up we set the car left to false
             if (e.KeyCode == Keys.Left)
             {
-                goleft = false;
+                moveLeft = false;
             }
             // if the RIGHT key is up we set the car right to false
             if (e.KeyCode == Keys.Right)
             {
-                goright = false;
+                moveRight = false;
             }
-            //when the keys are released we check if jumping is true
+            //when the keys are released we check if blnJump is true
             // if so we need to set it back to false so the player can jump again
-            if (jumping)
+            if (blnJump)
             {
-                jumping = false;
+                blnJump = false;
             }
         }
 

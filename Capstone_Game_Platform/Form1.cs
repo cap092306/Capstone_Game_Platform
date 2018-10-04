@@ -129,6 +129,7 @@ namespace Capstone_Game_Platform
             if (player.Bounds.IntersectsWith(door.Bounds) && hasKey)
             {
                 // then we change the image of the door to open
+                //The line below gave me an error so i commented it out until i can figure out what was wrong with it.
                 //door.Image = Properties.Resources.door_open;
                 // and we stop the timer
                 gameTimer.Stop();

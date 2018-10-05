@@ -112,6 +112,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.background);
             this.Name = "Form1";
+            this.Text = "Cloud 9 - Level 1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);

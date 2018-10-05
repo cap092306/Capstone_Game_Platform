@@ -85,7 +85,7 @@
             this.Controls.Add(this.button1);
             this.Name = "StartScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "StartScreen";
+            this.Text = "Cloud 9";
             this.ResumeLayout(false);
             this.PerformLayout();
 

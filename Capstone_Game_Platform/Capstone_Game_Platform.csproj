@@ -54,17 +54,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <Compile Include="utils\EncryptionUtils.cs" />
     <Compile Include="utils\PasswordGenerator.cs" />
-=======
     <Compile Include="StartScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StartScreen.Designer.cs">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </Compile>
->>>>>>> 92b411f786023b0f2aeeae937f04b5fe57f05967
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

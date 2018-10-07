@@ -20,7 +20,7 @@ namespace Capstone_Game_Platform
         private void button1_Click(object sender, EventArgs e)
         {
             Form Form1 = new Form1();
-            Form1.ShowDialog();
+            Form1.Show();
             //this.Dispose();
         }
     }

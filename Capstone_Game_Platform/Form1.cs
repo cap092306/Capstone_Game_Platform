@@ -149,6 +149,7 @@ namespace Capstone_Game_Platform
             {
                 gameTimer.Stop(); // stop the timer
                 MessageBox.Show("You Died!!!"); // show the message box
+                this.Close();
             }
         }
         private void keyisdown(object sender, KeyEventArgs e)
@@ -192,7 +193,7 @@ namespace Capstone_Game_Platform
             }
         }
 
-        private void maingameTimer(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

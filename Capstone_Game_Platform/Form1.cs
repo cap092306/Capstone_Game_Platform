@@ -52,7 +52,7 @@ namespace Capstone_Game_Platform
             }
             // if go left is true and players left is greater than 100 pixels
             // only then move player towards left of the
-            if (moveLeft && player.Left > 100)
+            if (moveLeft && player.Left > 50)
             {
                 player.Left -= playSpeed;
             }
@@ -148,7 +148,7 @@ namespace Capstone_Game_Platform
             if (player.Top + player.Height > this.ClientSize.Height + 60)
             {
                 gameTimer.Stop(); // stop the timer
-                MessageBox.Show("You Died!!!"); // show the message box
+                MessageBox.Show("You Died, the moon is laughing!!!"); // show the message box
                 this.Close();
             }
         }

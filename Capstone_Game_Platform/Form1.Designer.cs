@@ -56,6 +56,8 @@
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -82,12 +84,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
             // 
             this.gameTimer.Enabled = true;
-            this.gameTimer.Interval = 30;
+            this.gameTimer.Interval = 35;
             this.gameTimer.Tick += new System.EventHandler(this.mainGameTimer);
             // 
             // pictureBox6
@@ -147,7 +151,7 @@
             // 
             // key
             // 
-            this.key.Location = new System.Drawing.Point(126, 0);
+            this.key.Location = new System.Drawing.Point(33, 0);
             this.key.Name = "key";
             this.key.Size = new System.Drawing.Size(100, 50);
             this.key.TabIndex = 5;
@@ -372,9 +376,33 @@
             this.pictureBox21.TabStop = false;
             this.pictureBox21.Tag = "platform";
             // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Image = global::Capstone_Game_Platform.Properties.Resources.Cloud_L1;
+            this.pictureBox22.Location = new System.Drawing.Point(222, 76);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(138, 54);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox22.TabIndex = 26;
+            this.pictureBox22.TabStop = false;
+            this.pictureBox22.Tag = "platform";
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Image = global::Capstone_Game_Platform.Properties.Resources.Cloud_L1;
+            this.pictureBox23.Location = new System.Drawing.Point(12, 56);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(138, 54);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox23.TabIndex = 27;
+            this.pictureBox23.TabStop = false;
+            this.pictureBox23.Tag = "platform";
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(598, 481);
+            this.Controls.Add(this.pictureBox23);
+            this.Controls.Add(this.pictureBox22);
             this.Controls.Add(this.pictureBox21);
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.pictureBox19);
@@ -432,6 +460,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,6 +496,8 @@
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.PictureBox pictureBox21;
+        private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.PictureBox pictureBox23;
     }
 }
 

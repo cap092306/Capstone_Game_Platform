@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,12 +17,20 @@ namespace Capstone_Game_Platform
         {
             InitializeComponent();
         }
+        SoundPlayer Theme = new SoundPlayer(Resource1.looperman_l_1804190_0133365_trippy_psychedelic_8_bit_sample_meltdown);
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SoundPlayer My_BetterJukeBox = new SoundPlayer(Resource1.looperman_l_1804190_0133365_trippy_psychedelic_8_bit_sample_meltdown);
             Form Form1 = new Form1();
             Form1.Show();
+            Theme.Stop();
             //this.Dispose();
+        }
+        
+        private void StartScreen_Load(object sender, EventArgs e)
+        {
+            Theme.PlayLooping();
         }
     }
 }

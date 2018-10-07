@@ -83,6 +83,26 @@ namespace Capstone_Game_Platform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cloud_L11 {
+            get {
+                object obj = ResourceManager.GetObject("Cloud_L11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cloud_PNG27 {
+            get {
+                object obj = ResourceManager.GetObject("cloud_PNG27", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Portal_Closed {
             get {
                 object obj = ResourceManager.GetObject("Portal_Closed", resourceCulture);

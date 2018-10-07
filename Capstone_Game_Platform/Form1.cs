@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+
 
 namespace Capstone_Game_Platform
 {
@@ -21,6 +23,8 @@ namespace Capstone_Game_Platform
         int score = 0; // resets the score to 0 upon entering a level
         int playSpeed = 18; //play speed integer used to control the speed of the game
         int backLeft = 8; // sets backgound speed
+        SoundPlayer CoinSound = new SoundPlayer(Resource1.qubodup_CoinCollect);
+
         public Form1()
         {
             InitializeComponent();
@@ -120,6 +124,7 @@ namespace Capstone_Game_Platform
                     // now if the player collides with the coin picture box
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
+                        CoinSound.Play();
                         this.Controls.Remove(x); // then we are going to remove the coin image
                         score++; // add 1 to the score
                     }
@@ -194,6 +199,11 @@ namespace Capstone_Game_Platform
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
         {
 
         }

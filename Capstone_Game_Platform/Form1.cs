@@ -24,6 +24,7 @@ namespace Capstone_Game_Platform
         int playSpeed = 18; //play speed integer used to control the speed of the game
         int backLeft = 8; // sets backgound speed
         SoundPlayer CoinSound = new SoundPlayer(Resource1.qubodup_CoinCollect);
+        SoundPlayer DeathSound = new SoundPlayer(Resource1.Water_Drop_Sound_High_SoundBible_com_1387792987);
 
         public Form1()
         {
@@ -56,7 +57,7 @@ namespace Capstone_Game_Platform
             }
             // if go left is true and players left is greater than 100 pixels
             // only then move player towards left of the
-            if (moveLeft && player.Left > 50)
+            if (moveLeft && player.Left > 25)
             {
                 player.Left -= playSpeed;
             }
@@ -124,7 +125,7 @@ namespace Capstone_Game_Platform
                     // now if the player collides with the coin picture box
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
-                        CoinSound.Play();
+                         CoinSound.Play();
                         this.Controls.Remove(x); // then we are going to remove the coin image
                         score++; // add 1 to the score
                     }
@@ -152,6 +153,7 @@ namespace Capstone_Game_Platform
             // if the player goes below the forms height then we will end the game
             if (player.Top + player.Height > this.ClientSize.Height + 60)
             {
+                DeathSound.Play();
                 gameTimer.Stop(); // stop the timer
                 MessageBox.Show("You Died, the moon is laughing!!!"); // show the message box
                 this.Close();
@@ -200,10 +202,14 @@ namespace Capstone_Game_Platform
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //pictureBox12.Parent = /*background*/;
+            
+            //pictureBox23.Parent = background;
+            //player.Parent = background;
+            //pictureBox22.Parent = background;
         }
 
-        private void pictureBox19_Click(object sender, EventArgs e)
+        private void pictureBox9_Click(object sender, EventArgs e)
         {
 
         }

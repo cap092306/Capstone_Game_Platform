@@ -113,19 +113,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BG_L1.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Cloud_L1.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Portal_Closed.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Raindrop.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Star_L1.gif" />
+    <None Include="Resources\Tornado_L1_Dark.gif" />
+    <None Include="Resources\Raindrop1.gif" />
+    <None Include="Resources\Star_L1_Medium.gif" />
+    <None Include="Resources\Star_L1_Dark.gif" />
+    <None Include="Resources\Star_L1_Light.gif" />
+    <None Include="Resources\Floor_Block_L1.gif" />
+    <None Include="Resources\Cloud_L1_Medium.gif" />
+    <None Include="Resources\Cloud_L1_Light.gif" />
+    <None Include="Resources\Cloud_L1_Dark.gif" />
+    <None Include="Resources\Portal_Closed_High.gif" />
+    <None Include="Resources\Floor_Block_L1 1.gif" />
+    <None Include="Resources\BG_L11.gif" />
+    <Content Include="Resources\Raindrop.gif" />
+    <None Include="Resources\Water Drop Sound High-SoundBible.com-1387792987.wav" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rolemu_-_La_Calahorra.mp3" />
@@ -138,9 +142,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cloud_L1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cloud_PNG27.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

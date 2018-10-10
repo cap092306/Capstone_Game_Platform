@@ -77,5 +77,14 @@ namespace Capstone_Game_Platform {
                 return ResourceManager.GetStream("qubodup_CoinCollect", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Water_Drop_Sound_High_SoundBible_com_1387792987 {
+            get {
+                return ResourceManager.GetStream("Water_Drop_Sound_High_SoundBible_com_1387792987", resourceCulture);
+            }
+        }
     }
 }

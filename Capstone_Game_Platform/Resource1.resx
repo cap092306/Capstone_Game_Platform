@@ -124,4 +124,7 @@
   <data name="qubodup_CoinCollect" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\qubodup-CoinCollect.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Water_Drop_Sound_High_SoundBible_com_1387792987" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Water Drop Sound High-SoundBible.com-1387792987.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

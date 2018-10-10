@@ -118,25 +118,61 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Cloud_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cloud_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cloud_L1_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cloud_L1_Light.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cloud_L11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cloud_L1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cloud_L1_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cloud_L1_Medium.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BG_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Raindrop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Raindrop.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Star_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Star_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tornado_L1_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tornado_L1_Dark.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Portal_Closed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Portal_Closed.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Star_L1_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Star_L1_Medium.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cloud_L11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cloud_L1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cloud_PNG27" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cloud_PNG27.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cloud_L1_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cloud_L1_Dark.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cloud_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cloud_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Star_L1_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Star_L1_Light.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Raindrop1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Raindrop1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Raindrop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Raindrop.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Floor_Block_L1 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Floor_Block_L1 1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Portal_Closed_High" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Portal_Closed_High.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Star_L1_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Star_L1_Dark.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Floor_Block_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Floor_Block_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Star_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Star_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG_L11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG_L11.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

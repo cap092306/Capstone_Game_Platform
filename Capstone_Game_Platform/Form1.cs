@@ -18,13 +18,16 @@ namespace Capstone_Game_Platform
         bool moveRight = false; // used to control player moving right
         bool blnJump = false; // used to check if player is blnJump or not
         bool blnHasKey = false; // used to determine if the player possesses the key
-        int jumpSpd = 10; // jump speed integer
-        int force = 8; // jump force
+        int jumpSpd = 8; // jump speed integer
+        int force = 6; // jump force
         int score = 0; // resets the score to 0 upon entering a level
-        int playSpeed = 18; //play speed integer used to control the speed of the game
+        int playSpeed = 14; //play speed integer used to control the speed of the game
         int backLeft = 8; // sets backgound speed
         SoundPlayer CoinSound = new SoundPlayer(Resource1.qubodup_CoinCollect);
         SoundPlayer DeathSound = new SoundPlayer(Resource1.Water_Drop_Sound_High_SoundBible_com_1387792987);
+        SoundPlayer KeySound = new SoundPlayer(Resource1.chime);
+        SoundPlayer LevelSound = new SoundPlayer(Resource1.looperman_l_2360721_0140885_sad_guitar_electric_pt_3_113bpm);
+       
 
         public Form1()
         {
@@ -32,6 +35,7 @@ namespace Capstone_Game_Platform
         }
         private void mainGameTimer(object sender, EventArgs e)
         {
+          
             // linking the jumpSpd integer with the player picture boxes to location
             player.Top += jumpSpd;
             // refresh the player picture box consistently
@@ -43,17 +47,17 @@ namespace Capstone_Game_Platform
                 blnJump = false;
             }
             // if blnJump is true
-            // then change jump speed to -12
+            // then change jump speed to -10
             // reduce force by 1
             if (blnJump)
             {
-                jumpSpd = -12;
+                jumpSpd = -10;
                 force -= 1;
             }
             else
             {
-                // else change the jump speed to 12
-                jumpSpd = 12;
+                // else change the jump speed to 10
+                jumpSpd = 10;
             }
             // if go left is true and players left is greater than 100 pixels
             // only then move player towards left of the
@@ -65,7 +69,7 @@ namespace Capstone_Game_Platform
             // if go right boolean is true
             // player left plus players width plus 100 is less then the forms width
             // then we move the player towards the right by adding to the players left
-            if (moveRight && player.Left + (player.Width + 100) < this.ClientSize.Width)
+            if (moveRight && player.Left + (player.Width + 75) < this.ClientSize.Width)
             {
                 player.Left += playSpeed;
             }
@@ -128,6 +132,7 @@ namespace Capstone_Game_Platform
                          CoinSound.Play();
                         this.Controls.Remove(x); // then we are going to remove the coin image
                         score++; // add 1 to the score
+                        //label3.Text = score.ToString();
                     }
                 }
             }
@@ -140,10 +145,12 @@ namespace Capstone_Game_Platform
                 // and we stop the timer
                 gameTimer.Stop();
                 MessageBox.Show("You Completed the level!!"); // show the message box
+                LevelSound.Stop();
             }
             // if the player collides with the key picture box
             if (player.Bounds.IntersectsWith(key.Bounds))
             {
+                KeySound.Play();
                 // then we remove the key from the game
                 this.Controls.Remove(key);
                 // change the has key boolean to true
@@ -155,7 +162,8 @@ namespace Capstone_Game_Platform
             {
                 DeathSound.Play();
                 gameTimer.Stop(); // stop the timer
-                MessageBox.Show("You Died, the moon is laughing!!!"); // show the message box
+                MessageBox.Show("You Died, the moon is laughing!!!" + Environment.NewLine + Environment.NewLine + "                  BAHAHAHA!!!"); // show the message box
+                LevelSound.Stop();
                 this.Close();
             }
         }
@@ -202,11 +210,7 @@ namespace Capstone_Game_Platform
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //pictureBox12.Parent = /*background*/;
-            
-            //pictureBox23.Parent = background;
-            //player.Parent = background;
-            //pictureBox22.Parent = background;
+
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)

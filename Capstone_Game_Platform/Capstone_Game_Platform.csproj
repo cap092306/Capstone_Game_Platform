@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +45,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -87,6 +89,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -116,6 +121,10 @@
     <None Include="Resources\Cloud_L1.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Tornado_L2_Dark.gif" />
+    <None Include="Resources\Star_L2_Med.gif" />
+    <None Include="Resources\Star_L2_Light.gif" />
+    <None Include="Resources\Star_L2_Dark.gif" />
     <None Include="Resources\Tornado_L1_Dark.gif" />
     <None Include="Resources\Raindrop1.gif" />
     <None Include="Resources\Star_L1_Medium.gif" />
@@ -128,6 +137,12 @@
     <None Include="Resources\Portal_Closed_High.gif" />
     <None Include="Resources\Floor_Block_L1 1.gif" />
     <None Include="Resources\BG_L11.gif" />
+    <None Include="Resources\chime.wav" />
+    <None Include="Resources\Cloud_L2_Dark.gif" />
+    <None Include="Resources\Portal_Closed_L2_High.gif" />
+    <None Include="Resources\Cloud_L2_Med.gif" />
+    <None Include="Resources\Floor_Block_L2.gif" />
+    <None Include="Resources\looperman-l-2360721-0140885-sad-guitar-electric-pt-3-113bpm.wav" />
     <Content Include="Resources\Raindrop.gif" />
     <None Include="Resources\Water Drop Sound High-SoundBible.com-1387792987.wav" />
   </ItemGroup>

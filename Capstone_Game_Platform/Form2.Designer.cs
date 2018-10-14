@@ -518,6 +518,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.background);
+            this.DoubleBuffered = true;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cloud 9 - Level 2";

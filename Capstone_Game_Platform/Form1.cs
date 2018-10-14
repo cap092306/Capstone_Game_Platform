@@ -35,7 +35,6 @@ namespace Capstone_Game_Platform
         }
         private void mainGameTimer(object sender, EventArgs e)
         {
-          
             // linking the jumpSpd integer with the player picture boxes to location
             player.Top += jumpSpd;
             // refresh the player picture box consistently
@@ -210,7 +209,7 @@ namespace Capstone_Game_Platform
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)

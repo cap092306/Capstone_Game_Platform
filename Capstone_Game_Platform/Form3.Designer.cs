@@ -518,6 +518,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.background);
+            this.DoubleBuffered = true;
             this.Name = "Form3";
             this.Text = "Cloud 9 - Level 3";
             this.Load += new System.EventHandler(this.Form3_Load);

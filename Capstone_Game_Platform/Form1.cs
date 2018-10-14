@@ -20,7 +20,7 @@ namespace Capstone_Game_Platform
         bool blnHasKey = false; // used to determine if the player possesses the key
         int jumpSpd = 8; // jump speed integer
         int force = 6; // jump force
-        int score = 0; // resets the score to 0 upon entering a level
+        public static int score = 0; // resets the score to 0 upon entering a level
         int playSpeed = 14; //play speed integer used to control the speed of the game
         int backLeft = 8; // sets backgound speed
         SoundPlayer CoinSound = new SoundPlayer(Resource1.qubodup_CoinCollect);
@@ -58,7 +58,7 @@ namespace Capstone_Game_Platform
                 // else change the jump speed to 10
                 jumpSpd = 10;
             }
-            // if go left is true and players left is greater than 100 pixels
+            // if go left is true and players left is greater than 25 pixels
             // only then move player towards left of the
             if (moveLeft && player.Left > 25)
             {
@@ -143,7 +143,9 @@ namespace Capstone_Game_Platform
                 //door.Image = Properties.Resources.door_open;
                 // and we stop the timer
                 gameTimer.Stop();
-                MessageBox.Show("You Completed the level!!"); // show the message box
+                LevelComplete LevelComplete = new LevelComplete();
+                LevelComplete.Show();
+                //MessageBox.Show("You Completed the level!!" + Environment.NewLine + Environment.NewLine +"Score: " + score); // show the message box
                 LevelSound.Stop();
             }
             // if the player collides with the key picture box
@@ -157,12 +159,13 @@ namespace Capstone_Game_Platform
             }
             // this is where the player dies
             // if the player goes below the forms height then we will end the game
-            if (player.Top + player.Height > this.ClientSize.Height + 60)
+            if (player.Top + player.Height > this.ClientSize.Height + 35)
             {
                 DeathSound.Play();
                 gameTimer.Stop(); // stop the timer
-                MessageBox.Show("You Died, the moon is laughing!!!" + Environment.NewLine + Environment.NewLine + "                  BAHAHAHA!!!"); // show the message box
-                LevelSound.Stop();
+                DeathBox DeathBox = new DeathBox();
+                DeathBox.Show();
+                //MessageBox.Show("You Died, the moon is laughing!!!" + Environment.NewLine + Environment.NewLine + "                  BAHAHAHA!!!"); // show the message box
                 this.Close();
             }
         }
@@ -213,6 +216,11 @@ namespace Capstone_Game_Platform
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void background_Click(object sender, EventArgs e)
         {
 
         }

@@ -20,7 +20,7 @@ namespace Capstone_Game_Platform
         bool blnHasKey = false; // used to determine if the player possesses the key
         int jumpSpd = 8; // jump speed integer
         int force = 6; // jump force
-        int score = 0; // resets the score to 0 upon entering a level
+        public static int score = 0; // resets the score to 0 upon entering a level
         int playSpeed = 14; //play speed integer used to control the speed of the game
         int backLeft = 8; // sets backgound speed
         SoundPlayer CoinSound = new SoundPlayer(Resource1.qubodup_CoinCollect);
@@ -155,11 +155,13 @@ namespace Capstone_Game_Platform
             }
             // this is where the player dies
             // if the player goes below the forms height then we will end the game
-            if (player.Top + player.Height > this.ClientSize.Height + 60)
+            if (player.Top + player.Height > this.ClientSize.Height + 35)
             {
                 DeathSound.Play();
                 gameTimer.Stop(); // stop the timer
-                MessageBox.Show("You Died, the moon is laughing!!!" + Environment.NewLine + Environment.NewLine + "                  BAHAHAHA!!!"); // show the message box
+                DeathBox DeathBox = new DeathBox();
+                DeathBox.Show();
+                //MessageBox.Show("You Died, the moon is laughing!!!" + Environment.NewLine + Environment.NewLine + "                  BAHAHAHA!!!"); // show the message box
                 this.Close();
             }
         }

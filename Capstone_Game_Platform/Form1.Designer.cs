@@ -539,10 +539,11 @@
             this.background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.background.TabIndex = 0;
             this.background.TabStop = false;
+            this.background.Click += new System.EventHandler(this.background_Click);
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(544, 481);
+            this.ClientSize = new System.Drawing.Size(613, 481);
             this.Controls.Add(this.pictureBox31);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox29);

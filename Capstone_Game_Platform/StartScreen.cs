@@ -35,10 +35,15 @@ namespace Capstone_Game_Platform
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form Form2 = new Form2();
+            Form Form3 = new Form3();
 
-            Form2.Show();
+            Form3.Show();
             Theme.Stop();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
 
         }
     }

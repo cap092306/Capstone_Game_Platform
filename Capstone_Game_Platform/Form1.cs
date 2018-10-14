@@ -39,7 +39,7 @@ namespace Capstone_Game_Platform
             // linking the jumpSpd integer with the player picture boxes to location
             player.Top += jumpSpd;
             // refresh the player picture box consistently
-            player.Refresh();
+            //player.Refresh();
             // if blnJump is true and force is less than 0
             // then change blnJump to false
             if (blnJump && force < 0)

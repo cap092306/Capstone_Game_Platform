@@ -542,7 +542,7 @@
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(1383, 481);
+            this.ClientSize = new System.Drawing.Size(653, 477);
             this.Controls.Add(this.pictureBox31);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox29);

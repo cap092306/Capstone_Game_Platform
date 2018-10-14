@@ -10,22 +10,23 @@ using System.Windows.Forms;
 
 namespace Capstone_Game_Platform
 {
-    public partial class DeathBox : Form
+    public partial class DeathBox2 : Form
     {
-        public DeathBox()
+        public DeathBox2()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 Form1 = new Form1();
-            Form1.Show();
+            Form2 Form2 = new Form2();
+            Form2.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
     }
 }

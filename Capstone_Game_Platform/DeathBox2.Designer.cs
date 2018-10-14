@@ -1,6 +1,6 @@
 ﻿namespace Capstone_Game_Platform
 {
-    partial class DeathBox
+    partial class DeathBox2
     {
         /// <summary>
         /// Required designer variable.
@@ -94,7 +94,7 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // DeathBox
+            // DeathBox2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,7 +105,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "DeathBox";
+            this.Name = "DeathBox2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeathBox";
             this.ResumeLayout(false);

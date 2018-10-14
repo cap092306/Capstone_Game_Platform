@@ -161,8 +161,8 @@ namespace Capstone_Game_Platform
             {
                 DeathSound.Play();
                 gameTimer.Stop(); // stop the timer
-                DeathBox DeathBox = new DeathBox();
-                DeathBox.Show();
+                DeathBox2 DeathBox2 = new DeathBox2();
+                DeathBox2.Show();
                 //MessageBox.Show("You Died, the moon is laughing!!!" + Environment.NewLine + Environment.NewLine + "                  BAHAHAHA!!!"); // show the message box
                 this.Close();
             }

@@ -106,7 +106,7 @@
             // pictureBox31
             // 
             this.pictureBox31.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox31.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox31.Image")));
+            this.pictureBox31.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L3_Light;
             this.pictureBox31.Location = new System.Drawing.Point(1688, 376);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(35, 30);
@@ -254,7 +254,7 @@
             // pictureBox16
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
+            this.pictureBox16.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L3_Dark;
             this.pictureBox16.Location = new System.Drawing.Point(272, 50);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(35, 30);
@@ -266,7 +266,7 @@
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
+            this.pictureBox15.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L3_Med;
             this.pictureBox15.Location = new System.Drawing.Point(530, 226);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(35, 30);
@@ -277,7 +277,7 @@
             // 
             // pictureBox14
             // 
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
+            this.pictureBox14.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L3_Dark;
             this.pictureBox14.Location = new System.Drawing.Point(539, 102);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(35, 30);
@@ -288,7 +288,7 @@
             // 
             // pictureBox13
             // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L3_Dark;
             this.pictureBox13.Location = new System.Drawing.Point(620, 25);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(35, 30);
@@ -300,7 +300,7 @@
             // pictureBox12
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L3_Med;
             this.pictureBox12.Location = new System.Drawing.Point(312, 236);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(35, 30);
@@ -324,7 +324,7 @@
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L3_Med;
             this.pictureBox10.Location = new System.Drawing.Point(1387, 226);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(35, 30);
@@ -335,7 +335,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L3_Dark;
             this.pictureBox8.Location = new System.Drawing.Point(1038, 2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(35, 30);
@@ -347,7 +347,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L3_Light;
             this.pictureBox7.Location = new System.Drawing.Point(1260, 349);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(35, 30);
@@ -415,7 +415,7 @@
             // coin
             // 
             this.coin.BackColor = System.Drawing.Color.Transparent;
-            this.coin.Image = ((System.Drawing.Image)(resources.GetObject("coin.Image")));
+            this.coin.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L3_Dark;
             this.coin.Location = new System.Drawing.Point(446, 25);
             this.coin.Name = "coin";
             this.coin.Size = new System.Drawing.Size(35, 30);
@@ -462,7 +462,7 @@
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L3_Dark;
             this.pictureBox9.Location = new System.Drawing.Point(687, 143);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(35, 30);
@@ -485,7 +485,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 485);
+            this.ClientSize = new System.Drawing.Size(1924, 477);
             this.Controls.Add(this.pictureBox31);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox29);

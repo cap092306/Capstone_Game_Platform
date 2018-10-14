@@ -394,7 +394,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L1_Medium;
+            this.pictureBox8.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L1_Dark;
             this.pictureBox8.Location = new System.Drawing.Point(1037, 0);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(35, 30);
@@ -542,7 +542,7 @@
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(544, 481);
+            this.ClientSize = new System.Drawing.Size(1383, 481);
             this.Controls.Add(this.pictureBox31);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox29);

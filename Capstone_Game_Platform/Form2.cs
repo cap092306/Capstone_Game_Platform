@@ -213,5 +213,10 @@ namespace Capstone_Game_Platform
         {
 
         }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

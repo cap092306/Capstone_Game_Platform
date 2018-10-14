@@ -21,7 +21,6 @@ namespace Capstone_Game_Platform
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SoundPlayer My_BetterJukeBox = new SoundPlayer(Resource1.looperman_l_1804190_0133365_trippy_psychedelic_8_bit_sample_meltdown);
             Form Form1 = new Form1();
             Form1.Show();
             Theme.Stop();
@@ -31,6 +30,16 @@ namespace Capstone_Game_Platform
         private void StartScreen_Load(object sender, EventArgs e)
         {
             Theme.PlayLooping();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

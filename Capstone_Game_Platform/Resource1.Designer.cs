@@ -63,9 +63,27 @@ namespace Capstone_Game_Platform {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream chime {
+            get {
+                return ResourceManager.GetStream("chime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream looperman_l_1804190_0133365_trippy_psychedelic_8_bit_sample_meltdown {
             get {
                 return ResourceManager.GetStream("looperman_l_1804190_0133365_trippy_psychedelic_8_bit_sample_meltdown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream looperman_l_2360721_0140885_sad_guitar_electric_pt_3_113bpm {
+            get {
+                return ResourceManager.GetStream("looperman_l_2360721_0140885_sad_guitar_electric_pt_3_113bpm", resourceCulture);
             }
         }
         

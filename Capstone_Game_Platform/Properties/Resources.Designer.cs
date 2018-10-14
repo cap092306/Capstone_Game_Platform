@@ -133,6 +133,66 @@ namespace Capstone_Game_Platform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cloud_L2_Dark {
+            get {
+                object obj = ResourceManager.GetObject("Cloud_L2_Dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cloud_L2_Med {
+            get {
+                object obj = ResourceManager.GetObject("Cloud_L2_Med", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cloud_L3_Dark {
+            get {
+                object obj = ResourceManager.GetObject("Cloud_L3_Dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cloud_L3_Low {
+            get {
+                object obj = ResourceManager.GetObject("Cloud_L3_Low", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cloud_L3_Low1 {
+            get {
+                object obj = ResourceManager.GetObject("Cloud_L3_Low1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cloud_L3_Med {
+            get {
+                object obj = ResourceManager.GetObject("Cloud_L3_Med", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cloud_PNG27 {
             get {
                 object obj = ResourceManager.GetObject("cloud_PNG27", resourceCulture);
@@ -163,6 +223,26 @@ namespace Capstone_Game_Platform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Floor_Block_L2 {
+            get {
+                object obj = ResourceManager.GetObject("Floor_Block_L2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Floor_Block_L3 {
+            get {
+                object obj = ResourceManager.GetObject("Floor_Block_L3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Portal_Closed {
             get {
                 object obj = ResourceManager.GetObject("Portal_Closed", resourceCulture);
@@ -176,6 +256,16 @@ namespace Capstone_Game_Platform.Properties {
         internal static System.Drawing.Bitmap Portal_Closed_High {
             get {
                 object obj = ResourceManager.GetObject("Portal_Closed_High", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Portal_Closed_L2_High {
+            get {
+                object obj = ResourceManager.GetObject("Portal_Closed_L2_High", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +333,99 @@ namespace Capstone_Game_Platform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Star_L2_Dark {
+            get {
+                object obj = ResourceManager.GetObject("Star_L2_Dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Star_L2_Light {
+            get {
+                object obj = ResourceManager.GetObject("Star_L2_Light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Star_L2_Med {
+            get {
+                object obj = ResourceManager.GetObject("Star_L2_Med", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Star_L3_Dark {
+            get {
+                object obj = ResourceManager.GetObject("Star_L3_Dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Star_L3_Light {
+            get {
+                object obj = ResourceManager.GetObject("Star_L3_Light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Star_L3_Med {
+            get {
+                object obj = ResourceManager.GetObject("Star_L3_Med", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sun {
+            get {
+                object obj = ResourceManager.GetObject("Sun", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tornado_High {
+            get {
+                object obj = ResourceManager.GetObject("Tornado_High", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Tornado_L1_Dark {
             get {
                 object obj = ResourceManager.GetObject("Tornado_L1_Dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tornado_L2_Dark {
+            get {
+                object obj = ResourceManager.GetObject("Tornado_L2_Dark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

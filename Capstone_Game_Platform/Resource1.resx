@@ -127,4 +127,10 @@
   <data name="Water_Drop_Sound_High_SoundBible_com_1387792987" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Water Drop Sound High-SoundBible.com-1387792987.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="chime" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\chime.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="looperman_l_2360721_0140885_sad_guitar_electric_pt_3_113bpm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\looperman-l-2360721-0140885-sad-guitar-electric-pt-3-113bpm.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

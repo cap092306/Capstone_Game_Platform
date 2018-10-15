@@ -96,8 +96,6 @@ public class XMLUtils
         }
     }
 
-
-
     public void DeleteXMLfile(string path)
     {
         if (File.Exists(path))

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
 using System.Data;
 using System.Security;
 using System.IO;
-
+using System.Xml.Linq;
 
 public class XMLUtils
 {
@@ -26,8 +21,8 @@ public class XMLUtils
         {
             try
             {
-                File.Create(Path);
-                //TBD create default XML File content
+                XDocument doc = XDocument.Parse(Capstone_Game_Platform.Properties.Resources.Cloud9Data);
+                doc.Save(Path);
             }
             catch (Exception ex)
             {
@@ -37,27 +32,31 @@ public class XMLUtils
     }
 
     /// <summary>
-    /// Read XML File
+    /// Read XML File. If file is not found, default XML file is created and read.
     /// </summary>
-    /// <param name="path">Full Path to XML File</param>
     /// <returns>DataSet</returns>
     public DataSet ReadXMLfile()
     {
+        if (!File.Exists(Path))
+        {
+            CreateXMLfile();
+        }
+
         try
         {
             DataSet ds = new DataSet();
             ds.ReadXml(Path);
             return ds;
-        } catch (SecurityException ex)
+        }
+        catch (SecurityException ex)
         {
-            throw new Exception("Can not access XML File at: "  + Path, ex);
+            throw new Exception("Can not access XML File at: " + Path, ex);
         }
     }
 
     /// <summary>
     /// Save Data Set to XML file
     /// </summary>
-    /// <param name="path">Full Path to XML file</param>
     /// <param name="ds">Data Set</param>
     public void UpdateXMLfile(DataSet ds)
     {
@@ -71,6 +70,9 @@ public class XMLUtils
         }
     }
 
+    /// <summary>
+    /// Deletes XML File
+    /// </summary>
     public void DeleteXMLfile()
     {
         if (File.Exists(Path))
@@ -84,7 +86,7 @@ public class XMLUtils
                 throw new Exception("Error occured when trying to Delete XML File at: " + Path, ex);
             }
         }
-
     }
+
 }
 

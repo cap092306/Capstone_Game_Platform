@@ -37,46 +37,21 @@ public class XMLUtils
     }
 
     /// <summary>
-    /// Create new XML Data Tag
-    /// </summary>
-    public void CreateXMLTag(string parentElement, string childElement)
-    {
-        //open file
-        //find parent element
-        //create child element
-        //save file
-    }
-
-    /// <summary>
     /// Read XML File
     /// </summary>
     /// <param name="path">Full Path to XML File</param>
     /// <returns>DataSet</returns>
-    public DataSet ReadXMLfile(string path)
+    public DataSet ReadXMLfile()
     {
         try
         {
             DataSet ds = new DataSet();
-            ds.ReadXml(path);
+            ds.ReadXml(Path);
             return ds;
         } catch (SecurityException ex)
         {
-            throw new Exception("Can not access XML File at: "  + path, ex);
+            throw new Exception("Can not access XML File at: "  + Path, ex);
         }
-    }
-
-    /// <summary>
-    /// Update XML Data Element
-    /// </summary>
-    /// <param name="path"></param>
-    /// <param name="parentElement"></param>
-    /// <param name="xmlContent"></param>
-    public void UpdateXMLfile(string parentElement, string xmlContent)
-    {
-        //open file 
-        //find parent element in file
-        //write xml content
-        //save file
     }
 
     /// <summary>
@@ -84,29 +59,29 @@ public class XMLUtils
     /// </summary>
     /// <param name="path">Full Path to XML file</param>
     /// <param name="ds">Data Set</param>
-    public void UpdateXMLfile(string path, DataSet ds)
+    public void UpdateXMLfile(DataSet ds)
     {
         try
         {
-            ds.WriteXml(path, XmlWriteMode.WriteSchema);
+            ds.WriteXml(Path, XmlWriteMode.WriteSchema);
         }
         catch (SecurityException ex)
         {
-            throw new Exception("Can not access XML File at: " + path, ex);
+            throw new Exception("Can not access XML File at: " + Path, ex);
         }
     }
 
-    public void DeleteXMLfile(string path)
+    public void DeleteXMLfile()
     {
-        if (File.Exists(path))
+        if (File.Exists(Path))
         {
             try
             {
-                File.Delete(path);
+                File.Delete(Path);
             }
             catch (Exception ex)
             {
-                throw new Exception("Error occured when trying to Delete XML File at: " + path, ex);
+                throw new Exception("Error occured when trying to Delete XML File at: " + Path, ex);
             }
         }
 

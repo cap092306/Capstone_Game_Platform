@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<cloud9>
+<players>
+  <player>
+    <player_ID>1</player_ID>
+    <player_name>DewDrop</player_name>
+    <char_level>1</char_level>
+    <total_points>0</total_points>
+  </player>
+</players>
+  <achievements>
+    <achievement>
+      <achievement_ID>1</achievement_ID>
+      <achievement_name>Defeat the Moon</achievement_name>
+      <achievement_desc>Defeat the Moon and save the Sun.</achievement_desc>
+      <achievement_data></achievement_data>
+      <achievement_date></achievement_date>
+    </achievement>
+    <achievement>
+      <achievement_ID>2</achievement_ID>
+      <achievement_name>Star Light</achievement_name>
+      <achievement_desc>Collect 100 Stars</achievement_desc>
+      <achievement_data>0</achievement_data>
+      <achievement_date></achievement_date>
+    </achievement>
+    <achievement>
+      <achievement_ID>3</achievement_ID>
+      <achievement_name>Faster than the speed of light</achievement_name>
+      <achievement_desc>Complete level one in less than one minute.</achievement_desc>
+      <achievement_data></achievement_data>
+      <achievement_date></achievement_date>
+    </achievement>
+    <achievement>
+      <achievement_ID>4</achievement_ID>
+      <achievement_name>Explorer Level 1</achievement_name>
+      <achievement_desc>Find all the specials on level 1.</achievement_desc>
+      <achievement_data></achievement_data>
+      <achievement_date></achievement_date>
+    </achievement>
+    <achievement>
+      <achievement_ID>5</achievement_ID>
+      <achievement_name>Explorer Level 2</achievement_name>
+      <achievement_desc>Find all the specials on level 2.</achievement_desc>
+      <achievement_data></achievement_data>
+      <achievement_date></achievement_date>
+    </achievement>
+    <achievement>
+      <achievement_ID>6</achievement_ID>
+      <achievement_name>Explorer Level 3</achievement_name>
+      <achievement_desc>Find all the specials on level 3.</achievement_desc>
+      <achievement_data></achievement_data>
+      <achievement_date></achievement_date>
+    </achievement>
+  </achievements>
+  <levels>
+    <level>
+      <level_ID>1</level_ID>
+      <level_Order>1</level_Order>
+      <level_name>The quest begins here.</level_name>
+      <level_life_max>5</level_life_max>
+      <level_mana_max>5</level_mana_max>
+      <level_monster_count>10</level_monster_count>
+      <level_special_count>5</level_special_count>
+    </level>
+    <level>
+      <level_ID>2</level_ID>
+      <level_Order>2</level_Order>
+      <level_name>The quest continues...</level_name>
+      <level_life_max>4</level_life_max>
+      <level_mana_max>7</level_mana_max>
+      <level_monster_count>15</level_monster_count>
+      <level_special_count>7</level_special_count>
+    </level>
+    <level>
+      <level_ID>3</level_ID>
+      <level_Order>3</level_Order>
+      <level_name>Do or Die.</level_name>
+      <level_life_max>3</level_life_max>
+      <level_mana_max>10</level_mana_max>
+      <level_monster_count>25</level_monster_count>
+      <level_special_count>10</level_special_count>
+    </level>
+  </levels>
+  <player_history>
+    <level>
+      <level_ID>1</level_ID>
+      <life_count>0</life_count>
+      <points>0</points>
+      <time>0</time>
+      <special_count>0</special_count>
+      <monster_count>0</monster_count>
+      <last_played></last_played>
+      <completed></completed>
+    </level>
+    <level>
+      <level_ID>2</level_ID>
+      <life_count>0</life_count>
+      <points>0</points>
+      <time>0</time>
+      <special_count>0</special_count>
+      <monster_count>0</monster_count>
+      <last_played></last_played>
+      <completed></completed>
+    </level>
+    <level>
+      <level_ID>3</level_ID>
+      <life_count>0</life_count>
+      <points>0</points>
+      <time>0</time>
+      <special_count>0</special_count>
+      <monster_count>0</monster_count>
+      <last_played></last_played>
+      <completed></completed>
+    </level>
+  </player_history>
+</cloud9>

@@ -220,6 +220,7 @@
     <None Include="Resources\Cloud_L3_Low.gif" />
     <None Include="Resources\Cloud_L3_Med.gif" />
     <None Include="Resources\Cloud_L3_Low1.gif" />
+    <EmbeddedResource Include="Resources\Cloud9Data.xml" />
     <Content Include="Resources\Raindrop.gif" />
     <None Include="Resources\Water Drop Sound High-SoundBible.com-1387792987.wav" />
   </ItemGroup>
@@ -235,6 +236,7 @@
   <ItemGroup>
     <None Include="Resources\Cloud_L1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

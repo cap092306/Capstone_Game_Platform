@@ -19,7 +19,7 @@ namespace Capstone_Game_Platform.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -197,6 +197,30 @@ namespace Capstone_Game_Platform.Properties {
             get {
                 object obj = ResourceManager.GetObject("cloud_PNG27", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;
+        ///&lt;cloud9&gt;
+        ///&lt;players&gt;
+        ///  &lt;player&gt;
+        ///    &lt;player_ID&gt;1&lt;/player_ID&gt;
+        ///    &lt;player_name&gt;DewDrop&lt;/player_name&gt;
+        ///    &lt;char_level&gt;1&lt;/char_level&gt;
+        ///    &lt;total_points&gt;0&lt;/total_points&gt;
+        ///  &lt;/player&gt;
+        ///&lt;/players&gt;
+        ///  &lt;achievements&gt;
+        ///    &lt;achievement&gt;
+        ///      &lt;achievement_ID&gt;1&lt;/achievement_ID&gt;
+        ///      &lt;achievement_name&gt;Defeat the Moon&lt;/achievement_name&gt;
+        ///      &lt;achievement_desc&gt;Defeat the Moon and save the Sun.&lt;/achievement_desc&gt;
+        ///      &lt;achievement_data&gt;&lt;/achievement_data [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Cloud9Data {
+            get {
+                return ResourceManager.GetString("Cloud9Data", resourceCulture);
             }
         }
         

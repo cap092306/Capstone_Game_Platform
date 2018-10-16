@@ -47,6 +47,7 @@
             this.button3.TabIndex = 16;
             this.button3.Text = "Exit Game";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -59,6 +60,7 @@
             this.button2.TabIndex = 15;
             this.button2.Text = "Next Level";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -98,7 +100,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Data 70", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(84, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(303, 42);

@@ -129,7 +129,7 @@ namespace Capstone_Game_Platform
                     {
                         CoinSound.Play();
                         this.Controls.Remove(x); // then we are going to remove the coin image
-                        score++; // add 1 to the score
+                        score += 10; // add 10 to the score
                         //label3.Text = score.ToString();
                     }
                 }
@@ -142,7 +142,9 @@ namespace Capstone_Game_Platform
                 //door.Image = Properties.Resources.door_open;
                 // and we stop the timer
                 gameTimer.Stop();
-                MessageBox.Show("You Completed the level!!"); // show the message box
+                LevelComplete3 LevelComplete3 = new LevelComplete3();
+                LevelComplete3.Show();
+                //MessageBox.Show("You Completed the level!!"); // show the message box
             }
             // if the player collides with the key picture box
             if (player.Bounds.IntersectsWith(key.Bounds))

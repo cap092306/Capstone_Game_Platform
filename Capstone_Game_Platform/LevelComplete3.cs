@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Capstone_Game_Platform
 {
-    public partial class LevelComplete : Form
+    public partial class LevelComplete3 : Form
     {
-        public LevelComplete()
+        public LevelComplete3()
         {
             InitializeComponent();
         }
@@ -24,13 +24,6 @@ namespace Capstone_Game_Platform
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form2 Form2 = new Form2();
-            Form2.Show();
             this.Close();
         }
     }

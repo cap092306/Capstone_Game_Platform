@@ -21,5 +21,17 @@ namespace Capstone_Game_Platform
         {
             label3.Text = Form2.score.ToString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 Form3 = new Form3();
+            Form3.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

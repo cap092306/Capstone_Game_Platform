@@ -90,12 +90,6 @@
     <Compile Include="Level2Complete.Designer.cs">
       <DependentUpon>Level2Complete.cs</DependentUpon>
     </Compile>
-    <Compile Include="LevelComplete3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LevelComplete3.Designer.cs">
-      <DependentUpon>LevelComplete3.cs</DependentUpon>
-    </Compile>
     <Compile Include="LevelComplete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,12 +107,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
-    </Compile>
-    <Compile Include="UserManual.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserManual.Designer.cs">
-      <DependentUpon>UserManual.cs</DependentUpon>
     </Compile>
     <Compile Include="utils\EncryptionUtils.cs" />
     <Compile Include="utils\PasswordGenerator.cs" />
@@ -150,9 +138,6 @@
     <EmbeddedResource Include="Level2Complete.resx">
       <DependentUpon>Level2Complete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LevelComplete3.resx">
-      <DependentUpon>LevelComplete3.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LevelComplete.resx">
       <DependentUpon>LevelComplete.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,9 +152,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserManual.resx">
-      <DependentUpon>UserManual.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

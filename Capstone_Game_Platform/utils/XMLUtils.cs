@@ -4,89 +4,103 @@ using System.Security;
 using System.IO;
 using System.Xml.Linq;
 
-public class XMLUtils
+namespace Capstone_Game_Platform
 {
-    /// <summary>
-    /// Path to XML File
-    /// </summary>
-    public string Path { get; set; }
-
-    /// <summary>
-    /// Create new default XML File
-    /// </summary>
-    /// <param name="path"></param>
-    public void CreateXMLfile()
+    public class XMLUtils
     {
-        if (!File.Exists(Path))
+        /// <summary>
+        /// Path to XML File
+        /// </summary>
+        public string Path { get; set; }
+
+        /// <summary>
+        /// Create new default XML File
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns>bool - true if file created</returns>
+        public bool CreateXMLfile()
+        {
+            if (!File.Exists(Path))
+            {
+                try
+                {
+                    XDocument doc = XDocument.Parse(Capstone_Game_Platform.Properties.Resources.Cloud9Data);
+                    doc.Save(Path);
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error occured when trying to create default XML File at: " + Path, ex);
+                }
+            }
+            else { throw new Exception("File Exsists at: " + Path); }
+        }
+
+        /// <summary>
+        /// Read XML File. If file is not found, default XML file is created and read.
+        /// </summary>
+        /// <returns>DataSet</returns>
+        public DataSet ReadXMLfile()
+        {
+            if (!File.Exists(Path))
+            {
+                CreateXMLfile();
+            }
+
+            try
+            {
+                DataSet ds = new DataSet();
+                ds.ReadXml(Path);
+                return ds;
+            }
+            catch (SecurityException ex)
+            {
+                throw new Exception("Can not access XML File at: " + Path, ex);
+            }
+        }
+
+        /// <summary>
+        /// Save Data Set to XML file
+        /// </summary>
+        /// <param name="ds">Data Set</param>
+        /// <returns>bool - true if file writen</returns>
+        public bool UpdateXMLfile(DataSet ds)
         {
             try
             {
-                XDocument doc = XDocument.Parse(Capstone_Game_Platform.Properties.Resources.Cloud9Data);
-                doc.Save(Path);
+                ds.AcceptChanges(); 
+                ds.WriteXml(Path);
+                return true;
             }
-            catch (Exception ex)
+            catch (SecurityException ex)
             {
-                throw new Exception("Error occured when trying to create default XML File at: " + Path, ex);
+                throw new Exception("Can not access XML File at: " + Path, ex);
             }
-        } else { throw new Exception("File Exsists at: " + Path); }
-    }
-
-    /// <summary>
-    /// Read XML File. If file is not found, default XML file is created and read.
-    /// </summary>
-    /// <returns>DataSet</returns>
-    public DataSet ReadXMLfile()
-    {
-        if (!File.Exists(Path))
-        {
-            CreateXMLfile();
         }
 
-        try
+        /// <summary>
+        /// Deletes XML File
+        /// </summary>
+        /// <returns>bool - true if file deleted/ false if there was no file to delete</returns>
+        public bool DeleteXMLfile()
         {
-            DataSet ds = new DataSet();
-            ds.ReadXml(Path);
-            return ds;
-        }
-        catch (SecurityException ex)
-        {
-            throw new Exception("Can not access XML File at: " + Path, ex);
-        }
-    }
-
-    /// <summary>
-    /// Save Data Set to XML file
-    /// </summary>
-    /// <param name="ds">Data Set</param>
-    public void UpdateXMLfile(DataSet ds)
-    {
-        try
-        {
-            ds.WriteXml(Path, XmlWriteMode.WriteSchema);
-        }
-        catch (SecurityException ex)
-        {
-            throw new Exception("Can not access XML File at: " + Path, ex);
-        }
-    }
-
-    /// <summary>
-    /// Deletes XML File
-    /// </summary>
-    public void DeleteXMLfile()
-    {
-        if (File.Exists(Path))
-        {
-            try
+            if (File.Exists(Path))
             {
-                File.Delete(Path);
-            }
-            catch (Exception ex)
+                try
+                {
+                    File.Delete(Path);
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error occured when trying to Delete XML File at: " + Path, ex);
+                }
+            } else
             {
-                throw new Exception("Error occured when trying to Delete XML File at: " + Path, ex);
+                return false;
             }
         }
-    }
 
+    }
 }
 

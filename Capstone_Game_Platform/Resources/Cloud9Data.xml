@@ -26,7 +26,7 @@
   <achievement>
     <achievement_ID>2</achievement_ID>
     <achievement_name>Star Light</achievement_name>
-    <achievement_desc>Collect 100 Stars</achievement_desc>
+    <achievement_desc>Collect 1000 Stars</achievement_desc>
   </achievement>
   <achievement>
     <achievement_ID>3</achievement_ID>
@@ -80,7 +80,7 @@
     <level_ID>1</level_ID>
     <life_count>0</life_count>
     <points>0</points>
-    <time>0</time>
+    <level_time>0</level_time>
     <special_count>0</special_count>
     <monster_count>0</monster_count>
     <last_played/>
@@ -91,7 +91,7 @@
     <level_ID>2</level_ID>
     <life_count>0</life_count>
     <points>0</points>
-    <time>0</time>
+    <level_time>0</level_time>
     <special_count>0</special_count>
     <monster_count>0</monster_count>
     <last_played/>
@@ -102,7 +102,7 @@
     <level_ID>3</level_ID>
     <life_count>0</life_count>
     <points>0</points>
-    <time>0</time>
+    <level_time>0</level_time>
     <special_count>0</special_count>
     <monster_count>0</monster_count>
     <last_played/>
@@ -113,7 +113,7 @@
     <level_ID>3</level_ID>
     <life_count>1</life_count>
     <points>200</points>
-    <time>00:00:05</time>
+    <level_time>0</level_time>
     <special_count>5</special_count>
     <monster_count>25</monster_count>
     <last_played/>
@@ -124,7 +124,7 @@
     <level_ID>3</level_ID>
     <life_count>3</life_count>
     <points>300</points>
-    <time>00:00:03</time>
+    <level_time>0</level_time>
     <special_count>10</special_count>
     <monster_count>25</monster_count>
     <last_played/>

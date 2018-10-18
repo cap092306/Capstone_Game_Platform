@@ -135,6 +135,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
+    <Compile Include="SaveGameHelper.cs" />
     <Compile Include="UserManual.cs">
       <SubType>Form</SubType>
     </Compile>

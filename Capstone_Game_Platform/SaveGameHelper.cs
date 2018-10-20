@@ -28,13 +28,10 @@ namespace Capstone_Game_Platform
         private XMLUtils xmlUtils;
         private DataSet ds;
         //tables in XML managed in this helper
-        private const int player_history = 4;
-        private const int player_achievement = 5;
+        private const int player_history = 3;
+        private const int player_achievement = 4;
         //achievements
         public enum Achievement : int { Defeat_Moon = 1, Star_Light = 2, light_speed = 3}
-
-
-
 
         public  SaveGameHelper(){
             LoadXMLUtils();
@@ -44,7 +41,7 @@ namespace Capstone_Game_Platform
         {
             xmlUtils = new XMLUtils()
             {
-                Path = Path.Combine(Application.ExecutablePath, "Cloud9Data.xml")
+                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Cloud9Data.xml")
             };
             ds = xmlUtils.ReadXMLfile();
         }
@@ -54,15 +51,15 @@ namespace Capstone_Game_Platform
             //player_history
             DataTable dt = ds.Tables[player_history];
             DataRow result = (from row in dt.AsEnumerable()
-                              where row.Field<int>("level_ID") == this.Level_ID //level1
-                                    && row.Field<int>("player_ID") == this.Player_ID //player1
+                              where row.Field<string>("player_ID") == this.Player_ID.ToString() //player1
+                                    && row.Field<string>("level_ID") == this.Level_ID.ToString() //level1
                               select row).SingleOrDefault();
 
-            result.ItemArray[2] = this.Life_Count; // finished level with this many lives left
-            result.ItemArray[3] = this.Level_Score; // final score of the level
-            result.ItemArray[4] = this.Level_Time; // how long it took to complete the level in seconds
-            result.ItemArray[5] = this.Special_Count; // how many special items were found in the level-default is one if the player finished the level
-            result.ItemArray[6] = this.Monster_Count; // how many bad guys were defeated
+            result.ItemArray[2] = this.Life_Count.ToString(); // finished level with this many lives left
+            result.ItemArray[3] = this.Level_Score.ToString(); // final score of the level
+            result.ItemArray[4] = this.Level_Time.ToString(); // how long it took to complete the level in seconds
+            result.ItemArray[5] = this.Special_Count.ToString(); // how many special items were found in the level-default is one if the player finished the level
+            result.ItemArray[6] = this.Monster_Count.ToString(); // how many bad guys were defeated
             result.ItemArray[7] = DateTime.Now.ToString(); //last played
             if (result.ItemArray[8].ToString() == String.Empty)
             {
@@ -78,11 +75,11 @@ namespace Capstone_Game_Platform
         {
             DataTable dt = ds.Tables[player_achievement];
             DataRow result = (from row in dt.AsEnumerable()
-                              where row.Field<int>("player_ID") == this.Player_ID
-                                    && row.Field<int>("achievement_ID") == (int)(Achievement)this.Player_Achievement
+                              where row.Field<string>("player_ID") == this.Player_ID.ToString()
+                                    && row.Field<string>("achievement_ID") == ((int)(Achievement)this.Player_Achievement).ToString()
                       select row).SingleOrDefault();
             //add to star collection achievement
-            if (this.Player_Achievement == Achievement.Star_Light)
+            if (Player_Achievement == Achievement.Star_Light)
             {
                 int starCount = int.Parse(this.Achievement_Data.ToString()) + int.Parse(result.ItemArray[2].ToString());
                 result.ItemArray[2] = starCount.ToString();

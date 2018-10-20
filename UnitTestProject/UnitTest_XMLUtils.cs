@@ -1,6 +1,8 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Capstone_Game_Platform;
+using System.IO;
 
 namespace UnitTestProject
 {
@@ -12,7 +14,7 @@ namespace UnitTestProject
         {
             XMLUtils xmlUtils = new XMLUtils
             {
-                Path = $"c:\\temp\\Cloud9Data.xml"
+                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Cloud9Data.xml")
             };
             xmlUtils.DeleteXMLfile();
             bool result = xmlUtils.CreateXMLfile();
@@ -24,7 +26,7 @@ namespace UnitTestProject
         {
             XMLUtils xmlUtils = new XMLUtils
             {
-                Path = $"c:\\temp\\Cloud9Data.xml"
+                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Cloud9Data.xml")
             };
             xmlUtils.DeleteXMLfile();
             DataSet result = xmlUtils.ReadXMLfile();
@@ -37,7 +39,7 @@ namespace UnitTestProject
         {
             XMLUtils xmlUtils = new XMLUtils
             {
-                Path = $"c:\\temp\\Cloud9Data.xml"
+                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Cloud9Data.xml")
             };
             xmlUtils.DeleteXMLfile();
             DataSet result = xmlUtils.ReadXMLfile();

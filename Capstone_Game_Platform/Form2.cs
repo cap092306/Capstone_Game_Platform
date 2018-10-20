@@ -133,6 +133,18 @@ namespace Capstone_Game_Platform
                         //label3.Text = score.ToString();
                     }
                 }
+                if (x is PictureBox && x.Tag == "bolt")
+                    if (player.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        {
+                            DeathSound.Play();
+                            gameTimer.Stop(); // stop the timer
+                            DeathBox2 DeathBox2 = new DeathBox2();
+                            DeathBox2.Show();
+                            //MessageBox.Show("You Died, the moon is laughing!!!" + Environment.NewLine + Environment.NewLine + "                  BAHAHAHA!!!"); // show the message box
+                            this.Close();
+                        }
+                    }
             }
             // if the player collides with the door and has key boolean is true
             if (player.Bounds.IntersectsWith(door.Bounds) && blnHasKey)
@@ -221,6 +233,28 @@ namespace Capstone_Game_Platform
         private void pictureBox12_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int width = this.Width;
+            if (Bolt_L2.Location.X > width - Bolt_L2.Width)
+            {
+                Bolt_L2.Location = new Point(1, Bolt_L2.Location.Y);
+            }
+            else
+            { Bolt_L2.Location = new Point(Bolt_L2.Location.X + 50, Bolt_L2.Location.Y); }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            int width = this.Width;
+            if (BoltL2_2.Location.X > width - BoltL2_2.Width)
+            {
+                BoltL2_2.Location = new Point(1, BoltL2_2.Location.Y);
+            }
+            else
+            { BoltL2_2.Location = new Point(BoltL2_2.Location.X + 50, BoltL2_2.Location.Y); }
         }
     }
 }

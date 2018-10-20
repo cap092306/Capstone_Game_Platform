@@ -246,6 +246,9 @@
     <None Include="Resources\Cloud_L3_Med.gif" />
     <None Include="Resources\Cloud_L3_Low1.gif" />
     <EmbeddedResource Include="Resources\Cloud9Data.xml" />
+    <None Include="Resources\Moon.gif" />
+    <None Include="Resources\Bolt_L1.gif" />
+    <None Include="Resources\Bolt_L2.gif" />
     <Content Include="Resources\Raindrop.gif" />
     <None Include="Resources\Water Drop Sound High-SoundBible.com-1387792987.wav" />
   </ItemGroup>

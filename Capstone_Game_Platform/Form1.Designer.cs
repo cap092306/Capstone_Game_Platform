@@ -67,6 +67,8 @@
             this.door = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.background = new System.Windows.Forms.PictureBox();
+            this.Bolt_L1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
@@ -103,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bolt_L1)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
@@ -499,7 +502,7 @@
             // 
             this.player.BackColor = System.Drawing.Color.LightSkyBlue;
             this.player.Image = global::Capstone_Game_Platform.Properties.Resources.Raindrop1;
-            this.player.Location = new System.Drawing.Point(50, 382);
+            this.player.Location = new System.Drawing.Point(12, 374);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(27, 45);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -540,9 +543,27 @@
             this.background.TabIndex = 0;
             this.background.TabStop = false;
             // 
+            // Bolt_L1
+            // 
+            this.Bolt_L1.Image = global::Capstone_Game_Platform.Properties.Resources.Bolt_L1;
+            this.Bolt_L1.Location = new System.Drawing.Point(270, 360);
+            this.Bolt_L1.Name = "Bolt_L1";
+            this.Bolt_L1.Size = new System.Drawing.Size(25, 59);
+            this.Bolt_L1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Bolt_L1.TabIndex = 40;
+            this.Bolt_L1.TabStop = false;
+            this.Bolt_L1.Tag = "bolt";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 400;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(653, 477);
+            this.Controls.Add(this.Bolt_L1);
             this.Controls.Add(this.pictureBox31);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox29);
@@ -625,6 +646,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.door)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bolt_L1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -669,6 +691,8 @@
         private System.Windows.Forms.PictureBox pictureBox31;
         private System.Windows.Forms.PictureBox pictureBox25;
         private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.PictureBox Bolt_L1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

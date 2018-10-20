@@ -24,6 +24,7 @@ namespace Capstone_Game_Platform
             Form Form1 = new Form1();
             Form1.Show();
             Theme.Stop();
+            
             //this.Dispose();
         }
         

@@ -217,5 +217,21 @@ namespace Capstone_Game_Platform
         {
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int width = this.Width;
+if(Moon.Location.X > width - Moon.Width)
+            {
+                Moon.Location = new Point(1, Moon.Location.Y);
+            }
+else
+            { Moon.Location = new Point(Moon.Location.X + 100, Moon.Location.Y +2); }
+        }
+
+        private void background_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

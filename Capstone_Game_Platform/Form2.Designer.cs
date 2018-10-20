@@ -63,6 +63,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.background = new System.Windows.Forms.PictureBox();
+            this.Bolt_L2 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.BoltL2_2 = new System.Windows.Forms.PictureBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
@@ -95,6 +99,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bolt_L2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BoltL2_2)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
@@ -482,11 +488,47 @@
             this.background.TabIndex = 40;
             this.background.TabStop = false;
             // 
+            // Bolt_L2
+            // 
+            this.Bolt_L2.Image = global::Capstone_Game_Platform.Properties.Resources.Bolt_L2;
+            this.Bolt_L2.Location = new System.Drawing.Point(113, 361);
+            this.Bolt_L2.Name = "Bolt_L2";
+            this.Bolt_L2.Size = new System.Drawing.Size(25, 59);
+            this.Bolt_L2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Bolt_L2.TabIndex = 76;
+            this.Bolt_L2.TabStop = false;
+            this.Bolt_L2.Tag = "bolt";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 400;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // BoltL2_2
+            // 
+            this.BoltL2_2.Image = global::Capstone_Game_Platform.Properties.Resources.Bolt_L2;
+            this.BoltL2_2.Location = new System.Drawing.Point(598, 361);
+            this.BoltL2_2.Name = "BoltL2_2";
+            this.BoltL2_2.Size = new System.Drawing.Size(25, 59);
+            this.BoltL2_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BoltL2_2.TabIndex = 77;
+            this.BoltL2_2.TabStop = false;
+            this.BoltL2_2.Tag = "bolt";
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 600;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 481);
+            this.Controls.Add(this.BoltL2_2);
+            this.Controls.Add(this.Bolt_L2);
             this.Controls.Add(this.pictureBox31);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox29);
@@ -559,6 +601,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bolt_L2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BoltL2_2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -599,5 +643,9 @@
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox background;
+        private System.Windows.Forms.PictureBox Bolt_L2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox BoltL2_2;
+        private System.Windows.Forms.Timer timer2;
     }
 }

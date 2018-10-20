@@ -19,7 +19,7 @@ namespace Capstone_Game_Platform.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -76,6 +76,26 @@ namespace Capstone_Game_Platform.Properties {
         internal static System.Drawing.Bitmap BG_L11 {
             get {
                 object obj = ResourceManager.GetObject("BG_L11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bolt_L1 {
+            get {
+                object obj = ResourceManager.GetObject("Bolt_L1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bolt_L2 {
+            get {
+                object obj = ResourceManager.GetObject("Bolt_L2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,20 +223,23 @@ namespace Capstone_Game_Platform.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;
         ///&lt;cloud9&gt;
-        ///&lt;players&gt;
         ///  &lt;player&gt;
         ///    &lt;player_ID&gt;1&lt;/player_ID&gt;
         ///    &lt;player_name&gt;DewDrop&lt;/player_name&gt;
         ///    &lt;char_level&gt;1&lt;/char_level&gt;
-        ///    &lt;total_points&gt;0&lt;/total_points&gt;
+        ///    &lt;char_points&gt;0&lt;/char_points&gt;
         ///  &lt;/player&gt;
-        ///&lt;/players&gt;
-        ///  &lt;achievements&gt;
-        ///    &lt;achievement&gt;
-        ///      &lt;achievement_ID&gt;1&lt;/achievement_ID&gt;
-        ///      &lt;achievement_name&gt;Defeat the Moon&lt;/achievement_name&gt;
-        ///      &lt;achievement_desc&gt;Defeat the Moon and save the Sun.&lt;/achievement_desc&gt;
-        ///      &lt;achievement_data&gt;&lt;/achievement_data [rest of string was truncated]&quot;;.
+        ///  &lt;player&gt;
+        ///    &lt;player_ID&gt;2&lt;/player_ID&gt;
+        ///    &lt;player_name&gt;Rain&lt;/player_name&gt;
+        ///    &lt;char_level&gt;1&lt;/char_level&gt;
+        ///    &lt;char_points&gt;0&lt;/char_points&gt;
+        ///  &lt;/player&gt;
+        ///  &lt;player&gt;
+        ///    &lt;player_ID&gt;3&lt;/player_ID&gt;
+        ///    &lt;player_name&gt;River&lt;/player_name&gt;
+        ///    &lt;char_level&gt;1&lt;/char_level&gt;
+        ///    &lt;char_poin [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Cloud9Data {
             get {
@@ -260,6 +283,16 @@ namespace Capstone_Game_Platform.Properties {
         internal static System.Drawing.Bitmap Floor_Block_L3 {
             get {
                 object obj = ResourceManager.GetObject("Floor_Block_L3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Moon {
+            get {
+                object obj = ResourceManager.GetObject("Moon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

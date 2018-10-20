@@ -63,6 +63,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.background = new System.Windows.Forms.PictureBox();
+            this.Moon = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
@@ -95,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Moon)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
@@ -480,12 +483,30 @@
             this.background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.background.TabIndex = 76;
             this.background.TabStop = false;
+            this.background.Click += new System.EventHandler(this.background_Click);
+            // 
+            // Moon
+            // 
+            this.Moon.Image = global::Capstone_Game_Platform.Properties.Resources.Moon;
+            this.Moon.Location = new System.Drawing.Point(144, 2);
+            this.Moon.Name = "Moon";
+            this.Moon.Size = new System.Drawing.Size(90, 147);
+            this.Moon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Moon.TabIndex = 108;
+            this.Moon.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 300;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 477);
+            this.Controls.Add(this.Moon);
             this.Controls.Add(this.pictureBox31);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox29);
@@ -557,6 +578,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Moon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,5 +619,7 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox background;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.PictureBox Moon;
+        private System.Windows.Forms.Timer timer1;
     }
 }

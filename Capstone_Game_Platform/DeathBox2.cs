@@ -21,6 +21,8 @@ namespace Capstone_Game_Platform
         {
             Form2 Form2 = new Form2();
             Form2.Show();
+            this.Close();
+
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -21,6 +21,7 @@ namespace Capstone_Game_Platform
         public int Level_Time { get; set; } //second count
         public int Monster_Count { get; set; } //monsters killed
         public int Special_Count { get; set; } // special items found
+        public int Level_Attempts { get; set; } // how many times the level has been played
         public Achievement Player_Achievement { get; set; }
         public string Achievement_Data { get; set; }
         public DateTime Achievement_Date { get; set; }
@@ -54,17 +55,50 @@ namespace Capstone_Game_Platform
                               where row.Field<string>("player_ID") == this.Player_ID.ToString() //player1
                                     && row.Field<string>("level_ID") == this.Level_ID.ToString() //level1
                               select row).SingleOrDefault();
+            // save best stats
+            int life_count = int.Parse(result.ItemArray[2].ToString());
+            if (this.Life_Count > life_count)
+            {
+                result.ItemArray[2] = this.Life_Count.ToString(); // finished level with this many lives left
+            }
 
-            result.ItemArray[2] = this.Life_Count.ToString(); // finished level with this many lives left
-            result.ItemArray[3] = this.Level_Score.ToString(); // final score of the level
-            result.ItemArray[4] = this.Level_Time.ToString(); // how long it took to complete the level in seconds
-            result.ItemArray[5] = this.Special_Count.ToString(); // how many special items were found in the level-default is one if the player finished the level
-            result.ItemArray[6] = this.Monster_Count.ToString(); // how many bad guys were defeated
+            int level_score = int.Parse(result.ItemArray[3].ToString());
+            if (this.Level_Score > level_score)
+            {
+                result.ItemArray[3] = this.Level_Score.ToString(); // final score of the level
+            }
+
+            int level_time = int.Parse(result.ItemArray[4].ToString());
+            if (this.Level_Time > level_time)
+            { 
+                result.ItemArray[4] = this.Level_Time.ToString(); // how long it took to complete the level in seconds
+            }
+
+            int special_count = int.Parse(result.ItemArray[5].ToString());
+            if (this.Special_Count > special_count)
+            {
+                result.ItemArray[5] = this.Special_Count.ToString(); // how many special items were found in the level-default is one if the player finished the level
+            }
+
+            int monster_count = int.Parse(result.ItemArray[6].ToString());
+            if (this.Monster_Count > monster_count)
+            {
+                result.ItemArray[6] = this.Monster_Count.ToString(); // how many bad guys were defeated
+            }
+
             result.ItemArray[7] = DateTime.Now.ToString(); //last played
+
             if (result.ItemArray[8].ToString() == String.Empty)
             {
                 result.ItemArray[8] = DateTime.Now.ToString(); //completed the first time
             }
+
+            int level_attempts = int.Parse(result.ItemArray[9].ToString());
+            if (this.Level_Attempts > level_attempts)
+            {
+                result.ItemArray[9] = this.Level_Attempts.ToString(); // how many times the level has been played
+            }
+
             ds.AcceptChanges();
             xmlUtils.UpdateXMLfile(ds);
 

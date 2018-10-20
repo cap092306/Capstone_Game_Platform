@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Capstone_Game_Platform
 {
-    public partial class PlayerRanking : Form
+    public partial class PlayerStats : Form
     {
-        public PlayerRanking()
+        public PlayerStats()
         {
             InitializeComponent();
         }

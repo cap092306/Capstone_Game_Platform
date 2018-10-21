@@ -56,31 +56,31 @@ namespace Capstone_Game_Platform
                                     && row.Field<string>("level_ID") == this.Level_ID.ToString() //level1
                               select row).SingleOrDefault();
             // save best stats
-            int life_count = int.Parse(result.ItemArray[2].ToString());
+            int life_count = int.Parse(result.ItemArray[2].ToString() ?? "0");
             if (this.Life_Count > life_count)
             {
                 result.ItemArray[2] = this.Life_Count.ToString(); // finished level with this many lives left
             }
 
-            int level_score = int.Parse(result.ItemArray[3].ToString());
+            int level_score = int.Parse(result.ItemArray[3].ToString() ?? "0");
             if (this.Level_Score > level_score)
             {
                 result.ItemArray[3] = this.Level_Score.ToString(); // final score of the level
             }
 
-            int level_time = int.Parse(result.ItemArray[4].ToString());
+            int level_time = int.Parse(result.ItemArray[4].ToString() ?? "0");
             if (this.Level_Time > level_time)
             { 
                 result.ItemArray[4] = this.Level_Time.ToString(); // how long it took to complete the level in seconds
             }
 
-            int special_count = int.Parse(result.ItemArray[5].ToString());
+            int special_count = int.Parse(result.ItemArray[5].ToString() ?? "0");
             if (this.Special_Count > special_count)
             {
                 result.ItemArray[5] = this.Special_Count.ToString(); // how many special items were found in the level-default is one if the player finished the level
             }
 
-            int monster_count = int.Parse(result.ItemArray[6].ToString());
+            int monster_count = int.Parse(result.ItemArray[6].ToString() ?? "0");
             if (this.Monster_Count > monster_count)
             {
                 result.ItemArray[6] = this.Monster_Count.ToString(); // how many bad guys were defeated
@@ -93,7 +93,7 @@ namespace Capstone_Game_Platform
                 result.ItemArray[8] = DateTime.Now.ToString(); //completed the first time
             }
 
-            int level_attempts = int.Parse(result.ItemArray[9].ToString());
+            int level_attempts = int.Parse(result.ItemArray[9].ToString() ?? "0");
             if (this.Monster_Count < level_attempts)
             {
                 result.ItemArray[9] = this.Level_Attempts.ToString(); // how many times the level has been played
@@ -114,7 +114,7 @@ namespace Capstone_Game_Platform
             //add to star collection achievement
             if (Player_Achievement == Achievement.Star_Light)
             {
-                int starCount = int.Parse(this.Achievement_Data.ToString()) + int.Parse(result.ItemArray[2].ToString());
+                int starCount = int.Parse(this.Achievement_Data.ToString() ?? "0") + int.Parse(result.ItemArray[2].ToString() ?? "0");
                 result.ItemArray[2] = starCount.ToString();
                 if (starCount >= 1000 && result.ItemArray[3].ToString() == String.Empty)
                 {

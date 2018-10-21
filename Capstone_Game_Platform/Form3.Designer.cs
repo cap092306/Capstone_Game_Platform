@@ -490,10 +490,11 @@
             this.Moon.Image = global::Capstone_Game_Platform.Properties.Resources.Moon;
             this.Moon.Location = new System.Drawing.Point(144, 2);
             this.Moon.Name = "Moon";
-            this.Moon.Size = new System.Drawing.Size(90, 147);
-            this.Moon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Moon.Size = new System.Drawing.Size(73, 124);
+            this.Moon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Moon.TabIndex = 108;
             this.Moon.TabStop = false;
+            this.Moon.Tag = "Moon";
             // 
             // timer1
             // 

@@ -133,6 +133,18 @@ namespace Capstone_Game_Platform
                         //label3.Text = score.ToString();
                     }
                 }
+                if (x is PictureBox && x.Tag == "Moon")
+                    if (player.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        {
+                            DeathSound.Play();
+                            gameTimer.Stop(); // stop the timer
+                            DeathBox3 DeathBox3 = new DeathBox3();
+                            DeathBox3.Show();
+                            //MessageBox.Show("You Died, the moon is laughing!!!" + Environment.NewLine + Environment.NewLine + "                  BAHAHAHA!!!"); // show the message box
+                            this.Close();
+                        }
+                    }
             }
             // if the player collides with the door and has key boolean is true
             if (player.Bounds.IntersectsWith(door.Bounds) && blnHasKey)

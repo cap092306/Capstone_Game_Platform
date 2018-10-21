@@ -178,6 +178,9 @@
     <EmbeddedResource Include="LevelComplete3.resx">
       <DependentUpon>LevelComplete3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PlayerStats.resx">
+      <DependentUpon>PlayerStats.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>

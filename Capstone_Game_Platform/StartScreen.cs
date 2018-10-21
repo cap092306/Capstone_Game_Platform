@@ -18,6 +18,7 @@ namespace Capstone_Game_Platform
             InitializeComponent();
         }
         SoundPlayer Theme = new SoundPlayer(Resource1.looperman_l_1804190_0133365_trippy_psychedelic_8_bit_sample_meltdown);
+        public static int PlayerID = 1;// gives us the ability to allow for more than player
 
         private void button1_Click(object sender, EventArgs e)
         {

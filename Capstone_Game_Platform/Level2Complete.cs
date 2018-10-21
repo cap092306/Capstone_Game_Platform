@@ -38,7 +38,7 @@ namespace Capstone_Game_Platform
         {
             SaveGameHelper saveGameHelper = new SaveGameHelper();
             saveGameHelper.Level_ID = 2;
-            saveGameHelper.Player_ID = 1;
+            saveGameHelper.Player_ID = StartScreen.PlayerID;
             saveGameHelper.Level_Score = Form2.score;
             saveGameHelper.Special_Count = 1; //wind + 
             saveGameHelper.Monster_Count = 0; //lightbolt kills

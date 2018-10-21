@@ -143,6 +143,7 @@
       <DependentUpon>UserManual.cs</DependentUpon>
     </Compile>
     <Compile Include="utils\EncryptionUtils.cs" />
+    <Compile Include="utils\LinqPivot.cs" />
     <Compile Include="utils\PasswordGenerator.cs" />
     <Compile Include="StartScreen.cs">
       <SubType>Form</SubType>

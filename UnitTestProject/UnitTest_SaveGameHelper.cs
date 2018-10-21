@@ -19,7 +19,7 @@ namespace UnitTestProject
             saveGameHelper.Level_Score = 200;
             saveGameHelper.Level_Time = 1000;
             saveGameHelper.Special_Count = 1;
-            saveGameHelper.Monster_Count = 0;            
+            saveGameHelper.Monster_Count = 0;
             saveGameHelper.SaveLevel();
         }
 

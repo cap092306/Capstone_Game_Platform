@@ -94,11 +94,10 @@ namespace Capstone_Game_Platform
             }
 
             int level_attempts = int.Parse(result.ItemArray[9].ToString());
-            if (this.Level_Attempts > level_attempts)
+            if (this.Monster_Count < level_attempts)
             {
                 result.ItemArray[9] = this.Level_Attempts.ToString(); // how many times the level has been played
             }
-
             ds.AcceptChanges();
             xmlUtils.UpdateXMLfile(ds);
 

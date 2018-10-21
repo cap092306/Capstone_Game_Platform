@@ -42,6 +42,7 @@ namespace Capstone_Game_Platform
             saveGameHelper.Special_Count = 1; //wind + 
             saveGameHelper.Monster_Count = 0; //lightbolt kills
             saveGameHelper.Level_Time = 0; // time to complete level in seconds
+            saveGameHelper.Level_Attempts = 1; // how many attempts before completing level
             saveGameHelper.SaveLevel();
 
             saveGameHelper.Player_Achievement = SaveGameHelper.Achievement.Star_Light;

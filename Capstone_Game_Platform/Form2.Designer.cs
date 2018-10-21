@@ -491,7 +491,7 @@
             // Bolt_L2
             // 
             this.Bolt_L2.Image = global::Capstone_Game_Platform.Properties.Resources.Bolt_L2;
-            this.Bolt_L2.Location = new System.Drawing.Point(113, 361);
+            this.Bolt_L2.Location = new System.Drawing.Point(239, 361);
             this.Bolt_L2.Name = "Bolt_L2";
             this.Bolt_L2.Size = new System.Drawing.Size(25, 59);
             this.Bolt_L2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -508,7 +508,7 @@
             // BoltL2_2
             // 
             this.BoltL2_2.Image = global::Capstone_Game_Platform.Properties.Resources.Bolt_L2;
-            this.BoltL2_2.Location = new System.Drawing.Point(598, 361);
+            this.BoltL2_2.Location = new System.Drawing.Point(396, 361);
             this.BoltL2_2.Name = "BoltL2_2";
             this.BoltL2_2.Size = new System.Drawing.Size(25, 59);
             this.BoltL2_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

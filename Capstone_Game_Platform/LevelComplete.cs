@@ -39,11 +39,15 @@ namespace Capstone_Game_Platform
             saveGameHelper.Level_ID = 1;
             saveGameHelper.Player_ID = 1;
             saveGameHelper.Level_Score = Form1.score;
+            saveGameHelper.Special_Count = 1; //wind + 
+            saveGameHelper.Monster_Count = 0; //lightbolt kills
+            saveGameHelper.Level_Time = 0; // time to complete level in seconds
             saveGameHelper.SaveLevel();
+
             saveGameHelper.Player_Achievement = SaveGameHelper.Achievement.Star_Light;
             saveGameHelper.Achievement_Data = (Form1.score / 10).ToString();
             saveGameHelper.SaveAchievement();
-            this.label4.Visible = true;
+            label4.Visible = true;
         }
     }
 }

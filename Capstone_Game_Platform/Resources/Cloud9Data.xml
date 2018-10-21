@@ -107,6 +107,7 @@
     <monster_count>0</monster_count>
     <last_played/>
     <completed/>
+    <level_attempts/>
   </player_history>
   <player_history>
     <player_ID>2</player_ID>
@@ -118,6 +119,7 @@
     <monster_count>25</monster_count>
     <last_played/>
     <completed/>
+    <level_attempts/>
   </player_history>
   <player_history>
     <player_ID>3</player_ID>
@@ -129,6 +131,7 @@
     <monster_count>25</monster_count>
     <last_played/>
     <completed/>
+    <level_attempts/>
   </player_history>
   <player_achievement>
     <player_ID>1</player_ID>

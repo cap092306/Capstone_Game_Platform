@@ -40,7 +40,16 @@ namespace Capstone_Game_Platform
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Form Help = new UserManual();
+            Help.Show();
+            Theme.Stop();
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form Stats = new PlayerStats();
+            Stats.Show();
+            Theme.Stop();
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Capstone_Game_Platform;
+using System.IO;
 
 namespace UnitTestProject
 {
@@ -12,6 +13,12 @@ namespace UnitTestProject
         [TestMethod]
         public void SaveLevel_TestMethod()
         {
+            XMLUtils xmlUtils = new XMLUtils
+            {
+                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
+            };
+            xmlUtils.DeleteXMLfile();
+
             SaveGameHelper saveGameHelper = new SaveGameHelper();
             saveGameHelper.Level_ID = 1;
             saveGameHelper.Player_ID = 1;

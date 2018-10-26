@@ -19,7 +19,7 @@ namespace Capstone_Game_Platform.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -484,6 +484,15 @@ namespace Capstone_Game_Platform.Properties {
             get {
                 object obj = ResourceManager.GetObject("Tornado_L2_Dark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cloud9Data.xml.
+        /// </summary>
+        internal static string XMLDBName {
+            get {
+                return ResourceManager.GetString("XMLDBName", resourceCulture);
             }
         }
     }

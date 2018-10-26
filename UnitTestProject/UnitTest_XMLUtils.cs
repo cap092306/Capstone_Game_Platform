@@ -14,7 +14,7 @@ namespace UnitTestProject
         {
             XMLUtils xmlUtils = new XMLUtils
             {
-                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Cloud9Data.xml")
+                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
             xmlUtils.DeleteXMLfile();
             bool result = xmlUtils.CreateXMLfile();
@@ -26,7 +26,7 @@ namespace UnitTestProject
         {
             XMLUtils xmlUtils = new XMLUtils
             {
-                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Cloud9Data.xml")
+                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
             xmlUtils.DeleteXMLfile();
             DataSet result = xmlUtils.ReadXMLfile();
@@ -39,7 +39,7 @@ namespace UnitTestProject
         {
             XMLUtils xmlUtils = new XMLUtils
             {
-                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Cloud9Data.xml")
+                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
             xmlUtils.DeleteXMLfile();
             DataSet result = xmlUtils.ReadXMLfile();
@@ -54,6 +54,16 @@ namespace UnitTestProject
             result = xmlUtils.ReadXMLfile();
             string savedVal = result.Tables[0].Rows[0]["player_name"].ToString();
             Assert.AreNotEqual(orginalVal, savedVal, $"Expects the new saved value to be different.");
+        }
+
+        [TestMethod]
+        public void DeleteXMLFile_TestMethod()
+        {
+            XMLUtils xmlUtils = new XMLUtils
+            {
+                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
+            };
+            xmlUtils.DeleteXMLfile();
         }
     }
 }

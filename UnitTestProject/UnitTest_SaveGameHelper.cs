@@ -15,7 +15,7 @@ namespace UnitTestProject
         {
             XMLUtils xmlUtils = new XMLUtils
             {
-                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
+                FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
             xmlUtils.DeleteXMLfile();
 
@@ -37,7 +37,7 @@ namespace UnitTestProject
             SaveGameHelper saveGameHelper = new SaveGameHelper();
             saveGameHelper.Level_ID = 1;
             saveGameHelper.Player_ID = 1;
-            saveGameHelper.Player_Achievement = SaveGameHelper.Achievement.Star_Light;
+            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Light;
             saveGameHelper.Achievement_Data = (200 / 10).ToString();
             saveGameHelper.SaveAchievement();
         }

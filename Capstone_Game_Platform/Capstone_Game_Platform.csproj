@@ -211,6 +211,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Cloud9Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Resources\Cloud_L1.gif" />
   </ItemGroup>
   <ItemGroup>

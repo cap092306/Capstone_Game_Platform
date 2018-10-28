@@ -45,7 +45,7 @@ namespace Capstone_Game_Platform
             saveGameHelper.Level_Attempts = 1; // how many attempts before completing level
             saveGameHelper.SaveLevel();
 
-            saveGameHelper.Player_Achievement = SaveGameHelper.Achievement.Star_Light;
+            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Light;
             saveGameHelper.Achievement_Data = (Form1.score / 10).ToString();
             saveGameHelper.SaveAchievement();
             label4.Visible = true;

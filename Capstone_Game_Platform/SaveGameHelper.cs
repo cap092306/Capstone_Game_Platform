@@ -18,16 +18,21 @@ namespace Capstone_Game_Platform
         public int Monster_Count { get; set; } //monsters killed
         public int Special_Count { get; set; } // special items found
         public int Level_Attempts { get; set; } // how many times the level has been played
-        public Achievement Player_Achievement { get; set; }
+        public Achievements Player_Achievement { get; set; }
         public string Achievement_Data { get; set; }
 
         private XMLUtils xmlUtils;
         private DataSet ds;
         //tables in XML managed in this helper
 
-        public enum XMLTbls : int {player = 0, achievement = 1, level = 2, player_history = 3, player_achievement = 4}
+        public enum XMLTbls : int {player = 0, player_history = 1, player_achievement = 2, level = 3}
         //achievements
-        public enum Achievement : int { Defeat_Moon = 1, Star_Light = 2, light_speed = 3}
+        public enum Achievement_Counters : int { Stars = 1000, Lighting = 100}
+        public enum Achievements : int {Defeat_Moon = 1, Star_Power = 2, Star_Light = 3, Light_Speed_1 = 4,
+            Light_Speed_2 = 5, Light_Speed_3 = 6, Specials_1 = 7, Specials_2 = 8, Specials_3 = 9,
+            Shocked = 10, Electrocuted = 11, Kills_1 = 12, Kills_2 = 13, Kills_3 = 14, Hopper = 15, Surfer = 16,
+            Head = 17, Black_Hole = 18, Skipper = 19, Jump = 20, Sacrifice = 21, Rider = 22, Chaser = 23,
+            Portal_1 = 24, Portal_2 = 25}
 
         public  SaveGameHelper(){
             LoadXMLUtils();
@@ -37,7 +42,7 @@ namespace Capstone_Game_Platform
         {
             xmlUtils = new XMLUtils()
             {
-                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
+                FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
             ds = xmlUtils.ReadXMLfile();
         }
@@ -106,21 +111,34 @@ namespace Capstone_Game_Platform
                               where row.Field<string>("player_ID") == Player_ID.ToString()
                                     && row.Field<string>("achievement_ID") == ((int)Player_Achievement).ToString()
                       select row).SingleOrDefault();
-            //add to star collection achievement
-            int intAchievementData = 0;
-            if (Player_Achievement == Achievement.Star_Light)
-            {
-                int.TryParse(Achievement_Data.ToString(), out intAchievementData);
-                int.TryParse(result.ItemArray[2].ToString(), out int starCount);
-                // if we add a second level of star collection add logic to handle it here
-                result.ItemArray[2] = (intAchievementData + starCount).ToString();
-                if ((intAchievementData + starCount) >= 1000 && result.ItemArray[3].ToString() == String.Empty)
+
+            int.TryParse(Achievement_Data.ToString(), out int intAchievementData);
+            int.TryParse(result.ItemArray[2].ToString(), out int achievementCount);
+
+            if (Player_Achievement == Achievements.Star_Light) // Star Collection is a counter
+            {   // if we add a second level of star collection add logic to handle it here
+                result.ItemArray[2] = (intAchievementData + achievementCount).ToString();
+                if ((intAchievementData + achievementCount) >= (int)Achievement_Counters.Stars && result.ItemArray[3].ToString() == string.Empty)
                 {
                     result.ItemArray[3] = DateTime.Now.ToString();
                 }
             }
-            //other achievements maybe true or false data types, or will be tested against the level data
-            //thus they will have to be handled differently
+
+            if (Player_Achievement == Achievements.Electrocuted) // Death by Lighting is a counter
+            {   // if we add a second level of star collection add logic to handle it here
+                result.ItemArray[2] = (intAchievementData + achievementCount).ToString();
+                if ((intAchievementData + achievementCount) >= (int)Achievement_Counters.Lighting && result.ItemArray[3].ToString() == string.Empty)
+                {
+                    result.ItemArray[3] = DateTime.Now.ToString();
+                }
+            }
+            
+            // All other achievements are true or false data types, save as 1, to change from default of 0
+            if(result.ItemArray[3].ToString() == string.Empty)
+            {
+                result.ItemArray[2] = 1;
+                result.ItemArray[3] = DateTime.Now.ToString(); // record date of first achievement 
+            }
 
             ds.AcceptChanges();
             xmlUtils.UpdateXMLfile(ds);

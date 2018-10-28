@@ -14,7 +14,7 @@ namespace UnitTestProject
         {
             XMLUtils xmlUtils = new XMLUtils
             {
-                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
+                FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
             xmlUtils.DeleteXMLfile();
             bool result = xmlUtils.CreateXMLfile();
@@ -26,12 +26,12 @@ namespace UnitTestProject
         {
             XMLUtils xmlUtils = new XMLUtils
             {
-                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
+                FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
             xmlUtils.DeleteXMLfile();
             DataSet result = xmlUtils.ReadXMLfile();
             int tblCount = result.Tables.Count;
-            Assert.AreEqual(5, tblCount, $"Expects 5 tables to be in default XML file.");
+            Assert.AreEqual(4, tblCount, $"Expects 4 tables to be in default XML file.");
         }
 
         [TestMethod]
@@ -39,7 +39,7 @@ namespace UnitTestProject
         {
             XMLUtils xmlUtils = new XMLUtils
             {
-                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
+                FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
             xmlUtils.DeleteXMLfile();
             DataSet result = xmlUtils.ReadXMLfile();
@@ -61,9 +61,19 @@ namespace UnitTestProject
         {
             XMLUtils xmlUtils = new XMLUtils
             {
-                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
+                FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
-            xmlUtils.DeleteXMLfile();
+            Assert.IsTrue(xmlUtils.DeleteXMLfile());
+        }
+
+        [TestMethod]
+        public void ValidateXMLFile_TestMethod()
+        {
+            XMLUtils xmlUtils = new XMLUtils
+            {
+                FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
+            };
+            Assert.IsTrue(xmlUtils.ValidateXmlFile());
         }
     }
 }

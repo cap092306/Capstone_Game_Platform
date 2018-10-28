@@ -222,28 +222,42 @@ namespace Capstone_Game_Platform.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;
-        ///&lt;cloud9&gt;
+        ///&lt;cloud9 xmlns:CO=&quot;urn:Cloud9Data&quot;&gt;
         ///  &lt;player&gt;
         ///    &lt;player_ID&gt;1&lt;/player_ID&gt;
         ///    &lt;player_name&gt;DewDrop&lt;/player_name&gt;
         ///    &lt;char_level&gt;1&lt;/char_level&gt;
         ///    &lt;char_points&gt;0&lt;/char_points&gt;
         ///  &lt;/player&gt;
-        ///  &lt;player&gt;
-        ///    &lt;player_ID&gt;2&lt;/player_ID&gt;
-        ///    &lt;player_name&gt;Rain&lt;/player_name&gt;
-        ///    &lt;char_level&gt;1&lt;/char_level&gt;
-        ///    &lt;char_points&gt;0&lt;/char_points&gt;
-        ///  &lt;/player&gt;
-        ///  &lt;player&gt;
-        ///    &lt;player_ID&gt;3&lt;/player_ID&gt;
-        ///    &lt;player_name&gt;River&lt;/player_name&gt;
-        ///    &lt;char_level&gt;1&lt;/char_level&gt;
-        ///    &lt;char_poin [rest of string was truncated]&quot;;.
+        ///  &lt;player_history&gt;
+        ///    &lt;player_ID&gt;1&lt;/player_ID&gt;
+        ///    &lt;level_ID&gt;1&lt;/level_ID&gt;
+        ///    &lt;life_count&gt;0&lt;/life_count&gt;
+        ///    &lt;points&gt;0&lt;/points&gt;
+        ///    &lt;level_time&gt;0&lt;/level_time&gt;
+        ///    &lt;special_count&gt;0&lt;/special_count&gt;
+        ///    &lt;monster_count&gt;0&lt;/monster_count&gt;
+        ///    &lt;last_played [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string Cloud9Data {
+        internal static string Cloud9DataXML {
             get {
-                return ResourceManager.GetString("Cloud9Data", resourceCulture);
+                return ResourceManager.GetString("Cloud9DataXML", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;xs:schema attributeFormDefault=&quot;unqualified&quot; elementFormDefault=&quot;qualified&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:CO=&quot;urn:Cloud9Data&quot;  targetNamespace=&quot;urn:Cloud9Data&quot;&gt;
+        ///  &lt;xs:element name=&quot;player_ID&quot; type=&quot;xs:integer&quot;/&gt;
+        ///  &lt;xs:element name=&quot;player_name&quot; type=&quot;xs:string&quot;/&gt;
+        ///  &lt;xs:element name=&quot;char_level&quot; type=&quot;xs:integer&quot;/&gt;
+        ///  &lt;xs:element name=&quot;char_points&quot; type=&quot;xs:integer&quot;/&gt;
+        ///  &lt;xs:element name=&quot;level_ID&quot; type=&quot;xs:integer&quot;/&gt;
+        ///  &lt;xs:element name=&quot;life_count&quot; type=&quot;xs:integer&quot;/&gt;
+        ///  &lt;xs:element [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Cloud9DataXSD {
+            get {
+                return ResourceManager.GetString("Cloud9DataXSD", resourceCulture);
             }
         }
         
@@ -493,6 +507,24 @@ namespace Capstone_Game_Platform.Properties {
         internal static string XMLDBName {
             get {
                 return ResourceManager.GetString("XMLDBName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cloud9Data.
+        /// </summary>
+        internal static string XMLNSURN {
+            get {
+                return ResourceManager.GetString("XMLNSURN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cloud9Data.xsd.
+        /// </summary>
+        internal static string XSDDBName {
+            get {
+                return ResourceManager.GetString("XSDDBName", resourceCulture);
             }
         }
     }

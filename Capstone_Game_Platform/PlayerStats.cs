@@ -22,7 +22,7 @@ namespace Capstone_Game_Platform
         {
             xmlUtils = new XMLUtils()
             {
-                Path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
+                FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
             ds = xmlUtils.ReadXMLfile();
             LoadPlayerHistory();
@@ -66,30 +66,28 @@ namespace Capstone_Game_Platform
 
         private void LoadPlayerAchievements()
         {
-            //DataTable dt1 = ds.Tables[(int)SaveGameHelper.XMLTbls.achievement];
-            //DataTable dt2 = ds.Tables[(int)SaveGameHelper.XMLTbls.player_achievement];
-            //IEnumerable<DataRow> results = from d1 in dt1.AsEnumerable()
-            //                               join d2 in dt2.AsEnumerable() on d1["achievement_ID"].ToString() equals d2["achievement_ID"].ToString()
-            //                               where d2["player_ID"].ToString() == StartScreen.PlayerID.ToString()
-            //                               select new DataRow
-            //                               {
-            //                                   achievement_ID = (int)d1["achievement_ID"],
-            //                                   achievement_name = (string)d1["achievement_name"],
-            //                                   achievement_desc = (string)d1["achievement_desc"],
-            //                                   achievement_data = (string)d2["achievement_data"],
-            //                                   achievement_date = (System.DateTime)d2["achievement_date"]
-            //                               };
-            //DataTable CombinedDataTable = results.CopyToDataTable<DataRow>();
+            DataTable dt = ds.Tables[(int)SaveGameHelper.XMLTbls.player_achievement];
+            DataTable results = dt.AsEnumerable()
+                .Where(i => i.Field<String>("player_ID") == StartScreen.PlayerID.ToString())
+                .OrderBy(i => i.Field<String>("achievement_ID"))
+                .CopyToDataTable();
 
+            results.TableName = "Player Achievements";
+            results.Columns.RemoveAt(0); // player_id
+            results.Columns.RemoveAt(0); //achievement_id
+            results.Columns["achievement_name"].SetOrdinal(0);
+            results.Columns["achievement_desc"].SetOrdinal(1);
+            results.Columns["achievement_data"].SetOrdinal(2);
+            results.Columns["achievement_date"].SetOrdinal(3);
+            
+            dataGridView2.DataSource = results;
+            dataGridView1.Columns[0].HeaderText = "Achievement";
+            dataGridView1.Columns[1].HeaderText = "Details";
+            dataGridView1.Columns[2].HeaderText = "Status";
+            dataGridView1.Columns[3].HeaderText = "Date Achieved";
 
-
-            //CombinedDataTable.TableName = "Player Achievements";
-            //CombinedDataTable.Columns.RemoveAt(0); // player_id
-
-            //dataGridView2.DataSource = CombinedDataTable;
-
-            //dataGridView2.Show();
-            //dataGridView2.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
+            dataGridView2.Show();
+            dataGridView2.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
         }
     }
 }

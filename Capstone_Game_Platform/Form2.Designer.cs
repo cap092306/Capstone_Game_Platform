@@ -113,9 +113,10 @@
             // 
             this.pictureBox31.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox31.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L2_Light;
-            this.pictureBox31.Location = new System.Drawing.Point(1688, 374);
+            this.pictureBox31.Location = new System.Drawing.Point(2532, 575);
+            this.pictureBox31.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox31.Size = new System.Drawing.Size(52, 46);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox31.TabIndex = 75;
             this.pictureBox31.TabStop = false;
@@ -125,9 +126,10 @@
             // 
             this.pictureBox30.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox30.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox30.Image")));
-            this.pictureBox30.Location = new System.Drawing.Point(1943, 390);
+            this.pictureBox30.Location = new System.Drawing.Point(2914, 600);
+            this.pictureBox30.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox30.Size = new System.Drawing.Size(52, 46);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox30.TabIndex = 74;
             this.pictureBox30.TabStop = false;
@@ -136,7 +138,8 @@
             // pictureBox29
             // 
             this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
-            this.pictureBox29.Location = new System.Drawing.Point(1840, 88);
+            this.pictureBox29.Location = new System.Drawing.Point(2760, 135);
+            this.pictureBox29.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(138, 54);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -149,7 +152,8 @@
             this.pictureBox28.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox28.Image = global::Capstone_Game_Platform.Properties.Resources.Floor_Block_L2;
-            this.pictureBox28.Location = new System.Drawing.Point(1840, 426);
+            this.pictureBox28.Location = new System.Drawing.Point(2760, 655);
+            this.pictureBox28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(138, 54);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -160,7 +164,8 @@
             // pictureBox27
             // 
             this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
-            this.pictureBox27.Location = new System.Drawing.Point(1157, 100);
+            this.pictureBox27.Location = new System.Drawing.Point(1736, 154);
+            this.pictureBox27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(138, 54);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -173,7 +178,8 @@
             this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox25.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox25.Image")));
-            this.pictureBox25.Location = new System.Drawing.Point(884, 426);
+            this.pictureBox25.Location = new System.Drawing.Point(1326, 655);
+            this.pictureBox25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(138, 54);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -186,7 +192,8 @@
             this.pictureBox24.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox24.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox24.Image")));
-            this.pictureBox24.Location = new System.Drawing.Point(1015, 426);
+            this.pictureBox24.Location = new System.Drawing.Point(1522, 655);
+            this.pictureBox24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(138, 54);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -199,7 +206,8 @@
             this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
-            this.pictureBox21.Location = new System.Drawing.Point(549, 426);
+            this.pictureBox21.Location = new System.Drawing.Point(824, 655);
+            this.pictureBox21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(138, 54);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -212,7 +220,8 @@
             this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(303, 426);
+            this.pictureBox19.Location = new System.Drawing.Point(454, 655);
+            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(138, 54);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -224,7 +233,8 @@
             // 
             this.pictureBox23.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
-            this.pictureBox23.Location = new System.Drawing.Point(41, 260);
+            this.pictureBox23.Location = new System.Drawing.Point(62, 400);
+            this.pictureBox23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(138, 54);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -236,7 +246,8 @@
             // 
             this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(0, 100);
+            this.pictureBox22.Location = new System.Drawing.Point(0, 154);
+            this.pictureBox22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(138, 54);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -249,7 +260,8 @@
             this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.Location = new System.Drawing.Point(0, 426);
+            this.pictureBox20.Location = new System.Drawing.Point(0, 655);
+            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(138, 54);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -261,9 +273,10 @@
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox16.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L2_Dark;
-            this.pictureBox16.Location = new System.Drawing.Point(272, 48);
+            this.pictureBox16.Location = new System.Drawing.Point(408, 74);
+            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox16.Size = new System.Drawing.Size(52, 46);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 60;
             this.pictureBox16.TabStop = false;
@@ -273,9 +286,10 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L2_Med;
-            this.pictureBox15.Location = new System.Drawing.Point(530, 224);
+            this.pictureBox15.Location = new System.Drawing.Point(795, 345);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox15.Size = new System.Drawing.Size(52, 46);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 59;
             this.pictureBox15.TabStop = false;
@@ -284,9 +298,10 @@
             // pictureBox14
             // 
             this.pictureBox14.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L2_Dark;
-            this.pictureBox14.Location = new System.Drawing.Point(539, 100);
+            this.pictureBox14.Location = new System.Drawing.Point(808, 154);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox14.Size = new System.Drawing.Size(52, 46);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 58;
             this.pictureBox14.TabStop = false;
@@ -295,9 +310,10 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L2_Dark;
-            this.pictureBox13.Location = new System.Drawing.Point(620, 23);
+            this.pictureBox13.Location = new System.Drawing.Point(930, 35);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox13.Size = new System.Drawing.Size(52, 46);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 57;
             this.pictureBox13.TabStop = false;
@@ -307,9 +323,10 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L2_Med;
-            this.pictureBox12.Location = new System.Drawing.Point(312, 234);
+            this.pictureBox12.Location = new System.Drawing.Point(468, 360);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox12.Size = new System.Drawing.Size(52, 46);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 56;
             this.pictureBox12.TabStop = false;
@@ -320,9 +337,10 @@
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L2_Light;
-            this.pictureBox11.Location = new System.Drawing.Point(683, 398);
+            this.pictureBox11.Location = new System.Drawing.Point(1024, 612);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox11.Size = new System.Drawing.Size(52, 46);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 55;
             this.pictureBox11.TabStop = false;
@@ -332,9 +350,10 @@
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L2_Med;
-            this.pictureBox10.Location = new System.Drawing.Point(1387, 224);
+            this.pictureBox10.Location = new System.Drawing.Point(2080, 345);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox10.Size = new System.Drawing.Size(52, 46);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 54;
             this.pictureBox10.TabStop = false;
@@ -343,9 +362,10 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L2_Dark;
-            this.pictureBox8.Location = new System.Drawing.Point(1038, 0);
+            this.pictureBox8.Location = new System.Drawing.Point(1557, 0);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox8.Size = new System.Drawing.Size(52, 46);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 52;
             this.pictureBox8.TabStop = false;
@@ -355,9 +375,10 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L2_Light;
-            this.pictureBox7.Location = new System.Drawing.Point(1260, 347);
+            this.pictureBox7.Location = new System.Drawing.Point(1890, 534);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox7.Size = new System.Drawing.Size(52, 46);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 51;
             this.pictureBox7.TabStop = false;
@@ -366,7 +387,8 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(1331, 260);
+            this.pictureBox5.Location = new System.Drawing.Point(1996, 400);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(138, 54);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -378,7 +400,8 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1210, 374);
+            this.pictureBox4.Location = new System.Drawing.Point(1815, 575);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(138, 54);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -389,7 +412,8 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1505, 117);
+            this.pictureBox3.Location = new System.Drawing.Point(2258, 180);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(138, 54);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -401,7 +425,8 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(739, 126);
+            this.pictureBox2.Location = new System.Drawing.Point(1108, 194);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(138, 54);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -412,9 +437,10 @@
             // key
             // 
             this.key.Image = global::Capstone_Game_Platform.Properties.Resources.Tornado_L2_Dark;
-            this.key.Location = new System.Drawing.Point(1892, 23);
+            this.key.Location = new System.Drawing.Point(2838, 35);
+            this.key.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.key.Name = "key";
-            this.key.Size = new System.Drawing.Size(40, 65);
+            this.key.Size = new System.Drawing.Size(60, 100);
             this.key.TabIndex = 45;
             this.key.TabStop = false;
             this.key.Tag = "key";
@@ -423,9 +449,10 @@
             // 
             this.coin.BackColor = System.Drawing.Color.Transparent;
             this.coin.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L2_Dark;
-            this.coin.Location = new System.Drawing.Point(446, 23);
+            this.coin.Location = new System.Drawing.Point(669, 35);
+            this.coin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.coin.Name = "coin";
-            this.coin.Size = new System.Drawing.Size(35, 30);
+            this.coin.Size = new System.Drawing.Size(52, 46);
             this.coin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.coin.TabIndex = 44;
             this.coin.TabStop = false;
@@ -435,7 +462,8 @@
             // 
             this.player.BackColor = System.Drawing.Color.LightSkyBlue;
             this.player.Image = global::Capstone_Game_Platform.Properties.Resources.Raindrop1;
-            this.player.Location = new System.Drawing.Point(52, 383);
+            this.player.Location = new System.Drawing.Point(78, 589);
+            this.player.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(27, 45);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -446,7 +474,8 @@
             // 
             this.door.BackColor = System.Drawing.Color.Transparent;
             this.door.Image = global::Capstone_Game_Platform.Properties.Resources.Portal_Closed_L2_High;
-            this.door.Location = new System.Drawing.Point(41, 12);
+            this.door.Location = new System.Drawing.Point(62, 18);
+            this.door.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.door.Name = "door";
             this.door.Size = new System.Drawing.Size(63, 90);
             this.door.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -458,7 +487,8 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(485, 260);
+            this.pictureBox1.Location = new System.Drawing.Point(728, 400);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(138, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -470,9 +500,10 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = global::Capstone_Game_Platform.Properties.Resources.Star_L2_Dark;
-            this.pictureBox9.Location = new System.Drawing.Point(687, 141);
+            this.pictureBox9.Location = new System.Drawing.Point(1030, 217);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox9.Size = new System.Drawing.Size(52, 46);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 53;
             this.pictureBox9.TabStop = false;
@@ -482,6 +513,7 @@
             // 
             this.background.Image = ((System.Drawing.Image)(resources.GetObject("background.Image")));
             this.background.Location = new System.Drawing.Point(0, 0);
+            this.background.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.background.Name = "background";
             this.background.Size = new System.Drawing.Size(2000, 480);
             this.background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -491,9 +523,10 @@
             // Bolt_L2
             // 
             this.Bolt_L2.Image = global::Capstone_Game_Platform.Properties.Resources.Bolt_L2;
-            this.Bolt_L2.Location = new System.Drawing.Point(239, 361);
+            this.Bolt_L2.Location = new System.Drawing.Point(358, 555);
+            this.Bolt_L2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Bolt_L2.Name = "Bolt_L2";
-            this.Bolt_L2.Size = new System.Drawing.Size(25, 59);
+            this.Bolt_L2.Size = new System.Drawing.Size(38, 91);
             this.Bolt_L2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Bolt_L2.TabIndex = 76;
             this.Bolt_L2.TabStop = false;
@@ -508,9 +541,10 @@
             // BoltL2_2
             // 
             this.BoltL2_2.Image = global::Capstone_Game_Platform.Properties.Resources.Bolt_L2;
-            this.BoltL2_2.Location = new System.Drawing.Point(396, 361);
+            this.BoltL2_2.Location = new System.Drawing.Point(594, 555);
+            this.BoltL2_2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BoltL2_2.Name = "BoltL2_2";
-            this.BoltL2_2.Size = new System.Drawing.Size(25, 59);
+            this.BoltL2_2.Size = new System.Drawing.Size(38, 91);
             this.BoltL2_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BoltL2_2.TabIndex = 77;
             this.BoltL2_2.TabStop = false;
@@ -524,9 +558,9 @@
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 481);
+            this.ClientSize = new System.Drawing.Size(986, 740);
             this.Controls.Add(this.BoltL2_2);
             this.Controls.Add(this.Bolt_L2);
             this.Controls.Add(this.pictureBox31);
@@ -563,6 +597,8 @@
             this.Controls.Add(this.background);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cloud 9 - Level 2";

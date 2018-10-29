@@ -227,7 +227,6 @@
             this.Name = "StartScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cloud 9";
-            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.Load += new System.EventHandler(this.StartScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

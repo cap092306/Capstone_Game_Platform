@@ -53,7 +53,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UserManual";
             this.Text = "Cloud 9 - UserManual";
-            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.ResumeLayout(false);
             this.PerformLayout();
 

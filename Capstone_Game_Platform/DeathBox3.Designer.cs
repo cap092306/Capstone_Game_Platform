@@ -117,7 +117,6 @@
             this.Name = "DeathBox3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeathBox";
-            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.ResumeLayout(false);
             this.PerformLayout();
 

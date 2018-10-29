@@ -119,7 +119,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PlayerStats";
             this.Text = "PlayerStats";
-            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.Load += new System.EventHandler(this.PlayerStats_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

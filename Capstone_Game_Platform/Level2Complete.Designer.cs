@@ -146,7 +146,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Level2Complete";
             this.Text = "Level2Complete";
-            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.Load += new System.EventHandler(this.Level2Complete_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -74,13 +74,23 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="achievement">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="achievement_ID"/>
+			<xs:element ref="achievement_name"/>
+			<xs:element ref="achievement_desc"/>
+		</xs:sequence>
+	</xs:complexType>
+  </xs:element>
   <xs:element name="cloud9">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="player"/>
         <xs:element ref="player_history" maxOccurs="unbounded" minOccurs="0"/>
         <xs:element ref="player_achievement" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element ref="level" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="level" maxOccurs="unbounded" minOccurs="3"/>
+		<xs:element ref="achievement" maxOccurs="unbounded" minOccurs="25"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>

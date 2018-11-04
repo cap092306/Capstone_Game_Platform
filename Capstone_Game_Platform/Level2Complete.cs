@@ -47,7 +47,7 @@ namespace Capstone_Game_Platform
             saveGameHelper.SaveLevel();
 
             saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Light;
-            saveGameHelper.Achievement_Data = (Form2.score / 10).ToString();
+            saveGameHelper.Achievement_Data = (Form2.score / 10);
             saveGameHelper.SaveAchievement();
             label4.Visible = true;
         }

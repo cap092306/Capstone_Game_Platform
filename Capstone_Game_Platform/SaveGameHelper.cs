@@ -105,7 +105,7 @@ namespace Capstone_Game_Platform
             foreignKeyConstraint.DeleteRule = Rule.None;
             ds.Tables[(int)XMLTbls.player_achievement].Constraints.Add(foreignKeyConstraint);
 
-            ds.EnforceConstraints = true;
+            ds.EnforceConstraints = true; 
         }
 
         public bool SaveLevel()

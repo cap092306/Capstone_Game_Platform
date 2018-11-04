@@ -31,18 +31,13 @@ namespace UnitTestProject
             saveGameHelper.SaveLevel();
 
             DataSet ds = xmlUtils.ReadXMLfile();
-            DataTable dt = ds.Tables[(int)SaveGameHelper.XMLTbls.player_history];
-            DataTable lvlsCompleted = new DataTable();
-            var rows = (from lc in dt.AsEnumerable()
-                        where lc.Field<string>("player_ID") == StartScreen.PlayerID.ToString() &&
-                           !String.IsNullOrWhiteSpace(lc.Field<string>("completed").ToString())
-                        orderby lc.Field<string>("level_ID")
-                        select lc).DefaultIfEmpty();
+            DataRow rows = (from row in ds.Tables[(int)SaveGameHelper.XMLTbls.player_history].AsEnumerable()
+                            where row.Field<string>("player_ID") == StartScreen.PlayerID.ToString() //player1
+                                  && !String.IsNullOrWhiteSpace(row.Field<string>("completed").ToString())
+                            select row).SingleOrDefault();
 
-            foreach (var row in rows) { lvlsCompleted.ImportRow(row); }
-            Assert.IsNotNull(lvlsCompleted);
-            Assert.AreEqual(1, lvlsCompleted.Rows.Count, $"Expects 1 history record.");
-            Assert.IsTrue(!String.IsNullOrWhiteSpace(lvlsCompleted.Rows[0].Field<string>("last_played")));
+            Assert.IsNotNull(rows);
+            Assert.IsTrue(!String.IsNullOrWhiteSpace(rows.Field<string>("last_played")));
         }
 
         [TestMethod]
@@ -72,19 +67,13 @@ namespace UnitTestProject
             DataSet ds = xmlUtils.ReadXMLfile();
             DataTable dt = ds.Tables[(int)SaveGameHelper.XMLTbls.player_achievement];
             DataTable badges = new DataTable();
-            var rows = (from lc in dt.AsEnumerable()
-                        where lc.Field<string>("player_ID") == StartScreen.PlayerID.ToString() &&
-                           !String.IsNullOrWhiteSpace(lc.Field<string>("achievement_date").ToString())
-                        orderby lc.Field<string>("level_ID")
-                        select lc).DefaultIfEmpty();
+            DataRow rows = (from row in ds.Tables[(int)SaveGameHelper.XMLTbls.player_achievement].AsEnumerable()
+                        where row.Field<string>("player_ID") == StartScreen.PlayerID.ToString() //player1
+                              && !String.IsNullOrWhiteSpace(row.Field<string>("achievement_date").ToString())
+                        select row).SingleOrDefault();
 
-            foreach (var row in rows) { badges.ImportRow(row); }
-            Assert.IsNotNull(badges);
-            Assert.AreEqual(1, badges.Rows.Count, $"Expects 1 achievement record. Created new XML file and added 1 achievement."); //should come back with 1 row
-            Assert.IsTrue(!String.IsNullOrWhiteSpace(badges.Rows[0].Field<string>("achievement_data")));
+            Assert.IsNotNull(rows);
+            Assert.IsTrue(!String.IsNullOrWhiteSpace(rows.Field<string>("achievement_data")));
         }
-
-
     }
-
 }

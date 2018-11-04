@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>Capstone_Game_Platform.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +47,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>Capstone_Game_Platform.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
@@ -151,9 +153,7 @@
     <Compile Include="UserManual.Designer.cs">
       <DependentUpon>UserManual.cs</DependentUpon>
     </Compile>
-    <Compile Include="utils\EncryptionUtils.cs" />
     <Compile Include="utils\LinqPivot.cs" />
-    <Compile Include="utils\PasswordGenerator.cs" />
     <Compile Include="StartScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +209,7 @@
     <EmbeddedResource Include="UserManual.resx">
       <DependentUpon>UserManual.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Capstone_Game_Platform.ruleset" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

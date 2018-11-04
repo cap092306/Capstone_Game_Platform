@@ -23,7 +23,7 @@ namespace Capstone_Game_Platform
 
         private XMLUtils xmlUtils;
         private DataSet ds;
-        //tables in XML managed in this helper
+        //XML tables managed in this helper
 
         public enum XMLTbls : int {player = 0, player_history = 1, player_achievement = 2, level = 3, achievement = 4}
         public enum PlayerHistoryTbl : int {player_ID = 0, level_ID = 1, life_count = 2, points = 3, level_time = 4,
@@ -72,14 +72,18 @@ namespace Capstone_Game_Platform
 
             parentColumn = ds.Tables[(int)XMLTbls.player].Columns["player_ID"];
             childColumn = ds.Tables[(int)XMLTbls.player_history].Columns["player_ID"];
-            foreignKeyConstraint = new ForeignKeyConstraint("PlayerHistoryFK", parentColumn, childColumn);
-            foreignKeyConstraint.DeleteRule = Rule.None;
+            foreignKeyConstraint = new ForeignKeyConstraint("PlayerHistoryFK", parentColumn, childColumn)
+            {
+                DeleteRule = Rule.None
+            };
             ds.Tables[(int)XMLTbls.player_history].Constraints.Add(foreignKeyConstraint);
 
             parentColumn = ds.Tables[(int)XMLTbls.level].Columns["level_ID"];
             childColumn = ds.Tables[(int)XMLTbls.player_history].Columns["level_ID"];
-            foreignKeyConstraint = new ForeignKeyConstraint("LevelHistoryFK", parentColumn, childColumn);
-            foreignKeyConstraint.DeleteRule = Rule.None;
+            foreignKeyConstraint = new ForeignKeyConstraint("LevelHistoryFK", parentColumn, childColumn)
+            {
+                DeleteRule = Rule.None
+            };
             ds.Tables[(int)XMLTbls.player_history].Constraints.Add(foreignKeyConstraint);
 
             ds.Tables[(int)XMLTbls.achievement].TableName = "Achievement";
@@ -95,73 +99,81 @@ namespace Capstone_Game_Platform
 
             parentColumn = ds.Tables[(int)XMLTbls.player].Columns["player_ID"];
             childColumn = ds.Tables[(int)XMLTbls.player_achievement].Columns["player_ID"];
-            foreignKeyConstraint = new ForeignKeyConstraint("PlayerAchieveFK", parentColumn, childColumn);
-            foreignKeyConstraint.DeleteRule = Rule.None;
+            foreignKeyConstraint = new ForeignKeyConstraint("PlayerAchieveFK", parentColumn, childColumn)
+            {
+                DeleteRule = Rule.None
+            };
             ds.Tables[(int)XMLTbls.player_achievement].Constraints.Add(foreignKeyConstraint);
 
             parentColumn = ds.Tables[(int)XMLTbls.achievement].Columns["achievement_ID"];
             childColumn = ds.Tables[(int)XMLTbls.player_achievement].Columns["achievement_ID"];
-            foreignKeyConstraint = new ForeignKeyConstraint("LevelAchieveFK", parentColumn, childColumn);
-            foreignKeyConstraint.DeleteRule = Rule.None;
+            foreignKeyConstraint = new ForeignKeyConstraint("LevelAchieveFK", parentColumn, childColumn)
+            {
+                DeleteRule = Rule.None
+            };
             ds.Tables[(int)XMLTbls.player_achievement].Constraints.Add(foreignKeyConstraint);
 
-            ds.EnforceConstraints = true; 
+            ds.EnforceConstraints = true;
         }
 
         public bool SaveLevel()
         {
             //player_history
-            DataTable dt = ds.Tables[(int)XMLTbls.player_history];
-            DataRow result = (from row in dt.AsEnumerable()
+            DataRow result = (from row in ds.Tables[(int)XMLTbls.player_history].AsEnumerable()
                               where row.Field<string>("player_ID") == Player_ID.ToString() //player1
                                     && row.Field<string>("level_ID") == Level_ID.ToString() //level1
                               select row).SingleOrDefault();
+            result.BeginEdit();
             // save best stats
             int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.life_count].ToString(), out int life_count);
             if (Life_Count > life_count)
             {
-                result.ItemArray[(int)PlayerHistoryTbl.life_count] = Life_Count.ToString(); // finished level with this many lives left
+                result[(int)PlayerHistoryTbl.life_count] = Life_Count.ToString(); 
+                // finished level with this many lives left
             }
 
             int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.points].ToString(), out int level_score);
             if (Level_Score > level_score)
             {
-                result.ItemArray[(int)PlayerHistoryTbl.points] = Level_Score.ToString(); // final score of the level
+                result[(int)PlayerHistoryTbl.points] = Level_Score.ToString(); // final score of the level
             }
 
             int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.level_time].ToString(), out int level_time);
             if (Level_Time < level_time)
             { 
-                result.ItemArray[(int)PlayerHistoryTbl.level_time] = Level_Time; // how long it took to complete the level in seconds
+                result[(int)PlayerHistoryTbl.level_time] = Level_Time; 
+                // how long it took to complete the level in seconds
             }
 
             int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.special_count].ToString(), out int special_count);
             if (Special_Count > special_count)
             {
-                result.ItemArray[(int)PlayerHistoryTbl.special_count] = Special_Count; // how many special items were found in the level-default is one if the player finished the level
+                result[(int)PlayerHistoryTbl.special_count] = Special_Count; 
+                // how many special items were found in the level-default is one if the player finished the level
             }
 
             int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.monster_count].ToString(), out int monster_count);
             if (Monster_Count > monster_count)
             {
-                result.ItemArray[(int)PlayerHistoryTbl.monster_count] = Monster_Count; // how many bad guys were defeated
+                result[(int)PlayerHistoryTbl.monster_count] = Monster_Count; // how many bad guys were defeated
             }
 
-            result.ItemArray[(int)PlayerHistoryTbl.last_played] = DateTime.Now.ToString(); //last played
+            result[(int)PlayerHistoryTbl.last_played] = DateTime.Now.ToString(); //last played
 
-            if (result.ItemArray[(int)PlayerHistoryTbl.completed].ToString() == String.Empty)
+            if (result.ItemArray[(int)PlayerHistoryTbl.completed].ToString() == string.Empty)
             {
-                result.ItemArray[(int)PlayerHistoryTbl.completed] = DateTime.Now.ToString(); //completed the first time
+                result[(int)PlayerHistoryTbl.completed] = DateTime.Now.ToString(); //completed the first time
             }
 
             int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.level_attempts].ToString(), out int level_attempts);
             if (Level_Attempts < level_attempts)
             {
-                result.ItemArray[(int)PlayerHistoryTbl.level_attempts] = Level_Attempts.ToString(); // how many times the level has been played
+                result[(int)PlayerHistoryTbl.level_attempts] = Level_Attempts.ToString(); 
+                // how many times the level has been played
             }
-
+            result.EndEdit();
             result.AcceptChanges();
-            dt.AcceptChanges();
+            ds.Tables[(int)XMLTbls.player_history].LoadDataRow(result.ItemArray, LoadOption.Upsert);
             ds.AcceptChanges();
             xmlUtils.UpdateXMLfile(ds);
 
@@ -170,11 +182,11 @@ namespace Capstone_Game_Platform
 
         public bool SaveAchievement()
         {
-            DataTable dt = ds.Tables[(int)XMLTbls.player_achievement];
-            DataRow result = (from row in dt.AsEnumerable()
+            DataRow result = (from row in ds.Tables[(int)XMLTbls.player_achievement].AsEnumerable()
                               where row.Field<string>("player_ID") == Player_ID.ToString()
                                     && row.Field<string>("achievement_ID") == ((int)Player_Achievement).ToString()
                       select row).SingleOrDefault();
+            result.BeginEdit();
 
             int.TryParse(result.ItemArray[(int)PlayerAchievementsTbl.achievement_data].ToString(), out int achievementCount);
 
@@ -183,7 +195,7 @@ namespace Capstone_Game_Platform
                 result.ItemArray[(int)PlayerAchievementsTbl.achievement_data] = (Achievement_Data + achievementCount).ToString();
                 if ((Achievement_Data + achievementCount) >= (int)Achievement_Counters.Stars && result.ItemArray[(int)PlayerAchievementsTbl.achievement_date].ToString() == string.Empty)
                 {
-                    result.ItemArray[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString();
+                    result[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString();
                 }
             }
 
@@ -192,19 +204,23 @@ namespace Capstone_Game_Platform
                 result.ItemArray[(int)PlayerAchievementsTbl.achievement_data] = (Achievement_Data + achievementCount).ToString();
                 if ((Achievement_Data + achievementCount) >= (int)Achievement_Counters.Lighting && result.ItemArray[(int)PlayerAchievementsTbl.achievement_date].ToString() == string.Empty)
                 {
-                    result.ItemArray[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString();
+                    result[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString();
                 }
             }
             
             // All other achievements are true or false data types, save as 1, to change from default of 0
             if(result.ItemArray[(int)PlayerAchievementsTbl.achievement_date].ToString() == string.Empty)
             {
-                result.ItemArray[(int)PlayerAchievementsTbl.achievement_data] = 1;
-                result.ItemArray[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString(); // record date of first achievement 
+                result[(int)PlayerAchievementsTbl.achievement_data] = 1;
+                result[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString(); // record date of first achievement 
             }
 
+            result.EndEdit();
+            result.AcceptChanges();
+            ds.Tables[(int)XMLTbls.player_achievement].LoadDataRow(result.ItemArray, LoadOption.Upsert);
             ds.AcceptChanges();
             xmlUtils.UpdateXMLfile(ds);
+
             return true;
         }
     }

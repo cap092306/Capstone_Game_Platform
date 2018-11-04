@@ -48,7 +48,7 @@
     <achievement_name>Defeat the Moon</achievement_name>
     <achievement_desc>Defeat the Moon and save the Sun.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -56,7 +56,7 @@
     <achievement_name>Star Power</achievement_name>
     <achievement_desc>Collect a Star.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -64,7 +64,7 @@
     <achievement_name>Star Light</achievement_name>
     <achievement_desc>Collect 1000 Stars.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -72,7 +72,7 @@
     <achievement_name>Faster than the Speed of Light</achievement_name>
     <achievement_desc>Complete level 1 in less than 1 minute.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -88,7 +88,7 @@
     <achievement_name>Faster than the Speed of Light - Times 3</achievement_name>
     <achievement_desc>Complete level 3 in less than 1 minute.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -96,7 +96,7 @@
     <achievement_name>Explorer - Level 1</achievement_name>
     <achievement_desc>Find all the specials on level 1.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -104,7 +104,7 @@
     <achievement_name>Explorer - Level 2</achievement_name>
     <achievement_desc>Find all the specials on level 2.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+     <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -112,7 +112,7 @@
     <achievement_name>Explorer - Level 3</achievement_name>
     <achievement_desc>Find all the specials on level 3.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -120,7 +120,7 @@
     <achievement_name>Shocked!</achievement_name>
     <achievement_desc>Die by Lightening.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -128,7 +128,7 @@
     <achievement_name>Electrocuted...</achievement_name>
     <achievement_desc>Die by Lightening 100 times.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -136,7 +136,7 @@
     <achievement_name>Zeus' Rival</achievement_name>
     <achievement_desc>Kill all the Lightening, in level 1.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -144,7 +144,7 @@
     <achievement_name>Zeus' Rival - Part Deux</achievement_name>
     <achievement_desc>Kill all the Lightening, in level 2.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -152,7 +152,7 @@
     <achievement_name>Zeus' Rival, the third</achievement_name>
     <achievement_desc>Kill all the Lightening, in level 3.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -160,7 +160,7 @@
     <achievement_name>Cloud Hopper</achievement_name>
     <achievement_desc>Hop on every cloud in a level.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -168,7 +168,7 @@
     <achievement_name>Cloud Surfer</achievement_name>
     <achievement_desc>Hop on every cloud in level 2.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -176,7 +176,7 @@
     <achievement_name>Head in the Clouds</achievement_name>
     <achievement_desc>Hop on every cloud, in level 3.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -184,7 +184,7 @@
     <achievement_name>Black Hole</achievement_name>
     <achievement_desc>Die by falling in a black hole.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -192,7 +192,7 @@
     <achievement_name>Star Skipper</achievement_name>
     <achievement_desc>Complete a level without collecting any stars.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -200,7 +200,7 @@
     <achievement_name>Jump, Jump!</achievement_name>
     <achievement_desc>Complete a level by only jumping.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -208,7 +208,7 @@
     <achievement_name>Sacrifice the Sun!</achievement_name>
     <achievement_desc>Let the Mooon win.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -216,7 +216,7 @@
     <achievement_name>Tornado Rider</achievement_name>
     <achievement_desc>Collect a Tornado.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -224,7 +224,7 @@
     <achievement_name>Tornado Chaser</achievement_name>
     <achievement_desc>Collect all the Tornados, in every level.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -232,7 +232,7 @@
     <achievement_name>Portal Jumper</achievement_name>
     <achievement_desc>Use the portal in level 1.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <player_achievement>
     <player_ID>1</player_ID>
@@ -240,7 +240,7 @@
     <achievement_name>Portal Jumper - Part Deux</achievement_name>
     <achievement_desc>Use the portal in level 2.</achievement_desc>
     <achievement_data>0</achievement_data>
-    <achievement_date />
+    <achievement_date></achievement_date>
   </player_achievement>
   <level>
     <level_ID>1</level_ID>

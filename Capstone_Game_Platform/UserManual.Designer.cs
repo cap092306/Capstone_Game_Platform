@@ -48,6 +48,7 @@
             this.ClientSize = new System.Drawing.Size(511, 365);
             this.Controls.Add(this.label1);
             this.Name = "UserManual";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cloud 9 - UserManual";
             this.ResumeLayout(false);
             this.PerformLayout();

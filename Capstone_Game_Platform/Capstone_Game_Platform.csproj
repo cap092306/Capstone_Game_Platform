@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -117,6 +120,12 @@
     <Compile Include="LevelComplete3.Designer.cs">
       <DependentUpon>LevelComplete3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Continue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Continue.Designer.cs">
+      <DependentUpon>Continue.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlayerStats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +188,9 @@
     <EmbeddedResource Include="LevelComplete3.resx">
       <DependentUpon>LevelComplete3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Continue.resx">
+      <DependentUpon>Continue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PlayerStats.resx">
       <DependentUpon>PlayerStats.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +223,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Cloud9Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Resources\Cloud_L1.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +265,7 @@
     <None Include="Resources\Moon.gif" />
     <None Include="Resources\Bolt_L1.gif" />
     <None Include="Resources\Bolt_L2.gif" />
+    <Content Include="favicon.ico" />
     <Content Include="Resources\Raindrop.gif" />
     <None Include="Resources\Water Drop Sound High-SoundBible.com-1387792987.wav" />
   </ItemGroup>

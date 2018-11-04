@@ -1,0 +1,88 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:CO="urn:Cloud9Data"  targetNamespace="urn:Cloud9Data">
+  <xs:element name="player_ID" type="xs:integer"/>
+  <xs:element name="player_name" type="xs:string"/>
+  <xs:element name="char_level" type="xs:integer"/>
+  <xs:element name="char_points" type="xs:integer"/>
+  <xs:element name="level_ID" type="xs:integer"/>
+  <xs:element name="life_count" type="xs:integer"/>
+  <xs:element name="points" type="xs:integer"/>
+  <xs:element name="level_time" type="xs:integer"/>
+  <xs:element name="special_count" type="xs:integer"/>
+  <xs:element name="monster_count" type="xs:integer"/>
+  <xs:element name="last_played" type="xs:date"/>
+  <xs:element name="completed" type="xs:date"/>
+  <xs:element name="level_attempts" type="xs:integer"/>
+  <xs:element name="achievement_ID" type="xs:integer"/>
+  <xs:element name="achievement_name" type="xs:string"/>
+  <xs:element name="achievement_desc" type="xs:string"/>
+  <xs:element name="achievement_data" type="xs:string"/>
+  <xs:element name="achievement_date" type="xs:date"/>
+  <xs:element name="level_Order" type="xs:integer"/>
+  <xs:element name="level_name" type="xs:string"/>
+  <xs:element name="level_life_max" type="xs:integer"/>
+  <xs:element name="level_mana_max" type="xs:integer"/>
+  <xs:element name="level_monster_count" type="xs:integer"/>
+  <xs:element name="level_special_count" type="xs:integer"/>
+  <xs:element name="player">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="player_ID"/>
+        <xs:element ref="player_name"/>
+        <xs:element ref="char_level"/>
+        <xs:element ref="char_points"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="player_history">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="player_ID"/>
+        <xs:element ref="level_ID"/>
+        <xs:element ref="life_count"/>
+        <xs:element ref="points"/>
+        <xs:element ref="level_time"/>
+        <xs:element ref="special_count"/>
+        <xs:element ref="monster_count"/>
+        <xs:element ref="last_played"/>
+        <xs:element ref="completed"/>
+        <xs:element ref="level_attempts"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="player_achievement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="player_ID"/>
+        <xs:element ref="achievement_ID"/>
+        <xs:element ref="achievement_name"/>
+        <xs:element ref="achievement_desc"/>
+        <xs:element ref="achievement_data"/>
+        <xs:element ref="achievement_date"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="level">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="level_ID"/>
+        <xs:element ref="level_Order"/>
+        <xs:element ref="level_name"/>
+        <xs:element ref="level_life_max"/>
+        <xs:element ref="level_mana_max"/>
+        <xs:element ref="level_monster_count"/>
+        <xs:element ref="level_special_count"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cloud9">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="player"/>
+        <xs:element ref="player_history" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="player_achievement" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="level" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

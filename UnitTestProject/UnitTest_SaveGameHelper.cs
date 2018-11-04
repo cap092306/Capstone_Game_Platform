@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Capstone_Game_Platform;
+using System.IO;
 
 namespace UnitTestProject
 {
@@ -12,6 +13,12 @@ namespace UnitTestProject
         [TestMethod]
         public void SaveLevel_TestMethod()
         {
+            XMLUtils xmlUtils = new XMLUtils
+            {
+                FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
+            };
+            xmlUtils.DeleteXMLfile();
+
             SaveGameHelper saveGameHelper = new SaveGameHelper();
             saveGameHelper.Level_ID = 1;
             saveGameHelper.Player_ID = 1;
@@ -30,7 +37,7 @@ namespace UnitTestProject
             SaveGameHelper saveGameHelper = new SaveGameHelper();
             saveGameHelper.Level_ID = 1;
             saveGameHelper.Player_ID = 1;
-            saveGameHelper.Player_Achievement = SaveGameHelper.Achievement.Star_Light;
+            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Light;
             saveGameHelper.Achievement_Data = (200 / 10).ToString();
             saveGameHelper.SaveAchievement();
         }

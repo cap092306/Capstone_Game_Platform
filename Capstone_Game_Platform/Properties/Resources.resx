@@ -220,7 +220,7 @@
   <data name="Star_L1_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star_L1_Medium.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cloud9Data" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Cloud9DataXML" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cloud9Data.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="cloud_PNG27" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -240,5 +240,17 @@
   </data>
   <data name="Bolt_L2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bolt_L2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XMLDBName" xml:space="preserve">
+    <value>Cloud9Data.xml</value>
+  </data>
+  <data name="Cloud9DataXSD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cloud9Data.xsd;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="XMLNSURN" xml:space="preserve">
+    <value>Cloud9Data</value>
+  </data>
+  <data name="XSDDBName" xml:space="preserve">
+    <value>Cloud9Data.xsd</value>
   </data>
 </root>

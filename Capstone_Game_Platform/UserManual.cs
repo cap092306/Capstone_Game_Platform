@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Capstone_Game_Platform
 {
@@ -15,6 +9,11 @@ namespace Capstone_Game_Platform
         public UserManual()
         {
             InitializeComponent();
+
+            Uri uriPath = new Uri("file:///" + Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.HELPName.ToString()),UriKind.Absolute);
+            webBrowser1.Url = uriPath;
+            
+            webBrowser1.Refresh();
         }
     }
 }

@@ -253,4 +253,7 @@
   <data name="XSDDBName" xml:space="preserve">
     <value>Cloud9Data.xsd</value>
   </data>
+  <data name="HELPName" xml:space="preserve">
+    <value>HtmlPage1.html</value>
+  </data>
 </root>

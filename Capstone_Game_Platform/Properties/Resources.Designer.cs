@@ -222,7 +222,7 @@ namespace Capstone_Game_Platform.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;
-        ///&lt;cloud9 xmlns:CO=&quot;urn:Cloud9Data&quot;&gt;
+        ///&lt;cloud9&gt;
         ///  &lt;player&gt;
         ///    &lt;player_ID&gt;1&lt;/player_ID&gt;
         ///    &lt;player_name&gt;DewDrop&lt;/player_name&gt;
@@ -237,7 +237,8 @@ namespace Capstone_Game_Platform.Properties {
         ///    &lt;level_time&gt;0&lt;/level_time&gt;
         ///    &lt;special_count&gt;0&lt;/special_count&gt;
         ///    &lt;monster_count&gt;0&lt;/monster_count&gt;
-        ///    &lt;last_played [rest of string was truncated]&quot;;.
+        ///    &lt;last_played&gt;&lt;/last_played&gt;
+        ///    &lt;comp [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Cloud9DataXML {
             get {
@@ -298,6 +299,15 @@ namespace Capstone_Game_Platform.Properties {
             get {
                 object obj = ResourceManager.GetObject("Floor_Block_L3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HtmlPage1.html.
+        /// </summary>
+        internal static string HELPName {
+            get {
+                return ResourceManager.GetString("HELPName", resourceCulture);
             }
         }
         

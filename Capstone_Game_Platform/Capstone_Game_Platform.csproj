@@ -267,6 +267,9 @@
     <None Include="Resources\Bolt_L1.gif" />
     <None Include="Resources\Bolt_L2.gif" />
     <Content Include="favicon.ico" />
+    <Content Include="HTMLPage1.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\favicon.ico" />
     <Content Include="Resources\Raindrop.gif" />
     <None Include="Resources\Water Drop Sound High-SoundBible.com-1387792987.wav" />

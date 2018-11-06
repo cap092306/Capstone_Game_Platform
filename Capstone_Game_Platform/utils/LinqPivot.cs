@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Capstone_Game_Platform
 {
-    public class LinqPivot
+    internal class LinqPivot
     {
         public DataTable Pivot(DataTable dt, DataColumn pivotColumn, string pivotName)
         {

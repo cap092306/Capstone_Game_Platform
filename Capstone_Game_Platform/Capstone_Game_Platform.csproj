@@ -122,11 +122,11 @@
     <Compile Include="LevelComplete3.Designer.cs">
       <DependentUpon>LevelComplete3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Continue.cs">
+    <Compile Include="ContinueGame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Continue.Designer.cs">
-      <DependentUpon>Continue.cs</DependentUpon>
+    <Compile Include="ContinueGame.Designer.cs">
+      <DependentUpon>ContinueGame.cs</DependentUpon>
     </Compile>
     <Compile Include="PlayerStats.cs">
       <SubType>Form</SubType>
@@ -188,8 +188,8 @@
     <EmbeddedResource Include="LevelComplete3.resx">
       <DependentUpon>LevelComplete3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Continue.resx">
-      <DependentUpon>Continue.cs</DependentUpon>
+    <EmbeddedResource Include="ContinueGame.resx">
+      <DependentUpon>ContinueGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlayerStats.resx">
       <DependentUpon>PlayerStats.cs</DependentUpon>

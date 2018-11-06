@@ -173,8 +173,6 @@ namespace Capstone_Game_Platform
             }
             result.EndEdit();
             result.AcceptChanges();
-            ds.Tables[(int)XMLTbls.player_history].LoadDataRow(result.ItemArray, LoadOption.Upsert);
-            ds.AcceptChanges();
             xmlUtils.UpdateXMLfile(ds);
 
             return true;
@@ -217,8 +215,6 @@ namespace Capstone_Game_Platform
 
             result.EndEdit();
             result.AcceptChanges();
-            ds.Tables[(int)XMLTbls.player_achievement].LoadDataRow(result.ItemArray, LoadOption.Upsert);
-            ds.AcceptChanges();
             xmlUtils.UpdateXMLfile(ds);
 
             return true;

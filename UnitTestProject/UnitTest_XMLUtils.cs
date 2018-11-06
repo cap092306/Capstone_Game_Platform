@@ -31,7 +31,7 @@ namespace UnitTestProject
             xmlUtils.DeleteXMLfile();
             DataSet result = xmlUtils.ReadXMLfile();
             int tblCount = result.Tables.Count;
-            Assert.AreEqual(4, tblCount, $"Expects 4 tables to be in default XML file.");
+            Assert.AreEqual(5, tblCount, $"Expects 5 tables to be in default XML file.");
         }
 
         [TestMethod]

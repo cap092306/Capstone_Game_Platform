@@ -59,6 +59,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UnitTest_LinqPivot.cs" />
     <Compile Include="UnitTest_SaveGameHelper.cs" />
     <Compile Include="UnitTest_XMLUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

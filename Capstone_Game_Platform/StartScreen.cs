@@ -22,8 +22,8 @@ namespace Capstone_Game_Platform
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form Form1 = new Form1();
-            Form1.Show();
+            Form Form4 = new Form4();
+            Form4.Show();
             Theme.Stop();
             
             //this.Dispose();

@@ -68,6 +68,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeathBox3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
       <DependentUpon>StartScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="utils\XMLUtils.cs" />
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeathBox3.resx">
       <DependentUpon>DeathBox3.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +276,13 @@
     <None Include="Resources\Bolt_L1.gif" />
     <None Include="Resources\Bolt_L2.gif" />
     <Content Include="favicon.ico" />
+    <None Include="Resources\Beach_BK_11.gif" />
+    <None Include="Resources\Beach_BK_21.gif" />
+    <None Include="Resources\Beach_BK_31.gif" />
+    <None Include="Resources\Beach_BK_41.gif" />
+    <None Include="Resources\Beach_BK_51.gif" />
+    <None Include="Resources\Beach_BK_61.gif" />
+    <None Include="Resources\Beach_BK_71.gif" />
     <Content Include="Resources\favicon.ico" />
     <Content Include="Resources\Raindrop.gif" />
     <None Include="Resources\Water Drop Sound High-SoundBible.com-1387792987.wav" />

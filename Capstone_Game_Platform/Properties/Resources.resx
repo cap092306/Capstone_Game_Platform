@@ -121,8 +121,11 @@
   <data name="Floor_Block_L3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Floor_Block_L3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bolt_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bolt_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Beach_BK_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Beach_BK_31.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bolt_L2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bolt_L2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Raindrop1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Raindrop1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,14 +136,23 @@
   <data name="Raindrop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Raindrop.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cloud9DataXSD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cloud9Data.xsd;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="Portal_Closed_L2_High" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Portal_Closed_L2_High.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Star_L2_Med" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Star_L2_Med.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="XMLNSURN" xml:space="preserve">
+    <value>Cloud9Data</value>
+  </data>
+  <data name="BG_L11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG_L11.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cloud_L2_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cloud_L2_Dark.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sun.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cloud_L3_Med" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cloud_L3_Med.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +163,11 @@
   <data name="Cloud_L1_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cloud_L1_Dark.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Star_L2_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Star_L2_Dark.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Floor_Block_L2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Floor_Block_L2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Star_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Star_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cloud_L11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cloud_L1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,44 +175,56 @@
   <data name="Star_L1_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star_L1_Dark.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cloud9DataXML" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cloud9Data.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="Tornado_High" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tornado_High.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Portal_Closed_High" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Portal_Closed_High.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sun" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sun.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Star_L2_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Star_L2_Dark.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cloud_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cloud_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BG_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Bolt_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bolt_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cloud_L2_Med" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cloud_L2_Med.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Beach_BK_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Beach_BK_41.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Portal_Closed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Portal_Closed.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Star_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Star_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Beach_BK_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Beach_BK_11.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Floor_Block_L1 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Floor_Block_L1 1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Star_L1_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Star_L1_Light.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cloud_L1_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cloud_L1_Medium.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cloud_L3_Low" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cloud_L3_Low.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cloud_L1_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cloud_L1_Medium.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Beach_BK_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Beach_BK_21.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Star_L2_Med" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Star_L2_Med.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Floor_Block_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Floor_Block_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XMLDBName" xml:space="preserve">
+    <value>Cloud9Data.xml</value>
   </data>
   <data name="Moon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Moon.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,11 +232,11 @@
   <data name="Star_L2_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star_L2_Light.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Floor_Block_L2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Floor_Block_L2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Star_L1_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Star_L1_Light.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Star_L3_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Star_L3_Dark.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Beach_BK_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Beach_BK_51.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tornado_L1_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tornado_L1_Dark.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,11 +247,17 @@
   <data name="Star_L1_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star_L1_Medium.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cloud9DataXML" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cloud9Data.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="Beach_BK_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Beach_BK_61.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cloud_PNG27" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cloud_PNG27.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XSDDBName" xml:space="preserve">
+    <value>Cloud9Data.xsd</value>
+  </data>
+  <data name="BG_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Star_L3_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star_L3_Light.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,22 +268,10 @@
   <data name="Star_L3_Med" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star_L3_Med.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BG_L11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG_L11.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Star_L3_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Star_L3_Dark.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bolt_L2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bolt_L2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="XMLDBName" xml:space="preserve">
-    <value>Cloud9Data.xml</value>
-  </data>
-  <data name="Cloud9DataXSD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cloud9Data.xsd;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="XMLNSURN" xml:space="preserve">
-    <value>Cloud9Data</value>
-  </data>
-  <data name="XSDDBName" xml:space="preserve">
-    <value>Cloud9Data.xsd</value>
+  <data name="Beach_BK_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Beach_BK_71.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

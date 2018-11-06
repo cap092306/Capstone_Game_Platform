@@ -43,7 +43,6 @@
             this.webBrowser1.ScrollBarsEnabled = false;
             this.webBrowser1.Size = new System.Drawing.Size(775, 546);
             this.webBrowser1.TabIndex = 1;
-            this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
             this.webBrowser1.WebBrowserShortcutsEnabled = false;
             // 
             // UserManual

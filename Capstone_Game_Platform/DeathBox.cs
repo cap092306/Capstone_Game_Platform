@@ -16,7 +16,7 @@ namespace Capstone_Game_Platform
         {
             InitializeComponent();
         }
-
+        //updating this file to make sure i am current
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 Form1 = new Form1();

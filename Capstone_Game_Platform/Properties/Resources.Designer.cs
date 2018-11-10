@@ -277,7 +277,7 @@ namespace Capstone_Game_Platform.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Floor_Block_L1_1 {
             get {
-                object obj = ResourceManager.GetObject("Floor_Block_L1 1", resourceCulture);
+                object obj = ResourceManager.GetObject("Floor_Block_L1_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

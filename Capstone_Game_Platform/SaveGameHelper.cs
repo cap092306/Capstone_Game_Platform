@@ -28,8 +28,7 @@ namespace Capstone_Game_Platform
         public enum XMLTbls : int {player = 0, player_history = 1, player_achievement = 2, level = 3, achievement = 4}
         public enum PlayerHistoryTbl : int {player_ID = 0, level_ID = 1, life_count = 2, points = 3, level_time = 4,
             special_count = 5, monster_count = 6, last_played = 7, completed = 8, level_attempts = 9}
-        public enum PlayerAchievementsTbl : int { player_ID = 0, achievement_ID = 1, achievement_name = 2,
-            achievement_desc = 3, achievement_data = 4, achievement_date = 5}
+        public enum PlayerAchievementsTbl : int { player_ID = 0, achievement_ID = 1, achievement_data = 2, achievement_date = 3}
         //achievements
         public enum Achievement_Counters : int { Stars = 1000, Lighting = 100}
         public enum Achievements : int {Defeat_Moon = 1, Star_Power = 2, Star_Light = 3, Light_Speed_1 = 4,

@@ -74,22 +74,19 @@ namespace Capstone_Game_Platform
                 .OrderBy(i => i.Field<string>("achievement_ID"))
                 .CopyToDataTable();
 
-            results.TableName = "Player Achievements";
-            results.Columns.RemoveAt(0); // player_id
-            results.Columns.RemoveAt(0); //achievement_id
-            results.Columns["achievement_name"].SetOrdinal(0);
-            results.Columns["achievement_desc"].SetOrdinal(1);
-            results.Columns["achievement_data"].SetOrdinal(2);
-            results.Columns["achievement_date"].SetOrdinal(3);
-            
-            dataGridView2.DataSource = results;
-            dataGridView2.Columns[0].HeaderText = "Achievement";
-            dataGridView2.Columns[1].HeaderText = "Details";
-            dataGridView2.Columns[2].HeaderText = "Status";
-            dataGridView2.Columns[3].HeaderText = "Date Achieved";
+            DataTable achieve = ds.Tables[(int)SaveGameHelper.XMLTbls.achievement];
 
-            dataGridView2.Show();
-            dataGridView2.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
+            DataTable result = new DataTable();
+
+
+
+
+
+            //dataGridView2.DataSource = results;
+
+
+            //dataGridView2.Show();
+            //dataGridView2.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
         }
     }
 }

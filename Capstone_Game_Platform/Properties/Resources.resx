@@ -184,9 +184,6 @@
   <data name="Star_L1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star_L1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Floor_Block_L1 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Floor_Block_L1 1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Star_L1_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star_L1_Light.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -255,5 +252,8 @@
   </data>
   <data name="HELPName" xml:space="preserve">
     <value>HtmlPage1.html</value>
+  </data>
+  <data name="Floor_Block_L1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\floor_block_l1 1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

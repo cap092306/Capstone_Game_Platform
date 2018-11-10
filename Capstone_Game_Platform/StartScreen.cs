@@ -36,7 +36,7 @@ namespace Capstone_Game_Platform
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form cont = new Continue();
+            Form cont = new ContinueGame();
             cont.Show();
             Theme.Stop();
         }

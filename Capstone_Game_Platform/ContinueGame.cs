@@ -6,9 +6,9 @@ using System.IO;
 
 namespace Capstone_Game_Platform
 {
-    public partial class Continue : Form
+    public partial class ContinueGame : Form
     {
-        public Continue()
+        public ContinueGame()
         {
             InitializeComponent();
             LoadPlayerLevelHistory();

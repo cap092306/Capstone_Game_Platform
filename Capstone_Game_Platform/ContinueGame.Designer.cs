@@ -1,6 +1,6 @@
 ﻿namespace Capstone_Game_Platform
 {
-    partial class Continue
+    partial class ContinueGame
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Continue));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContinueGame));
             this.btnLvl1 = new System.Windows.Forms.Button();
             this.btnLvl2 = new System.Windows.Forms.Button();
             this.btnLvl3 = new System.Windows.Forms.Button();

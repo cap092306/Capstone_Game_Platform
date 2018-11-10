@@ -46,7 +46,7 @@
             this.btnLvl1.TabIndex = 0;
             this.btnLvl1.Text = "Level 1";
             this.btnLvl1.UseVisualStyleBackColor = true;
-            this.btnLvl1.Click += new System.EventHandler(this.btnLvl1_Click);
+            this.btnLvl1.Click += new System.EventHandler(this.BtnLvl1_Click);
             // 
             // btnLvl2
             // 
@@ -60,7 +60,7 @@
             this.btnLvl2.TabIndex = 1;
             this.btnLvl2.Text = "Level 2";
             this.btnLvl2.UseVisualStyleBackColor = true;
-            this.btnLvl2.Click += new System.EventHandler(this.btnLvl2_Click);
+            this.btnLvl2.Click += new System.EventHandler(this.BtnLvl2_Click);
             // 
             // btnLvl3
             // 
@@ -74,7 +74,7 @@
             this.btnLvl3.TabIndex = 2;
             this.btnLvl3.Text = "Level 3";
             this.btnLvl3.UseVisualStyleBackColor = true;
-            this.btnLvl3.Click += new System.EventHandler(this.btnLvl3_Click);
+            this.btnLvl3.Click += new System.EventHandler(this.BtnLvl3_Click);
             // 
             // label1
             // 

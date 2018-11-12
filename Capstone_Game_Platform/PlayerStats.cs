@@ -2,9 +2,10 @@
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Controls;
 using System.IO;
 using System.Collections.Generic;
-
+using System.Drawing;
 
 namespace Capstone_Game_Platform
 {
@@ -69,24 +70,50 @@ namespace Capstone_Game_Platform
         private void LoadPlayerAchievements()
         {
             DataTable dt = ds.Tables[(int)SaveGameHelper.XMLTbls.player_achievement];
-            DataTable results = dt.AsEnumerable()
-                .Where(i => i.Field<string>("player_ID") == StartScreen.PlayerID.ToString())
-                .OrderBy(i => i.Field<string>("achievement_ID"))
+            DataTable player = dt.AsEnumerable()
+                .Where(i => i.Field<string>("player_ID") == StartScreen.PlayerID.ToString() 
+                && i.Field<string>("achievement_data") != "0")
                 .CopyToDataTable();
+            dt = ds.Tables[(int)SaveGameHelper.XMLTbls.achievement];
 
-            DataTable achieve = ds.Tables[(int)SaveGameHelper.XMLTbls.achievement];
+            var result = from dt1 in player.AsEnumerable()
+                               join dt2 in dt.AsEnumerable() on (string)dt1["achievement_ID"] equals (string)dt2["achievement_ID"]
+                               select new {
+                                   achievement_ID = (string)dt1["achievement_ID"],
+                                   achievement_data = (string)dt1["achievement_data"],
+                                   achievement_date = (string)dt1["achievement_date"],
+                                   achievement_name = (string)dt2["achievement_name"],
+                                   achievement_desc = (string)dt2["achievement_desc"],
+                                   badge = (string)dt2["badge"],
+                                   number = (string)dt2["number"]
+                               };
 
-            DataTable result = new DataTable();
+            DataGridViewImageColumn imageCol = new DataGridViewImageColumn();
+            dataGridView2.Columns.Add(imageCol);
 
+            DataGridViewColumn descCol = new DataGridViewColumn(new DataGridViewTextBoxCell());
+            dataGridView2.Columns.Add(descCol);
+            DataGridViewColumn playerCol = new DataGridViewColumn(new DataGridViewTextBoxCell());
+            dataGridView2.Columns.Add(playerCol);
+            //int badgeValue, playerData;
 
-
-
-
-            //dataGridView2.DataSource = results;
-
-
-            //dataGridView2.Show();
-            //dataGridView2.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
+            for (int j = 0; j < result.Count(); j++)
+            {
+                dataGridView2.Rows.Add();
+                dataGridView2.Rows[j].Cells[0].Value = Properties.Resources.ResourceManager.GetObject(result.ElementAt(j).badge.ToString());
+                dataGridView2.Rows[j].Cells[1].Value = string.Format("{0} - {1}", result.ElementAt(j).achievement_name, result.ElementAt(j).achievement_desc);
+                if (result.ElementAt(j).achievement_date.ToString() == string.Empty)
+                {
+                    int.TryParse(result.ElementAt(j).number, out int badgeValue);
+                    int.TryParse(result.ElementAt(j).achievement_data, out int playerData);
+                    dataGridView2.Rows[j].Cells[2].Value = string.Format("You have {0} of {1}.", playerData, badgeValue);
+                } else
+                {
+                    dataGridView2.Rows[j].Cells[2].Value = string.Format("You achieved this goal on {0}.", result.ElementAt(j).achievement_date.ToString());
+                }
+                
+            }
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

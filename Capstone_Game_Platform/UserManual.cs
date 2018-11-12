@@ -1,16 +1,18 @@
-﻿using System;
-using System.Windows.Forms;
-using System.IO;
+﻿using System.Windows.Forms;
+using System.Windows.Data;
+
 
 namespace Capstone_Game_Platform
 {
-    public partial class UserManual : Form
+    public partial class UserManualUC : Form
     {
-
-        public UserManual()
+        public UserManualUC()
         {
             InitializeComponent();
-            webBrowser1.Url = new Uri("file:///" + Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.HELPName.ToString()));
+
+            
         }  
+
+
     }
 }

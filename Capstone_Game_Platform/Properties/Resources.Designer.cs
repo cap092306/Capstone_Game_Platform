@@ -63,6 +63,256 @@ namespace Capstone_Game_Platform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap A_1_Star_Power {
+            get {
+                object obj = ResourceManager.GetObject("A_1_Star_Power", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_10_Electrocuted {
+            get {
+                object obj = ResourceManager.GetObject("A_10_Electrocuted", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_11_Zeus_Rival {
+            get {
+                object obj = ResourceManager.GetObject("A_11_Zeus_Rival", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_12_Zeus_Rival_2 {
+            get {
+                object obj = ResourceManager.GetObject("A_12_Zeus_Rival_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_13_Zeus_Rival_3 {
+            get {
+                object obj = ResourceManager.GetObject("A_13_Zeus_Rival_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_14_Cloud_Hopper {
+            get {
+                object obj = ResourceManager.GetObject("A_14_Cloud_Hopper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_15_Cloud_Surfer {
+            get {
+                object obj = ResourceManager.GetObject("A_15_Cloud_Surfer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_16_Head_In_The_Clouds {
+            get {
+                object obj = ResourceManager.GetObject("A_16_Head_In_The_Clouds", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_17_Black_Hole {
+            get {
+                object obj = ResourceManager.GetObject("A_17_Black_Hole", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_18_Star_Skipper {
+            get {
+                object obj = ResourceManager.GetObject("A_18_Star_Skipper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_19_Jump_Jump {
+            get {
+                object obj = ResourceManager.GetObject("A_19_Jump_Jump", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_2_Star_Light {
+            get {
+                object obj = ResourceManager.GetObject("A_2_Star_Light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_20_Tornado_Rider {
+            get {
+                object obj = ResourceManager.GetObject("A_20_Tornado_Rider", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_21_Tornado_Chaser {
+            get {
+                object obj = ResourceManager.GetObject("A_21_Tornado_Chaser", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_22_Portal_Jumper {
+            get {
+                object obj = ResourceManager.GetObject("A_22_Portal_Jumper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_23_Portal_Jumper_2 {
+            get {
+                object obj = ResourceManager.GetObject("A_23_Portal_Jumper_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_24_Defeat_the_Moon {
+            get {
+                object obj = ResourceManager.GetObject("A_24_Defeat_the_Moon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_25_Sacrifice_The_Sun {
+            get {
+                object obj = ResourceManager.GetObject("A_25_Sacrifice_The_Sun", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_3_Faster_Than_Light_1 {
+            get {
+                object obj = ResourceManager.GetObject("A_3_Faster_Than_Light_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_4_Faster_Than_Light_2 {
+            get {
+                object obj = ResourceManager.GetObject("A_4_Faster_Than_Light_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_5_Faster_Than_Light_3 {
+            get {
+                object obj = ResourceManager.GetObject("A_5_Faster_Than_Light_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_6_Explorer_Level_1 {
+            get {
+                object obj = ResourceManager.GetObject("A_6_Explorer_Level_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_7_Explorer_Level_2 {
+            get {
+                object obj = ResourceManager.GetObject("A_7_Explorer_Level_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_8_Explorer_Level_3 {
+            get {
+                object obj = ResourceManager.GetObject("A_8_Explorer_Level_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap A_9_Shocked {
+            get {
+                object obj = ResourceManager.GetObject("A_9_Shocked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Beach_BK_1 {
             get {
                 object obj = ResourceManager.GetObject("Beach_BK_1", resourceCulture);
@@ -347,7 +597,7 @@ namespace Capstone_Game_Platform.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Floor_Block_L1_1 {
             get {
-                object obj = ResourceManager.GetObject("Floor_Block_L1_1", resourceCulture);
+                object obj = ResourceManager.GetObject("Floor_Block_L1 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

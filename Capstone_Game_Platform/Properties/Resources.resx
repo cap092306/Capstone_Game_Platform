@@ -277,4 +277,79 @@
   <data name="HELPName" xml:space="preserve">
     <value>HtmlPage1.html</value>
   </data>
+  <data name="A_10_Electrocuted" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\10_Electrocuted.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_11_Zeus_Rival" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\11_Zeus_Rival.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_12_Zeus_Rival_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\12_Zeus_Rival_2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_13_Zeus_Rival_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\13_Zeus_Rival_3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_14_Cloud_Hopper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\14_Cloud_Hopper.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_15_Cloud_Surfer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15_Cloud_Surfer.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_16_Head_In_The_Clouds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16_Head_In_The_Clouds.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_17_Black_Hole" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\17_Black_Hole.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_18_Star_Skipper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\18_Star_Skipper.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_19_Jump_Jump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\19_Jump_Jump.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_1_Star_Power" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1_Star_Power.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_20_Tornado_Rider" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20_Tornado_Rider.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_21_Tornado_Chaser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\21_Tornado_Chaser.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_22_Portal_Jumper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\22_Portal_Jumper.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_23_Portal_Jumper_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\23_Portal_Jumper_2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_24_Defeat_the_Moon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_Defeat_the_Moon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_25_Sacrifice_The_Sun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\25_Sacrifice_The_Sun.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_2_Star_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2_Star_Light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_3_Faster_Than_Light_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3_Faster_Than_Light_1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_4_Faster_Than_Light_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4_Faster_Than_Light_2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_5_Faster_Than_Light_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5_Faster_Than_Light_3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_6_Explorer_Level_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6_Explorer_Level_1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_7_Explorer_Level_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7_Explorer_Level_2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_8_Explorer_Level_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8_Explorer_Level_3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A_9_Shocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9_Shocked.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

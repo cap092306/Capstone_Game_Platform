@@ -55,8 +55,12 @@
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="ReachFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -68,6 +72,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
@@ -157,9 +162,6 @@
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
     <Compile Include="SaveGameHelper.cs" />
-    <Compile Include="TableLayout.xaml.cs">
-      <DependentUpon>TableLayout.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserManual.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +242,31 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\10_Electrocuted.gif" />
+    <None Include="Resources\11_Zeus_Rival.gif" />
+    <None Include="Resources\12_Zeus_Rival_2.gif" />
+    <None Include="Resources\13_Zeus_Rival_3.gif" />
+    <None Include="Resources\14_Cloud_Hopper.gif" />
+    <None Include="Resources\15_Cloud_Surfer.gif" />
+    <None Include="Resources\16_Head_In_The_Clouds.gif" />
+    <None Include="Resources\17_Black_Hole.gif" />
+    <None Include="Resources\18_Star_Skipper.gif" />
+    <None Include="Resources\19_Jump_Jump.gif" />
+    <None Include="Resources\1_Star_Power.png" />
+    <None Include="Resources\20_Tornado_Rider.gif" />
+    <None Include="Resources\21_Tornado_Chaser.gif" />
+    <None Include="Resources\22_Portal_Jumper.gif" />
+    <None Include="Resources\23_Portal_Jumper_2.gif" />
+    <None Include="Resources\24_Defeat_the_Moon.png" />
+    <None Include="Resources\25_Sacrifice_The_Sun.gif" />
+    <None Include="Resources\2_Star_Light.png" />
+    <None Include="Resources\3_Faster_Than_Light_1.gif" />
+    <None Include="Resources\4_Faster_Than_Light_2.gif" />
+    <None Include="Resources\5_Faster_Than_Light_3.gif" />
+    <None Include="Resources\6_Explorer_Level_1.gif" />
+    <None Include="Resources\7_Explorer_Level_2.gif" />
+    <None Include="Resources\8_Explorer_Level_3.gif" />
+    <None Include="Resources\9_Shocked.gif" />
     <None Include="Resources\Cloud9Data.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -283,34 +310,6 @@
     <None Include="Resources\Bolt_L1.gif" />
     <None Include="Resources\Bolt_L2.gif" />
     <Content Include="favicon.ico" />
-    <Content Include="HTMLPage1.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\10_Electrocuted.gif" />
-    <Content Include="Resources\11_Zeus_Rival.gif" />
-    <Content Include="Resources\12_Zeus_Rival_2.gif" />
-    <Content Include="Resources\13_Zeus_Rival_3.gif" />
-    <Content Include="Resources\14_Cloud_Hopper.gif" />
-    <Content Include="Resources\15_Cloud_Surfer.gif" />
-    <Content Include="Resources\16_Head_In_The_Clouds.gif" />
-    <Content Include="Resources\17_Black_Hole.gif" />
-    <Content Include="Resources\18_Star_Skipper.gif" />
-    <Content Include="Resources\19_Jump_Jump.gif" />
-    <Content Include="Resources\1_Star_Power.png" />
-    <Content Include="Resources\20_Tornado_Rider.gif" />
-    <Content Include="Resources\21_Tornado_Chaser.gif" />
-    <Content Include="Resources\22_Portal_Jumper.gif" />
-    <Content Include="Resources\23_Portal_Jumper_2.gif" />
-    <Content Include="Resources\24_Defeat_the_Moon.png" />
-    <Content Include="Resources\25_Sacrifice_The_Sun.gif" />
-    <Content Include="Resources\2_Star_Light.png" />
-    <Content Include="Resources\3_Faster_Than_Light_1.gif" />
-    <Content Include="Resources\4_Faster_Than_Light_2.gif" />
-    <Content Include="Resources\5_Faster_Than_Light_3.gif" />
-    <Content Include="Resources\6_Explorer_Level_1.gif" />
-    <Content Include="Resources\7_Explorer_Level_2.gif" />
-    <Content Include="Resources\8_Explorer_Level_3.gif" />
-    <Content Include="Resources\9_Shocked.gif" />
     <Content Include="Resources\favicon.ico" />
     <Content Include="Resources\Raindrop.gif" />
     <None Include="Resources\Water Drop Sound High-SoundBible.com-1387792987.wav" />
@@ -338,12 +337,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="TableLayout.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

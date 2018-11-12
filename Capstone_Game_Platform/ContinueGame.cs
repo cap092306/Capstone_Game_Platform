@@ -57,6 +57,7 @@ namespace Capstone_Game_Platform
 
             count = dt.AsEnumerable()
                 .Where(i => i.Field<string>("player_ID") == StartScreen.PlayerID.ToString() 
+                    && !string.IsNullOrWhiteSpace(i.Field<string>("last_played"))
                     && i.Field<string>("last_played") == dt.AsEnumerable()
                         .OrderByDescending(t => t.Field<string>("last_played"))
                         .First().Field<string>("last_played").ToString())

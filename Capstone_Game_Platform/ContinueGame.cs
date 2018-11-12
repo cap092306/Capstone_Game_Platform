@@ -39,8 +39,13 @@ namespace Capstone_Game_Platform
 
                 DisplayLevels(lvlsCompleted);
 
-                string maxPlayerLvl = lvlsCompleted.AsEnumerable().OrderByDescending(j => j.Field<string>("level_ID")).First().Field<string>("level_ID").ToString();
-                string maxLvl = ds.Tables[(int)SaveGameHelper.XMLTbls.level].AsEnumerable().OrderByDescending(k => k.Field<string>("level_ID")).First().Field<string>("level_ID").ToString();
+                string maxPlayerLvl = lvlsCompleted.AsEnumerable()
+                    .OrderByDescending(j => j.Field<string>("level_ID"))
+                    .First().Field<string>("level_ID").ToString();
+
+                string maxLvl = ds.Tables[(int)SaveGameHelper.XMLTbls.level].AsEnumerable()
+                    .OrderByDescending(k => k.Field<string>("level_ID"))
+                    .First().Field<string>("level_ID").ToString();
                 
                 if (maxPlayerLvl != maxLvl)
                 {
@@ -52,14 +57,18 @@ namespace Capstone_Game_Platform
 
             count = dt.AsEnumerable()
                 .Where(i => i.Field<string>("player_ID") == StartScreen.PlayerID.ToString() 
-                    && i.Field<string>("last_played") == dt.AsEnumerable().OrderByDescending(t => t.Field<string>("last_played")).First().Field<string>("last_played").ToString())
+                    && i.Field<string>("last_played") == dt.AsEnumerable()
+                        .OrderByDescending(t => t.Field<string>("last_played"))
+                        .First().Field<string>("last_played").ToString())
                 .Count();
 
             if(count > 0)
             {
                 DataRow lastPlayed = (from lp in dt.AsEnumerable()
                     where lp.Field<string>("player_ID") == StartScreen.PlayerID.ToString() &&
-                        lp.Field<string>("last_played") == dt.AsEnumerable().OrderByDescending(t => t.Field<string>("last_played")).First().Field<string>("last_played").ToString()
+                        lp.Field<string>("last_played") == dt.AsEnumerable()
+                            .OrderByDescending(t => t.Field<string>("last_played"))
+                            .First().Field<string>("last_played").ToString()
                     select lp).SingleOrDefault();
 
                 DisplayLastLevel(lastPlayed);

@@ -120,4 +120,7 @@
   <data name="XMLDBName" xml:space="preserve">
     <value>Cloud9Data.xml</value>
   </data>
+  <data name="XSDDBName" xml:space="preserve">
+    <value>Cloud9Data.xsd</value>
+  </data>
 </root>

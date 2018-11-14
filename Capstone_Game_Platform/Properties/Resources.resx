@@ -142,9 +142,6 @@
   <data name="Portal_Closed_L2_High" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Portal_Closed_L2_High.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="XMLNSURN" xml:space="preserve">
-    <value>Cloud9Data</value>
-  </data>
   <data name="BG_L11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG_L11.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -273,9 +270,6 @@
   </data>
   <data name="Beach_BK_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Beach_BK_71.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HELPName" xml:space="preserve">
-    <value>HtmlPage1.html</value>
   </data>
   <data name="A_10_Electrocuted" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\10_Electrocuted.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

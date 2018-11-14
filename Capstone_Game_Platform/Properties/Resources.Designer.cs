@@ -623,15 +623,6 @@ namespace Capstone_Game_Platform.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to HtmlPage1.html.
-        /// </summary>
-        internal static string HELPName {
-            get {
-                return ResourceManager.GetString("HELPName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Moon {
@@ -837,15 +828,6 @@ namespace Capstone_Game_Platform.Properties {
         internal static string XMLDBName {
             get {
                 return ResourceManager.GetString("XMLDBName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cloud9Data.
-        /// </summary>
-        internal static string XMLNSURN {
-            get {
-                return ResourceManager.GetString("XMLNSURN", resourceCulture);
             }
         }
         

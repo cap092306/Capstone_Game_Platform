@@ -68,5 +68,14 @@ namespace UnitTestProject.Properties {
                 return ResourceManager.GetString("XMLDBName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cloud9Data.xsd.
+        /// </summary>
+        internal static string XSDDBName {
+            get {
+                return ResourceManager.GetString("XSDDBName", resourceCulture);
+            }
+        }
     }
 }

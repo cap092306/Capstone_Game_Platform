@@ -73,6 +73,7 @@ namespace UnitTestProject
             {
                 FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
+            xmlUtils.CreateXMLfile();
             Assert.IsTrue(xmlUtils.ValidateXmlFile());
         }
     }

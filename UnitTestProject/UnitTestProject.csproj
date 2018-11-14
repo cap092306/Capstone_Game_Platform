@@ -67,16 +67,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Capstone_Game_Platform\Capstone_Game_Platform.csproj">
-      <Project>{24b958e0-13d5-4801-9b71-fd326498211b}</Project>
-      <Name>Capstone_Game_Platform</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capstone_Game_Platform\Capstone_Game_Platform.csproj">
+      <Project>{24b958e0-13d5-4801-9b71-fd326498211b}</Project>
+      <Name>Capstone_Game_Platform</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

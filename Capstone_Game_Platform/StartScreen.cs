@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Media;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Capstone_Game_Platform
 {
@@ -16,6 +10,15 @@ namespace Capstone_Game_Platform
         public StartScreen()
         {
             InitializeComponent();
+            XMLUtils xmlUtils = new XMLUtils()
+            {
+                FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
+            };
+            if (!xmlUtils.ValidateXmlFile())
+            {
+                xmlUtils.DeleteXMLfile();
+                xmlUtils.CreateXMLfile();
+            }
         }
         SoundPlayer Theme = new SoundPlayer(Resource1.looperman_l_1804190_0133365_trippy_psychedelic_8_bit_sample_meltdown);
         public static int PlayerID = 1;// gives us the ability to allow for more than player

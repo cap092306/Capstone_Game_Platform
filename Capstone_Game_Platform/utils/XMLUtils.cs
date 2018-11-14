@@ -5,13 +5,7 @@ using System.IO;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Linq;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using System.Configuration;
-using System.Diagnostics;
 using System.Reflection;
-
 
 namespace Capstone_Game_Platform
 {
@@ -26,14 +20,14 @@ namespace Capstone_Game_Platform
         /// Create new default XML File
         /// </summary>
         /// <param name="path"></param>
-        /// <returns>bool - true if file created</returns>
+        /// <returns>bool - true if file created, false if file exists</returns>
         public bool CreateXMLfile()
         {
             if (!File.Exists(FilePath))
             {
                 try
                 {
-                    XDocument doc = XDocument.Parse(Capstone_Game_Platform.Properties.Resources.Cloud9DataXML);
+                    XDocument doc = XDocument.Parse(Properties.Resources.Cloud9DataXML);
                     doc.Save(FilePath);
                     return true;
                 }
@@ -42,7 +36,7 @@ namespace Capstone_Game_Platform
                     throw new Exception("Error occured when trying to create default XML File at: " + FilePath, ex);
                 }
             }
-            else { throw new Exception("File Exsists at: " + FilePath); }
+            return false;
         }
 
         /// <summary>
@@ -104,34 +98,52 @@ namespace Capstone_Game_Platform
                 {
                     throw new Exception("Error occured when trying to Delete XML File at: " + FilePath, ex);
                 }
-            } else
-            {
-                return false;
-            }
+            } 
+            return false;
         }
 
+        /// <summary>
+        /// Validates file, if no file exsists, file is created then validated
+        /// </summary>
+        /// <returns>Bool - returns true if file is validated</returns>
         public bool ValidateXmlFile()
         {
+            if (!File.Exists(FilePath))
+            {
+                CreateXMLfile();
+            }
+
             try
             {
-                StreamReader strmrStreamReader;
-                strmrStreamReader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(Properties.Resources.Cloud9DataXSD));
+                XmlTextReader reader = new XmlTextReader(Properties.Resources.Cloud9DataXSD);
                 XmlSchema xSchema = new XmlSchema();
-                xSchema = XmlSchema.Read(strmrStreamReader, null);
+                xSchema = XmlSchema.Read(reader, ValidationEventHandler);
                 XmlReaderSettings settings = new XmlReaderSettings();
                 settings.Schemas.Add(xSchema);
                 settings.ValidationType = ValidationType.Schema;
                 XmlDocument xDoc = new XmlDocument();
-                xDoc.LoadXml(Properties.Resources.Cloud9DataXML);
+                xDoc.LoadXml(FilePath);
                 XmlReader rdr = XmlReader.Create(new StringReader(xDoc.InnerXml), settings);
                 while (rdr.Read())
                 { }
+                return true;
             }
-            catch
+            catch (Exception ex)
             {
-                return false;
+                throw new Exception("Error occured when trying to validate XML File at: " + FilePath, ex);
             }
-            return true;
+        }
+
+        private static void ValidationEventHandler(object sender, ValidationEventArgs e)
+        {
+            XmlSeverityType type = XmlSeverityType.Warning;
+            if (Enum.TryParse("Error", out type))
+            {
+                if (type == XmlSeverityType.Error)
+                {
+                    throw new Exception(e.Message);
+                }
+            }
         }
     }
 }

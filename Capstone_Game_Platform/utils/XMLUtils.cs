@@ -5,11 +5,12 @@ using System.IO;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Linq;
-using System.Reflection;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("UnitTestProject")]
 namespace Capstone_Game_Platform
 {
-    public class XMLUtils
+    internal class XMLUtils
     {
         /// <summary>
         /// Path to XML File

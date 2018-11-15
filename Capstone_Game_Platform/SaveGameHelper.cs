@@ -2,10 +2,12 @@
 using System.Linq;
 using System.Data;
 using System.IO;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("UnitTestProject")]
 namespace Capstone_Game_Platform
 {
-    public class SaveGameHelper
+    internal class SaveGameHelper
     {
         public int Player_ID { get; set; }
         public string Player_Name { get; set; }

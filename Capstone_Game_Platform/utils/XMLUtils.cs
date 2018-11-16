@@ -135,17 +135,17 @@ namespace Capstone_Game_Platform
         //    }
         //}
 
-        private static void ValidationEventHandler(object sender, ValidationEventArgs e)
-        {
-            XmlSeverityType type = XmlSeverityType.Warning;
-            if (Enum.TryParse("Error", out type))
-            {
-                if (type == XmlSeverityType.Error)
-                {
-                    throw new Exception(e.Message);
-                }
-            }
-        }
+        //private static void ValidationEventHandler(object sender, ValidationEventArgs e)
+        //{
+        //    XmlSeverityType type = XmlSeverityType.Warning;
+        //    if (Enum.TryParse("Error", out type))
+        //    {
+        //        if (type == XmlSeverityType.Error)
+        //        {
+        //            throw new Exception(e.Message);
+        //        }
+        //    }
+        //}
     }
 }
 

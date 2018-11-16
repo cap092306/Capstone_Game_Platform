@@ -66,15 +66,15 @@ namespace UnitTestProject
             Assert.IsTrue(xmlUtils.DeleteXMLfile());
         }
 
-        [TestMethod]
-        public void ValidateXMLFile_TestMethod()
-        {
-            XMLUtils xmlUtils = new XMLUtils
-            {
-                FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
-            };
-            xmlUtils.CreateXMLfile();
-            Assert.IsTrue(xmlUtils.ValidateXmlFile());
-        }
+        //[TestMethod]
+        //public void ValidateXMLFile_TestMethod()
+        //{
+        //    XMLUtils xmlUtils = new XMLUtils
+        //    {
+        //        FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
+        //    };
+        //    xmlUtils.CreateXMLfile();
+        //    Assert.IsTrue(xmlUtils.ValidateXmlFile());
+        //}
     }
 }

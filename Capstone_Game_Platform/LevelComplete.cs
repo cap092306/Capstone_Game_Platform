@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capstone_Game_Platform
@@ -22,28 +16,30 @@ namespace Capstone_Game_Platform
 			label5.Text = Form1.time;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             Form2 Form2 = new Form2();
             Form2.Show();
-            this.Close();
+            Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            SaveGameHelper saveGameHelper = new SaveGameHelper();
-            saveGameHelper.Level_ID = 1;
-            saveGameHelper.Player_ID = StartScreen.PlayerID;
-            saveGameHelper.Level_Score = Form1.score;
-            saveGameHelper.Special_Count = 1; //wind + 
-            saveGameHelper.Monster_Count = 0; //lightbolt kills
-            saveGameHelper.Level_Time = 0; // time to complete level in seconds
-            saveGameHelper.Level_Attempts = 1; // how many attempts before completing level
+            SaveGameHelper saveGameHelper = new SaveGameHelper
+            {
+                Level_ID = 1,
+                Player_ID = StartScreen.PlayerID,
+                Level_Score = Form1.score,
+                Special_Count = 1, //wind + 
+                Monster_Count = 1, //lightbolt kills
+                Level_Time = int.Parse(Form1.time), // time to complete level in seconds
+                Level_Attempts = 1 // how many attempts before completing level
+            };
             saveGameHelper.SaveLevel();
 
             saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Light;

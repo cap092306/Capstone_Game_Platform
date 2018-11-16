@@ -14,7 +14,7 @@ namespace Capstone_Game_Platform
             {
                 FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
-            if (!xmlUtils.ValidateXmlFile())
+            //if (!xmlUtils.ValidateXmlFile())
             {
                 xmlUtils.DeleteXMLfile();
                 xmlUtils.CreateXMLfile();

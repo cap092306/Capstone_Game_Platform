@@ -27,7 +27,7 @@ namespace Capstone_Game_Platform
         SoundPlayer DeathSound = new SoundPlayer(Resource1.Water_Drop_Sound_High_SoundBible_com_1387792987);
         SoundPlayer KeySound = new SoundPlayer(Resource1.chime);
         SoundPlayer LevelSound = new SoundPlayer(Resource1.looperman_l_2360721_0140885_sad_guitar_electric_pt_3_113bpm);
-       
+		public static string time;
 
         public Form1()
         {
@@ -35,8 +35,10 @@ namespace Capstone_Game_Platform
         }
         private void mainGameTimer(object sender, EventArgs e)
         {
-            // linking the jumpSpd integer with the player picture boxes to location
-            player.Top += jumpSpd;
+			// Create new stopwatch for level timer.
+			var levelTime = System.Diagnostics.Stopwatch.StartNew();
+			// linking the jumpSpd integer with the player picture boxes to location
+			player.Top += jumpSpd;
             // refresh the player picture box consistently
             //player.Refresh();
             // if blnJump is true and force is less than 0
@@ -150,11 +152,12 @@ namespace Capstone_Game_Platform
             // if the player collides with the door and has key boolean is true
             if (player.Bounds.IntersectsWith(door.Bounds) && blnHasKey)
             {
-                // then we change the image of the door to open
-                //The line below gave me an error so i commented it out until i can figure out what was wrong with it.
-                //door.Image = Properties.Resources.door_open;
-                // and we stop the timer
-                gameTimer.Stop();
+				// then we change the image of the door to open
+				//The line below gave me an error so i commented it out until i can figure out what was wrong with it.
+				//door.Image = Properties.Resources.door_open;
+				// and we stop the timer
+				time = levelTime.Elapsed.Seconds.ToString();
+				gameTimer.Stop();
                 LevelComplete LevelComplete = new LevelComplete();
                 LevelComplete.Show();
                 this.Close();
@@ -175,7 +178,7 @@ namespace Capstone_Game_Platform
             if (player.Top + player.Height > this.ClientSize.Height + 35)
             {
                 DeathSound.Play();
-                gameTimer.Stop(); // stop the timer
+				gameTimer.Stop(); // stop the timer
                 DeathBox DeathBox = new DeathBox();
                 DeathBox.Show();
                 //MessageBox.Show("You Died, the moon is laughing!!!" + Environment.NewLine + Environment.NewLine + "                  BAHAHAHA!!!"); // show the message box

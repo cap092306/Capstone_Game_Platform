@@ -19,7 +19,8 @@ namespace Capstone_Game_Platform
 
         private void LevelComplete_Load(object sender, EventArgs e)
         {
-             label3.Text = Form1.score.ToString();
+             label3.Text = Form3.score.ToString();
+			 label7.Text = Form3.time;
         }
 
         private void button3_Click(object sender, EventArgs e)

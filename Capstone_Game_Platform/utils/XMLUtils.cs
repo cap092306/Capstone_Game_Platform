@@ -106,33 +106,33 @@ namespace Capstone_Game_Platform
         /// Validates file, if no file exsists, file is created then validated
         /// </summary>
         /// <returns>Bool - returns true if file is validated</returns>
-        public bool ValidateXmlFile()
-        {
-            if (!File.Exists(FilePath))
-            {
-                CreateXMLfile();
-            }
+        //public bool ValidateXmlFile()
+        //{
+        //    if (!File.Exists(FilePath))
+        //    {
+        //        CreateXMLfile();
+        //    }
 
-            try
-            {
-                XmlTextReader reader = new XmlTextReader(Properties.Resources.Cloud9DataXSD);
-                XmlSchema xSchema = new XmlSchema();
-                xSchema = XmlSchema.Read(reader, ValidationEventHandler);
-                XmlReaderSettings settings = new XmlReaderSettings();
-                settings.Schemas.Add(xSchema);
-                settings.ValidationType = ValidationType.Schema;
-                XmlDocument xDoc = new XmlDocument();
-                xDoc.LoadXml(FilePath);
-                XmlReader rdr = XmlReader.Create(new StringReader(xDoc.InnerXml), settings);
-                while (rdr.Read())
-                { }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error occured when trying to validate XML File at: " + FilePath, ex);
-            }
-        }
+        //    try
+        //    {
+        //        XmlTextReader reader = new XmlTextReader(Properties.Resources.Cloud9DataXSD);
+        //        XmlSchema xSchema = new XmlSchema();
+        //        xSchema = XmlSchema.Read(reader, ValidationEventHandler);
+        //        XmlReaderSettings settings = new XmlReaderSettings();
+        //        settings.Schemas.Add(xSchema);
+        //        settings.ValidationType = ValidationType.Schema;
+        //        XmlDocument xDoc = new XmlDocument();
+        //        xDoc.LoadXml(FilePath);
+        //        XmlReader rdr = XmlReader.Create(new StringReader(xDoc.InnerXml), settings);
+        //        while (rdr.Read())
+        //        { }
+        //        return true;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new Exception("Error occured when trying to validate XML File at: " + FilePath, ex);
+        //    }
+        //}
 
         private static void ValidationEventHandler(object sender, ValidationEventArgs e)
         {

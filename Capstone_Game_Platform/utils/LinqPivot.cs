@@ -1,9 +1,7 @@
 ﻿using System.Linq;
 using System.Data;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("UnitTestProject")]
 namespace Capstone_Game_Platform
 {
     internal class LinqPivot

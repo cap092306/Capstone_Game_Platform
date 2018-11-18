@@ -28,71 +28,71 @@
   <xs:element name="player">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="player_ID"/>
-        <xs:element ref="player_name"/>
-        <xs:element ref="char_level"/>
-        <xs:element ref="char_points"/>
+        <xs:element name="player_ID"/>
+        <xs:element name="player_name"/>
+        <xs:element name="char_level"/>
+        <xs:element name="char_points"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="player_history">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="player_ID"/>
-        <xs:element ref="level_ID"/>
-        <xs:element ref="life_count"/>
-        <xs:element ref="points"/>
-        <xs:element ref="level_time"/>
-        <xs:element ref="special_count"/>
-        <xs:element ref="monster_count"/>
-        <xs:element ref="last_played"/>
-        <xs:element ref="completed"/>
-        <xs:element ref="level_attempts"/>
+        <xs:element name="player_ID"/>
+        <xs:element name="level_ID"/>
+        <xs:element name="life_count"/>
+        <xs:element name="points"/>
+        <xs:element name="level_time"/>
+        <xs:element name="special_count"/>
+        <xs:element name="monster_count"/>
+        <xs:element name="last_played"/>
+        <xs:element name="completed"/>
+        <xs:element name="level_attempts"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="player_achievement">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="player_ID"/>
-        <xs:element ref="achievement_ID"/>
-        <xs:element ref="achievement_data"/>
-        <xs:element ref="achievement_date"/>
+        <xs:element name="player_ID"/>
+        <xs:element name="achievement_ID"/>
+        <xs:element name="achievement_data"/>
+        <xs:element name="achievement_date"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="level">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="level_ID"/>
-        <xs:element ref="level_Order"/>
-        <xs:element ref="level_name"/>
-        <xs:element ref="level_life_max"/>
-        <xs:element ref="level_mana_max"/>
-        <xs:element ref="level_monster_count"/>
-        <xs:element ref="level_special_count"/>
+        <xs:element name="level_ID"/>
+        <xs:element name="level_Order"/>
+        <xs:element name="level_name"/>
+        <xs:element name="level_life_max"/>
+        <xs:element name="level_mana_max"/>
+        <xs:element name="level_monster_count"/>
+        <xs:element name="level_special_count"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="achievement">
 	<xs:complexType>
 		<xs:sequence>
-			<xs:element ref="achievement_ID"/>
-			<xs:element ref="achievement_name"/>
-			<xs:element ref="achievement_desc"/>
-			<xs:element ref="badge"/>
-			<xs:element ref="number"/>
+			<xs:element name="achievement_ID"/>
+			<xs:element name="achievement_name"/>
+			<xs:element name="achievement_desc"/>
+			<xs:element name="badge"/>
+			<xs:element name="number"/>
 		</xs:sequence>
 	</xs:complexType>
   </xs:element>
   <xs:element name="cloud9">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="player" maxOccurs="unbounded" minOccurs="1" />
-        <xs:element ref="player_history" maxOccurs="unbounded" minOccurs="3"/>
-        <xs:element ref="player_achievement" maxOccurs="unbounded" minOccurs="25"/>
-        <xs:element ref="level" maxOccurs="3" minOccurs="3"/>
-		<xs:element ref="achievement" maxOccurs="25" minOccurs="25"/>
+        <xs:element name="player" maxOccurs="unbounded" minOccurs="1" />
+        <xs:element name="player_history" maxOccurs="unbounded" minOccurs="3"/>
+        <xs:element name="player_achievement" maxOccurs="unbounded" minOccurs="25"/>
+        <xs:element name="level" maxOccurs="3" minOccurs="3"/>
+		<xs:element name="achievement" maxOccurs="25" minOccurs="25"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>

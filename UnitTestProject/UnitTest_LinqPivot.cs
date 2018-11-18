@@ -8,7 +8,7 @@ using System.Linq;
 namespace UnitTestProject
 {
     [TestClass]
-    public class LinqPivot_UnitTest
+    public class UnitTest_LinqPivot
     {
         [TestMethod]
         public void Pivot_TestMethod()
@@ -20,8 +20,9 @@ namespace UnitTestProject
             DataSet ds = xmlUtils.ReadXMLfile();
             DataTable dt = ds.Tables[(int)SaveGameHelper.XMLTbls.player_history];
             LinqPivot linqPivot = new LinqPivot();
+            DataTable stats = linqPivot.Pivot(dt, dt.Columns["level_ID"], "Level Stats");
 
-            
+            Assert.AreEqual(4, stats.Columns.Count);
         }
     }
 }

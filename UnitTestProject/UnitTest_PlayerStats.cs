@@ -8,7 +8,7 @@ using System.Linq;
 namespace UnitTestProject
 {
     [TestClass]
-    public class PlayerStats_UnitTest
+    public class UnitTest_PlayerStats
     {
         [TestMethod]
         public void TestMethod1()

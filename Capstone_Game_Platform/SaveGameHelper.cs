@@ -199,7 +199,7 @@ namespace Capstone_Game_Platform
             }
 
             if (Player_Achievement == Achievements.Electrocuted) // Death by Lighting is a counter
-            {   // if we add a second level of star collection add logic to handle it here
+            {   // if we add a second level of electrocutions add logic to handle it here
                 result.ItemArray[(int)PlayerAchievementsTbl.achievement_data] = (Achievement_Data + achievementCount).ToString();
                 if ((Achievement_Data + achievementCount) >= (int)Achievement_Counters.Lighting && result.ItemArray[(int)PlayerAchievementsTbl.achievement_date].ToString() == string.Empty)
                 {

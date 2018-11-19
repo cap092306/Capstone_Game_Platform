@@ -28,8 +28,6 @@ namespace Capstone_Game_Platform
             Form Form4 = new Form4();
             Form4.Show();
             Theme.Stop();
-            
-            //this.Dispose();
         }
         
         private void StartScreen_Load(object sender, EventArgs e)

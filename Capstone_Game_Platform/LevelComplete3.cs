@@ -17,6 +17,11 @@ namespace Capstone_Game_Platform
         }
 
         private void Button3_Click(object sender, EventArgs e)
+        { 
+            Close();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
         {
             SaveGameHelper saveGameHelper = new SaveGameHelper
             {
@@ -33,7 +38,7 @@ namespace Capstone_Game_Platform
             saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Light;
             saveGameHelper.Achievement_Data = Form3.score / 10;
             saveGameHelper.SaveAchievement();
-            Close();
+            label4.Visible = true;
         }
     }
 }

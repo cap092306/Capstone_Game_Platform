@@ -3,7 +3,9 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("UnitTestProject")]
 namespace Capstone_Game_Platform
 {
     public partial class PlayerStats : Form

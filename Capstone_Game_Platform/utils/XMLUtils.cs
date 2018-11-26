@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Data;
-using System.Security;
 using System.IO;
-using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Linq;
 using System.Reflection;
@@ -56,7 +54,7 @@ namespace Capstone_Game_Platform
                 ds.ReadXml(FilePath);
                 return ds;
             }
-            catch (SecurityException ex)
+            catch (Exception ex)
             {
                 throw new Exception("Can not access XML File at: " + FilePath, ex);
             }
@@ -75,7 +73,7 @@ namespace Capstone_Game_Platform
                 ds.WriteXml(FilePath);
                 return true;
             }
-            catch (SecurityException ex)
+            catch (Exception ex)
             {
                 throw new Exception("Can not access XML File at: " + FilePath, ex);
             }
@@ -102,48 +100,24 @@ namespace Capstone_Game_Platform
             return false;
         }
 
-        /// <summary>
-        /// Validates file, if no file exsists, file is created then validated
-        /// </summary>
-        /// <returns>Bool - returns true if file is validated</returns>
-        //public bool ValidateXmlFile()
-        //{
-        //    if (!File.Exists(FilePath))
-        //    {
-        //        CreateXMLfile();
-        //    }
-
-        //    try
-        //    {
-        //        XmlTextReader reader = new XmlTextReader(Properties.Resources.Cloud9DataXSD);
-        //        XmlSchema xSchema = new XmlSchema();
-        //        xSchema = XmlSchema.Read(reader, ValidationEventHandler);
-        //        XmlReaderSettings settings = new XmlReaderSettings();
-        //        settings.Schemas.Add(xSchema);
-        //        settings.ValidationType = ValidationType.Schema;
-        //        XmlDocument xDoc = new XmlDocument();
-        //        xDoc.LoadXml(FilePath);
-        //        XmlReader rdr = XmlReader.Create(new StringReader(xDoc.InnerXml), settings);
-        //        while (rdr.Read())
-        //        { }
-        //        return true;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new Exception("Error occured when trying to validate XML File at: " + FilePath, ex);
-        //    }
-        //}
-
-        private static void ValidationEventHandler(object sender, ValidationEventArgs e)
+        // <summary>
+        // Validates file, if no file exsists, file is created then validated
+        // </summary>
+        // <returns>Bool - returns true if file is validated</returns>
+        public bool ValidateXmlFile()
         {
-            XmlSeverityType type = XmlSeverityType.Warning;
-            if (Enum.TryParse("Error", out type))
+            if (!File.Exists(FilePath))
             {
-                if (type == XmlSeverityType.Error)
-                {
-                    throw new Exception(e.Message);
-                }
+                CreateXMLfile();
             }
+
+            bool isXmlValid = true;
+            XDocument xSchema = XDocument.Parse(Properties.Resources.Cloud9DataXSD);
+            XmlSchemaSet schemas = new XmlSchemaSet();
+            schemas.Add("urn:Cloud9Data", xSchema.CreateReader());
+            XDocument xmlDocument = XDocument.Load(FilePath);
+            xmlDocument.Validate(schemas, (o, e) => { isXmlValid = false; });
+            return isXmlValid;
         }
     }
 }

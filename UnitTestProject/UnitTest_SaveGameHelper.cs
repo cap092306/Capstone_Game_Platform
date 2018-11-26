@@ -64,16 +64,26 @@ namespace UnitTestProject
             saveGameHelper.Achievement_Data = 1;
             saveGameHelper.SaveAchievement();
 
+            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Light;
+            saveGameHelper.Achievement_Data = 10;
+            saveGameHelper.SaveAchievement();
+
+            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Electrocuted;
+            saveGameHelper.Achievement_Data = 10;
+            saveGameHelper.SaveAchievement();
+
             DataSet ds = xmlUtils.ReadXMLfile();
             DataTable dt = ds.Tables[(int)SaveGameHelper.XMLTbls.player_achievement];
             DataTable badges = new DataTable();
-            DataRow rows = (from row in ds.Tables[(int)SaveGameHelper.XMLTbls.player_achievement].AsEnumerable()
+
+
+            int count = (from row in ds.Tables[(int)SaveGameHelper.XMLTbls.player_achievement].AsEnumerable()
                         where row.Field<string>("player_ID") == StartScreen.PlayerID.ToString() //player1
                               && !String.IsNullOrWhiteSpace(row.Field<string>("achievement_date").ToString())
-                        select row).SingleOrDefault();
+                        select row).Count();
 
-            Assert.IsNotNull(rows);
-            Assert.IsTrue(!String.IsNullOrWhiteSpace(rows.Field<string>("achievement_data")));
+            Assert.IsNotNull(count);
+            Assert.AreNotEqual(0,count);
         }
     }
 }

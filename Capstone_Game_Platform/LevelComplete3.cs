@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capstone_Game_Platform
@@ -23,22 +16,29 @@ namespace Capstone_Game_Platform
 			 label7.Text = Form3.time;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
+        { 
+            Close();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
         {
-            SaveGameHelper saveGameHelper = new SaveGameHelper();
-            saveGameHelper.Level_ID = 3;
-            saveGameHelper.Player_ID = StartScreen.PlayerID;
-            saveGameHelper.Level_Score = Form3.score;
-            saveGameHelper.Special_Count = 1; //wind + 
-            saveGameHelper.Monster_Count = 0; //lightbolt kills
-            saveGameHelper.Level_Time = 0; // time to complete level in seconds
-            saveGameHelper.Level_Attempts = 1; // how many attempts before completing level
+            SaveGameHelper saveGameHelper = new SaveGameHelper
+            {
+                Level_ID = 3,
+                Player_ID = StartScreen.PlayerID,
+                Level_Score = Form3.score,
+                Special_Count = 1, //wind + 
+                Monster_Count = 3, //lightbolt kills
+                Level_Time = int.Parse(Form3.time), // time to complete level in seconds
+                Level_Attempts = 1 // how many attempts before completing level
+            };
             saveGameHelper.SaveLevel();
 
             saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Light;
-            saveGameHelper.Achievement_Data = (Form3.score / 10);
+            saveGameHelper.Achievement_Data = Form3.score / 10;
             saveGameHelper.SaveAchievement();
-            this.Close();
+            label4.Visible = true;
         }
     }
 }

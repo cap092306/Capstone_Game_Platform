@@ -256,99 +256,141 @@
   </achievement>
   <achievement>
     <achievement_ID>6</achievement_ID>
+    <achievement_name>Explorer - Level 1</achievement_name>
+    <achievement_desc>Find all the specials on level 1.</achievement_desc>
+    <badge>A_6_Explorer_Level_1</badge>
+    <number>5</number>
+  </achievement>
+  <achievement>
+    <achievement_ID>7</achievement_ID>
+    <achievement_name>Explorer - Level 2</achievement_name>
+    <achievement_desc>Find all the specials on level 2.</achievement_desc>
+    <badge>A_7_Explorer_Level_2</badge>
+    <number>7</number>
+  </achievement>
+  <achievement>
+    <achievement_ID>8</achievement_ID>
+    <achievement_name>Explorer - Level 3</achievement_name>
+    <achievement_desc>Find all the specials on level 3.</achievement_desc>
+    <badge>A_8_Explorer_Level_3</badge>
+    <number>10</number>
+  </achievement>
+  <achievement>
+    <achievement_ID>9</achievement_ID>
     <achievement_name>Shocked!</achievement_name>
     <achievement_desc>Die by Lightening.</achievement_desc>
     <badge>A_9_Shocked</badge>
     <number>1</number>
   </achievement>
   <achievement>
-    <achievement_ID>7</achievement_ID>
+    <achievement_ID>10</achievement_ID>
     <achievement_name>Electrocuted...</achievement_name>
     <achievement_desc>Die by Lightening 500 times.</achievement_desc>
     <badge>A_10_Electrocuted</badge>
     <number>500</number>
   </achievement>
   <achievement>
-    <achievement_ID>8</achievement_ID>
+    <achievement_ID>11</achievement_ID>
     <achievement_name>Zeus' Rival</achievement_name>
     <achievement_desc>Kill all the Lightening, in level 1.</achievement_desc>
     <badge>A_11_Zeus_Rival</badge>
     <number>1</number>
   </achievement>
   <achievement>
-     <achievement_ID>9</achievement_ID>
+     <achievement_ID>12</achievement_ID>
      <achievement_name>Zeus' Rival - Part Deux</achievement_name>
      <achievement_desc>Kill all the Lightening, in level 2.</achievement_desc>
     <badge>A_12_Zeus_Rival_2</badge>
     <number>2</number>
   </achievement>
   <achievement>
-    <achievement_ID>10</achievement_ID>
+    <achievement_ID>13</achievement_ID>
     <achievement_name>Zeus' Rival, the third</achievement_name>
     <achievement_desc>Kill all the Lightening, in level 3.</achievement_desc>
     <badge>A_13_Zeus_Rival_3</badge>
     <number>3</number>
   </achievement>
   <achievement>
-    <achievement_ID>11</achievement_ID>
+    <achievement_ID>14</achievement_ID>
     <achievement_name>Cloud Hopper</achievement_name>
-    <achievement_desc>Hop on every cloud in level 1.</achievement_desc>
+    <achievement_desc>Hop on every cloud in a level.</achievement_desc>
     <badge>A_14_Cloud_Hopper</badge>
     <number>1</number>
   </achievement>
   <achievement>
-    <achievement_ID>12</achievement_ID>
+    <achievement_ID>15</achievement_ID>
     <achievement_name>Cloud Surfer</achievement_name>
     <achievement_desc>Hop on every cloud in level 2.</achievement_desc>
     <badge>A_15_Cloud_Surfer</badge>
     <number>1</number>
   </achievement>
   <achievement>
-    <achievement_ID>13</achievement_ID>
+    <achievement_ID>16</achievement_ID>
     <achievement_name>Head in the Clouds</achievement_name>
     <achievement_desc>Hop on every cloud, in level 3.</achievement_desc>
     <badge>A_16_Head_In_The_Clouds</badge>
     <number>1</number>
   </achievement>
   <achievement>
-    <achievement_ID>14</achievement_ID>
+    <achievement_ID>17</achievement_ID>
     <achievement_name>Black Hole</achievement_name>
     <achievement_desc>Die by falling in a black hole.</achievement_desc>
     <badge>A_17_Black_Hole</badge>
     <number>1</number>
   </achievement>
   <achievement>
-    <achievement_ID>15</achievement_ID>
+    <achievement_ID>18</achievement_ID>
     <achievement_name>Star Skipper</achievement_name>
     <achievement_desc>Complete a level without collecting any stars.</achievement_desc>
     <badge>A_18_Star_Skipper</badge>
     <number>1</number>
   </achievement>
   <achievement>
-    <achievement_ID>16</achievement_ID>
+    <achievement_ID>19</achievement_ID>
+    <achievement_name>Jump, Jump!</achievement_name>
+    <achievement_desc>Complete a level by only jumping.</achievement_desc>
+    <badge>A_19_Jump_Jump</badge>
+    <number>1</number>
+  </achievement>
+  <achievement>
+    <achievement_ID>20</achievement_ID>
+    <achievement_name>Tornado Rider</achievement_name>
+    <achievement_desc>Collect the Tornado in Level 1.</achievement_desc>
+    <badge>A_20_Tornado_Rider</badge>
+    <number>1</number>
+  </achievement>
+  <achievement>
+    <achievement_ID>21</achievement_ID>
+    <achievement_name>Tornado Chaser</achievement_name>
+    <achievement_desc>Collect the Tornado in Level 2.</achievement_desc>
+    <badge>A_21_Tornado_Chaser</badge>
+    <number>1</number>
+  </achievement>
+  <achievement>
+    <achievement_ID>22</achievement_ID>
     <achievement_name>Portal Jumper</achievement_name>
     <achievement_desc>Use the portal in level 1.</achievement_desc>
     <badge>A_22_Portal_Jumper</badge>
     <number>1</number>
   </achievement>
   <achievement>
-    <achievement_ID>17</achievement_ID>
+    <achievement_ID>23</achievement_ID>
     <achievement_name>Portal Jumper - Part Deux</achievement_name>
     <achievement_desc>Use the portal in level 2.</achievement_desc>
     <badge>A_23_Portal_Jumper_2</badge>
     <number>1</number>
   </achievement>
   <achievement>
-    <achievement_ID>18</achievement_ID>
+    <achievement_ID>24</achievement_ID>
     <achievement_name>Defeat the Moon</achievement_name>
     <achievement_desc>Defeat the Moon and save the Sun.</achievement_desc>
     <badge>A_24_Defeat_the_Moon</badge>
     <number>1</number>
   </achievement>
   <achievement>
-    <achievement_ID>19</achievement_ID>
+    <achievement_ID>25</achievement_ID>
     <achievement_name>Sacrifice the Sun!</achievement_name>
-    <achievement_desc>Let the Moon win.</achievement_desc>
+    <achievement_desc>Let the Mooon win.</achievement_desc>
     <badge>A_25_Sacrifice_The_Sun</badge>
     <number>1</number>
   </achievement>

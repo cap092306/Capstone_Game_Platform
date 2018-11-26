@@ -14,7 +14,7 @@ namespace Capstone_Game_Platform
             {
                 FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
-            //if (!xmlUtils.ValidateXmlFile())
+            if (!xmlUtils.ValidateXmlFile())
             {
                 xmlUtils.DeleteXMLfile();
                 xmlUtils.CreateXMLfile();
@@ -28,8 +28,6 @@ namespace Capstone_Game_Platform
             Form Form4 = new Form4();
             Form4.Show();
             Theme.Stop();
-            
-            //this.Dispose();
         }
         
         private void StartScreen_Load(object sender, EventArgs e)
@@ -46,7 +44,7 @@ namespace Capstone_Game_Platform
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form Help = new UserManualUC();
+            Form Help = new UserManual();
             Help.Show();
             Theme.Stop();
         }

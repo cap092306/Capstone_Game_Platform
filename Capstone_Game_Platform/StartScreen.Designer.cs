@@ -54,6 +54,9 @@
             // 
             // button1
             // 
+            this.button1.AccessibleDescription = "Click button to start a new game";
+            this.button1.AccessibleName = "Start New Game Button";
+            this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -68,6 +71,9 @@
             // 
             // button2
             // 
+            this.button2.AccessibleDescription = "Opens Continue Game Menu";
+            this.button2.AccessibleName = "Continue Game Button";
+            this.button2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
@@ -82,6 +88,9 @@
             // 
             // button3
             // 
+            this.button3.AccessibleDescription = "Opens Help Screen";
+            this.button3.AccessibleName = "User Guide and Help Button";
+            this.button3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
@@ -190,6 +199,9 @@
             // 
             // button4
             // 
+            this.button4.AccessibleDescription = "Opens Player Stats Window";
+            this.button4.AccessibleName = "Player Stats Button";
+            this.button4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
@@ -197,7 +209,7 @@
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(144, 49);
-            this.button4.TabIndex = 81;
+            this.button4.TabIndex = 2;
             this.button4.Text = "Player Stats";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);

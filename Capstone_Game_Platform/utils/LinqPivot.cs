@@ -34,26 +34,26 @@ namespace Capstone_Game_Platform
                .ToList();
             t.ForEach(c => result.Columns.Add(c));
 
-            for(int j = 0; j < t.Count; j++) //for each pivotColumn named value
+            for (int j = 0; j < t.Count; j++) //for each pivotColumn named value
             {
                 foreach (string s in dataColumnNames) //for each dataColumnName
                 {
                     //select value of dataColumnName string 
                     //where the pivotColum is equal to the current value from the list of pivotColum values
                     string value = (from row in dt.AsEnumerable()
-                                      where row.Field<string>(pivotColumn.ColumnName) == t[j]
-                                      select row.Field<string>(s)).SingleOrDefault();
+                                    where row.Field<string>(pivotColumn.ColumnName) == t[j]
+                                    select row.Field<string>(s)).SingleOrDefault();
 
                     DataRow pk = (from row in result.AsEnumerable()
-                                      where row.Field<string>(pivotName) == s
-                                      select row).SingleOrDefault();
+                                  where row.Field<string>(pivotName) == s
+                                  select row).SingleOrDefault();
 
                     pk.BeginEdit();
                     int index = pk.Table.Columns.IndexOf(t[j]);
                     pk[index] = value;
                     pk.EndEdit();
                     pk.AcceptChanges();
-                } 
+                }
             }
             return result;
         }

@@ -313,6 +313,26 @@ namespace Capstone_Game_Platform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Achievements_page7_8 {
+            get {
+                object obj = ResourceManager.GetObject("Achievements_page7_8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap back_cover {
+            get {
+                object obj = ResourceManager.GetObject("back_cover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Beach_BK_1 {
             get {
                 object obj = ResourceManager.GetObject("Beach_BK_1", resourceCulture);
@@ -541,7 +561,7 @@ namespace Capstone_Game_Platform.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
         ///&lt;cloud9&gt;
         ///  &lt;player&gt;
         ///    &lt;player_ID&gt;1&lt;/player_ID&gt;
@@ -558,7 +578,7 @@ namespace Capstone_Game_Platform.Properties {
         ///    &lt;special_count&gt;0&lt;/special_count&gt;
         ///    &lt;monster_count&gt;0&lt;/monster_count&gt;
         ///    &lt;last_played&gt;&lt;/last_played&gt;
-        ///    &lt;comp [rest of string was truncated]&quot;;.
+        ///    &lt;completed&gt;&lt;/completed [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Cloud9DataXML {
             get {
@@ -579,6 +599,26 @@ namespace Capstone_Game_Platform.Properties {
         internal static string Cloud9DataXSD {
             get {
                 return ResourceManager.GetString("Cloud9DataXSD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap contents_page1_2 {
+            get {
+                object obj = ResourceManager.GetObject("contents_page1_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cover {
+            get {
+                object obj = ResourceManager.GetObject("cover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -618,6 +658,16 @@ namespace Capstone_Game_Platform.Properties {
         internal static System.Drawing.Bitmap Floor_Block_L3 {
             get {
                 object obj = ResourceManager.GetObject("Floor_Block_L3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap game_controls_page5_6 {
+            get {
+                object obj = ResourceManager.GetObject("game_controls_page5_6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -785,6 +835,16 @@ namespace Capstone_Game_Platform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap stats_and_credits_page9_10 {
+            get {
+                object obj = ResourceManager.GetObject("stats_and_credits_page9_10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sun {
             get {
                 object obj = ResourceManager.GetObject("Sun", resourceCulture);
@@ -818,6 +878,16 @@ namespace Capstone_Game_Platform.Properties {
         internal static System.Drawing.Bitmap Tornado_L2_Dark {
             get {
                 object obj = ResourceManager.GetObject("Tornado_L2_Dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UG_page3_4 {
+            get {
+                object obj = ResourceManager.GetObject("UG_page3_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

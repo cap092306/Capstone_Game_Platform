@@ -44,7 +44,7 @@ namespace Capstone_Game_Platform
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form Help = new UserManualUC();
+            Form Help = new UserManual();
             Help.Show();
             Theme.Stop();
         }

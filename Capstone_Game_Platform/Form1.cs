@@ -14,10 +14,14 @@ namespace Capstone_Game_Platform
 {
     public partial class Form1 : Form
     {
+		bool shot = false; //used to track shot
+		bool shotRight = false; //used to shoot right
+		bool shotLeft = false; //used to shoot left
         bool moveLeft = false; // used to control player moving left
         bool moveRight = false; // used to control player moving right
         bool blnJump = false; // used to check if player is blnJump or not
         bool blnHasKey = false; // used to determine if the player possesses the key
+		int boltScore = 0; //used to track bolts killed
         int jumpSpd = 8; // jump speed integer
         int force = 6; // jump force
         public static int score = 0; // resets the score to 0 upon entering a level
@@ -60,6 +64,43 @@ namespace Capstone_Game_Platform
                 // else change the jump speed to 10
                 jumpSpd = 10;
             }
+
+			foreach (Control Y in this.Controls)
+			{
+				if (Y is PictureBox && Y.Tag == "bullet" && shotRight)
+				{ // move bullet towards the right of the screen 
+
+					Y.Left += 20;
+					if (Y.Left > ClientSize.Width - 2)
+					{
+						Controls.Remove(Y);
+						Y.Dispose();
+					}
+					if (Y is PictureBox && Y.Tag == "bullet" && Y.Bounds.IntersectsWith(Bolt_L1.Bounds))
+					{
+						this.Controls.Remove(Y);
+						Bolt_L1.Left = 1800;
+						boltScore += 1;
+					}
+				}
+				if (Y is PictureBox && Y.Tag == "bullet" && shotLeft)
+				{ // move bullet towards the left of the screen 
+
+					Y.Left -= 20;
+					if (Y.Left < 1)
+					{
+						Controls.Remove(Y);
+						Y.Dispose();
+					}
+					if (Y is PictureBox && Y.Tag == "bullet" && Y.Bounds.IntersectsWith(Bolt_L1.Bounds))
+					{
+						this.Controls.Remove(Y);
+						Bolt_L1.Left = 1800;
+						boltScore += 1;
+					}
+				}
+				}
+
             // if go left is true and players left is greater than 25 pixels
             // only then move player towards left of the
             if (moveLeft && player.Left > 25)
@@ -205,7 +246,23 @@ namespace Capstone_Game_Platform
                 // then we set blnJump to true
                 blnJump = true;
             }
-        }
+			if (e.KeyCode == Keys.E && shot == false)
+			{
+				// then we set blnJump to true
+				makeBullet();
+				shotRight = true;
+				shotLeft = false;
+				shot = true;
+			}
+			if (e.KeyCode == Keys.Q && shot == false)
+			{
+				// then we set blnJump to true
+				makeBullet();
+				shotLeft = true;
+				shotRight = false;
+				shot = true;
+			}
+		}
         private void keyisup(object sender, KeyEventArgs e)
         {
             // if the LEFT key is up we set the car left to false
@@ -224,7 +281,13 @@ namespace Capstone_Game_Platform
             {
                 blnJump = false;
             }
-        }
+
+			if (shot == true)
+			{
+				shot = false;
+			}
+			
+		}
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -241,6 +304,19 @@ namespace Capstone_Game_Platform
 
         }
 
+		private void makeBullet()
+		{
+			PictureBox bullet = new PictureBox(); // create a new picture box class to the form 
+			bullet.BackColor = Color.WhiteSmoke; // set the color of the bullet 
+			bullet.Height = 5; // set bullet height to 5 pixels 
+			bullet.Width = 10; // set bullet width to 10 pixels 
+			bullet.Left = player.Left + player.Width; // bullet will place in front of player object 
+			bullet.Top = player.Top + (player.Height / 2); // bullet will be middle of player object 
+			bullet.Tag = "bullet"; // set the tag for the object to bullet 
+			bullet.Name = "bullet";
+			Controls.Add(bullet);
+			bullet.BringToFront();
+		}
           private void timer1_Tick(object sender, EventArgs e)
         {
             int width = this.Width;

@@ -95,16 +95,16 @@ namespace UnitTestProject
             };
             xmlUtils.DeleteXMLfile();
             DataSet result = xmlUtils.ReadXMLfile();
-            string orginalVal = result.Tables[0].Rows[0]["player_name"].ToString();
+            string orginalVal = result.Tables[0].Rows[0]["char_level"].ToString();
             //change the dataset
-            result.Tables[0].Rows[0]["player_name"] = "Dew"; //changing from DewDrop
+            result.Tables[0].Rows[0]["char_level"] = "100"; //changing from 1
             result.AcceptChanges();
             //save the file
             xmlUtils.UpdateXMLfile(result);
             //clean the local varriable
             result = null;
             result = xmlUtils.ReadXMLfile();
-            string savedVal = result.Tables[0].Rows[0]["player_name"].ToString();
+            string savedVal = result.Tables[0].Rows[0]["char_level"].ToString();
             Assert.AreNotEqual(orginalVal, savedVal, $"Expects the new saved value to be different.");
         }
 

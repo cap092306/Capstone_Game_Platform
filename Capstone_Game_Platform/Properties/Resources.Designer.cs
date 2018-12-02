@@ -565,20 +565,21 @@ namespace Capstone_Game_Platform.Properties {
         ///&lt;cloud9&gt;
         ///  &lt;player&gt;
         ///    &lt;player_ID&gt;1&lt;/player_ID&gt;
-        ///    &lt;player_name&gt;DewDrop&lt;/player_name&gt;
         ///    &lt;char_level&gt;1&lt;/char_level&gt;
         ///    &lt;char_points&gt;0&lt;/char_points&gt;
         ///  &lt;/player&gt;
         ///  &lt;player_history&gt;
         ///    &lt;player_ID&gt;1&lt;/player_ID&gt;
         ///    &lt;level_ID&gt;1&lt;/level_ID&gt;
-        ///    &lt;life_count&gt;0&lt;/life_count&gt;
         ///    &lt;points&gt;0&lt;/points&gt;
         ///    &lt;level_time&gt;0&lt;/level_time&gt;
         ///    &lt;special_count&gt;0&lt;/special_count&gt;
         ///    &lt;monster_count&gt;0&lt;/monster_count&gt;
         ///    &lt;last_played&gt;&lt;/last_played&gt;
-        ///    &lt;completed&gt;&lt;/completed [rest of string was truncated]&quot;;.
+        ///    &lt;completed&gt;&lt;/completed&gt;
+        ///    &lt;level_attempts&gt;0&lt;/level_attempts&gt;
+        ///  &lt;/player_history&gt;
+        ///  &lt;playe [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Cloud9DataXML {
             get {
@@ -589,12 +590,12 @@ namespace Capstone_Game_Platform.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;xs:schema attributeFormDefault=&quot;unqualified&quot; elementFormDefault=&quot;qualified&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:CO=&quot;urn:Cloud9Data&quot;  targetNamespace=&quot;urn:Cloud9Data&quot;&gt;
         ///  &lt;xs:element name=&quot;player_ID&quot; type=&quot;xs:integer&quot;/&gt;
-        ///  &lt;xs:element name=&quot;player_name&quot; type=&quot;xs:string&quot;/&gt;
         ///  &lt;xs:element name=&quot;char_level&quot; type=&quot;xs:integer&quot;/&gt;
         ///  &lt;xs:element name=&quot;char_points&quot; type=&quot;xs:integer&quot;/&gt;
         ///  &lt;xs:element name=&quot;level_ID&quot; type=&quot;xs:integer&quot;/&gt;
-        ///  &lt;xs:element name=&quot;life_count&quot; type=&quot;xs:integer&quot;/&gt;
-        ///  &lt;xs:element [rest of string was truncated]&quot;;.
+        ///  &lt;xs:element name=&quot;points&quot; type=&quot;xs:integer&quot;/&gt;
+        ///  &lt;xs:element name=&quot;level_time&quot; type=&quot;xs:integer&quot;/&gt;
+        ///  &lt;xs:element nam [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Cloud9DataXSD {
             get {
@@ -619,6 +620,16 @@ namespace Capstone_Game_Platform.Properties {
             get {
                 object obj = ResourceManager.GetObject("cover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon favicon {
+            get {
+                object obj = ResourceManager.GetObject("favicon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         

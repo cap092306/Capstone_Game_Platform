@@ -19,14 +19,17 @@ namespace UnitTestProject
             };
             xmlUtils.DeleteXMLfile();
 
-            SaveGameHelper saveGameHelper = new SaveGameHelper();
-            saveGameHelper.Level_ID = 1;
-            saveGameHelper.Player_ID = 1;
-            saveGameHelper.Level_Score = 200;
-            saveGameHelper.Level_Time = 1000;
-            saveGameHelper.Special_Count = 1;
-            saveGameHelper.Monster_Count = 0;
-            saveGameHelper.Level_Attempts = 1;
+            SaveGameHelper saveGameHelper = new SaveGameHelper
+            {
+                Level_ID = 1,
+                Player_ID = 1,
+                Level_Score = 250,
+                Special_Count = 1, //wind + 
+                Monster_Count = 1, //lightbolt kills
+                Level_Time = 1000, // time to complete level in seconds
+                Level_Attempts = 1, // how many attempts before completing level
+                Char_Points = 250
+            };
             saveGameHelper.SaveLevel();
 
             DataSet ds = xmlUtils.ReadXMLfile();
@@ -48,26 +51,29 @@ namespace UnitTestProject
             };
             xmlUtils.DeleteXMLfile();
 
-            SaveGameHelper saveGameHelper = new SaveGameHelper();
-            saveGameHelper.Level_ID = 1;
-            saveGameHelper.Player_ID = 1;
-            saveGameHelper.Level_Score = 200;
-            saveGameHelper.Level_Time = 1000;
-            saveGameHelper.Special_Count = 1;
-            saveGameHelper.Monster_Count = 0;
-            saveGameHelper.Level_Attempts = 1;
+            SaveGameHelper saveGameHelper = new SaveGameHelper
+            {
+                Level_ID = 1,
+                Player_ID = 1,
+                Level_Score = 250,
+                Special_Count = 1, //wind + 
+                Monster_Count = 1, //lightbolt kills
+                Level_Time = 1000, // time to complete level in seconds
+                Level_Attempts = 1, // how many attempts before completing level
+                Char_Points = 250
+            };
             saveGameHelper.SaveLevel();
 
-            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Power;
-            saveGameHelper.Achievement_Data = 1;
-            saveGameHelper.SaveAchievement();
-
             saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Light;
-            saveGameHelper.Achievement_Data = 10;
+            saveGameHelper.Achievement_Data = 250 / 10;
             saveGameHelper.SaveAchievement();
-
-            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Electrocuted;
-            saveGameHelper.Achievement_Data = 10;
+         
+            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Light_Speed_1;
+            saveGameHelper.Achievement_Data = 1000;
+            saveGameHelper.SaveAchievement();
+           
+            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Portal_1;
+            saveGameHelper.Achievement_Data = 1;
             saveGameHelper.SaveAchievement();
 
             DataSet ds = xmlUtils.ReadXMLfile();

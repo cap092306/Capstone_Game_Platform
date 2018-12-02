@@ -274,6 +274,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\stats_and_credits_page9-10.gif" />
+    <Content Include="Resources\Achievements_page7-8.gif" />
     <Content Include="Resources\UG_page3-4.gif" />
     <None Include="Resources\Sun.gif" />
     <None Include="Resources\Star_L3_Med.gif" />
@@ -312,7 +313,6 @@
     <None Include="Resources\Bolt_L1.gif" />
     <None Include="Resources\Bolt_L2.gif" />
     <Content Include="favicon.ico" />
-    <Content Include="Resources\Achievements_page7-8.gif" />
     <Content Include="Resources\back-cover.gif" />
     <Content Include="Resources\contents_page1-2.gif" />
     <Content Include="Resources\cover.gif" />

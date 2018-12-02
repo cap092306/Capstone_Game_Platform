@@ -26,8 +26,8 @@ namespace Capstone_Game_Platform
         //XML tables managed in this helper
 
         public enum XMLTbls : int {player = 0, player_history = 1, player_achievement = 2, level = 3, achievement = 4}
-        public enum PlayerHistoryTbl : int {player_ID = 0, level_ID = 1, life_count = 2, points = 3, level_time = 4,
-            special_count = 5, monster_count = 6, last_played = 7, completed = 8, level_attempts = 9}
+        public enum PlayerHistoryTbl : int {player_ID = 0, level_ID = 1, points = 2, level_time = 3, special_count = 4,
+            monster_count = 5, last_played = 6, completed = 7, level_attempts = 8}
         public enum PlayerAchievementsTbl : int { player_ID = 0, achievement_ID = 1, achievement_data = 2, achievement_date = 3}
         public enum PlayerTbl : int { player_ID = 0, char_level = 1, char_points = 2}
         //achievements

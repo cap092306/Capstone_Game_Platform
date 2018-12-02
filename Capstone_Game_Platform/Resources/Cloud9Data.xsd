@@ -3,7 +3,6 @@
   <xs:element name="char_level" type="xs:integer"/>
   <xs:element name="char_points" type="xs:integer"/>
   <xs:element name="level_ID" type="xs:integer"/>
-  <xs:element name="life_count" type="xs:integer"/>
   <xs:element name="points" type="xs:integer"/>
   <xs:element name="level_time" type="xs:integer"/>
   <xs:element name="special_count" type="xs:integer"/>
@@ -38,7 +37,6 @@
       <xs:sequence>
         <xs:element name="player_ID"/>
         <xs:element name="level_ID"/>
-        <xs:element name="life_count"/>
         <xs:element name="points"/>
         <xs:element name="level_time"/>
         <xs:element name="special_count"/>

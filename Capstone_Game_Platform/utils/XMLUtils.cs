@@ -3,7 +3,6 @@ using System.Data;
 using System.IO;
 using System.Xml.Schema;
 using System.Xml.Linq;
-using System.Reflection;
 
 namespace Capstone_Game_Platform
 {
@@ -116,7 +115,7 @@ namespace Capstone_Game_Platform
             XmlSchemaSet schemas = new XmlSchemaSet();
             schemas.Add("urn:Cloud9Data", xSchema.CreateReader());
             XDocument xmlDocument = XDocument.Load(FilePath);
-            xmlDocument.Validate(schemas, (o, e) => { isXmlValid = false; });
+            xmlDocument.Validate(schemas, validationEventHandler: (o, e) => { isXmlValid = false; });
             return isXmlValid;
         }
     }

@@ -59,9 +59,7 @@ namespace Capstone_Game_Platform
                 stats.Columns["level_attempts"].ColumnName = "Lowest Number of Restarts to Complete Level";
                 stats.Columns["monster_count"].SetOrdinal(6);
                 stats.Columns["monster_count"].ColumnName = "Highest Number of Lighting Bolts Defeated";
-                stats.Columns["life_count"].SetOrdinal(7);
-                stats.Columns["life_count"].ColumnName = "Highest Number of Remaining Lives";
-                stats.Columns["special_count"].SetOrdinal(8);
+                stats.Columns["special_count"].SetOrdinal(7);
                 stats.Columns["special_count"].ColumnName = "Highest Number of Special Items Found";
 
                 LinqPivot lp = new LinqPivot();

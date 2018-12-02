@@ -38,6 +38,7 @@ namespace Capstone_Game_Platform
         public Form1()
         {
             InitializeComponent();
+            StartScreen.LevelTryCounter += 1;
         }
         private void mainGameTimer(object sender, EventArgs e)
         {

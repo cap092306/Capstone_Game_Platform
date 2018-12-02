@@ -67,7 +67,7 @@ namespace Capstone_Game_Platform
             saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Portal_1;
             saveGameHelper.Achievement_Data = 1;
             saveGameHelper.SaveAchievement();
-
+            StartScreen.char_level = saveGameHelper.Char_Level;
             label4.Visible = true;
         }
     }

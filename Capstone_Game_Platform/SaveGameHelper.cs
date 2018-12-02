@@ -181,6 +181,7 @@ namespace Capstone_Game_Platform
                 count = (int)Math.Round(points);
             }
             result[(int)PlayerTbl.char_level] = char_level + count;
+            Char_Level = char_level + count;
             result[(int)PlayerTbl.char_points] = char_points - (count * LevelUp);
 
             result.EndEdit();

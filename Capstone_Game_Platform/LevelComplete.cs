@@ -57,7 +57,7 @@ namespace Capstone_Game_Platform
                 saveGameHelper.SaveAchievement();
             }
             
-            if (int.Parse(Form1.time) <= 60)
+            if (int.Parse(Form1.time) <= minute)
             {
                 saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Light_Speed_1;
                 saveGameHelper.Achievement_Data = int.Parse(Form1.time);

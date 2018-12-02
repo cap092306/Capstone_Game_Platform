@@ -18,6 +18,9 @@ namespace Capstone_Game_Platform
         bool moveRight = false; // used to control player moving right
         bool blnJump = false; // used to check if player is blnJump or not
         bool blnHasKey = false; // used to determine if the player possesses the key
+        public static bool deathByBolt = false; //used to determine if the player died by lightening bolt
+        public static bool deathByBlackHole = false; //used to determine if the player died by falling in a Black hole
+        public static int boltScore = 0; //used to track bolts killed
         int jumpSpd = 8; // jump speed integer
         int force = 6; // jump force
         public static int score = 0; // resets the score to 0 upon entering a level
@@ -31,6 +34,7 @@ namespace Capstone_Game_Platform
 		public Form2()
         {
             InitializeComponent();
+            StartScreen.LevelTryCounter += 1;
         }
         private void mainGameTimer(object sender, EventArgs e)
         {
@@ -139,6 +143,7 @@ namespace Capstone_Game_Platform
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
                         {
+                            deathByBolt = true;
                             DeathSound.Play();
 							gameTimer.Stop(); // stop the timer
                             DeathBox2 DeathBox2 = new DeathBox2();//new instance of deathbox
@@ -174,6 +179,7 @@ namespace Capstone_Game_Platform
             // if the player goes below the forms height then we will end the game
             if (player.Top + player.Height > this.ClientSize.Height + 35)
             {
+                deathByBlackHole = true;
                 DeathSound.Play();
 				gameTimer.Stop(); // stop the timer
                 DeathBox2 DeathBox2 = new DeathBox2();

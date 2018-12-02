@@ -5,6 +5,8 @@ namespace Capstone_Game_Platform
 {
     public partial class Level2Complete : Form
     {
+        private int star = 10;
+        private int minute = 60;
         public Level2Complete()
         {
             InitializeComponent();
@@ -18,6 +20,7 @@ namespace Capstone_Game_Platform
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            StartScreen.LevelTryCounter = 0;
             Form3 Form3 = new Form3();
             Form3.Show();
             Close();
@@ -36,15 +39,37 @@ namespace Capstone_Game_Platform
                 Player_ID = StartScreen.PlayerID,
                 Level_Score = Form2.score,
                 Special_Count = 1, //wind + 
-                Monster_Count = 2, //lightbolt kills
+                Monster_Count = Form2.boltScore, //lightbolt kills
                 Level_Time = int.Parse(Form2.time), // time to complete level in seconds
-                Level_Attempts = 1 // how many attempts before completing level
+                Level_Attempts = StartScreen.LevelTryCounter, // how many attempts before completing level
+                Char_Points = Form1.score
             };
             saveGameHelper.SaveLevel();
 
-            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Light;
-            saveGameHelper.Achievement_Data = (Form2.score / 10);
+            if (Form2.score == 0)
+            {
+                saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Skipper;
+                saveGameHelper.Achievement_Data = 1;
+                saveGameHelper.SaveAchievement();
+            }
+            else
+            {
+                saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Light;
+                saveGameHelper.Achievement_Data = Form2.score / star;
+                saveGameHelper.SaveAchievement();
+            }
+
+            if (int.Parse(Form2.time) <= minute)
+            {
+                saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Light_Speed_2;
+                saveGameHelper.Achievement_Data = int.Parse(Form2.time);
+                saveGameHelper.SaveAchievement();
+            }
+
+            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Portal_2;
+            saveGameHelper.Achievement_Data = 1;
             saveGameHelper.SaveAchievement();
+            StartScreen.char_level = saveGameHelper.Char_Level;
             label4.Visible = true;
         }
     }

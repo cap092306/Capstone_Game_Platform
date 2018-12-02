@@ -1,6 +1,5 @@
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:CO="urn:Cloud9Data"  targetNamespace="urn:Cloud9Data">
   <xs:element name="player_ID" type="xs:integer"/>
-  <xs:element name="player_name" type="xs:string"/>
   <xs:element name="char_level" type="xs:integer"/>
   <xs:element name="char_points" type="xs:integer"/>
   <xs:element name="level_ID" type="xs:integer"/>
@@ -29,7 +28,6 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element name="player_ID"/>
-        <xs:element name="player_name"/>
         <xs:element name="char_level"/>
         <xs:element name="char_points"/>
       </xs:sequence>
@@ -92,7 +90,7 @@
         <xs:element name="player_history" maxOccurs="unbounded" minOccurs="3"/>
         <xs:element name="player_achievement" maxOccurs="unbounded" minOccurs="25"/>
         <xs:element name="level" maxOccurs="3" minOccurs="3"/>
-		<xs:element name="achievement" maxOccurs="25" minOccurs="25"/>
+		<xs:element name="achievement" maxOccurs="16" minOccurs="16"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>

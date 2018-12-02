@@ -22,7 +22,6 @@ namespace UnitTestProject
             SaveGameHelper saveGameHelper = new SaveGameHelper();
             saveGameHelper.Level_ID = 1;
             saveGameHelper.Player_ID = 1;
-            saveGameHelper.Life_Count = 1;
             saveGameHelper.Level_Score = 200;
             saveGameHelper.Level_Time = 1000;
             saveGameHelper.Special_Count = 1;
@@ -52,7 +51,6 @@ namespace UnitTestProject
             SaveGameHelper saveGameHelper = new SaveGameHelper();
             saveGameHelper.Level_ID = 1;
             saveGameHelper.Player_ID = 1;
-            saveGameHelper.Life_Count = 1;
             saveGameHelper.Level_Score = 200;
             saveGameHelper.Level_Time = 1000;
             saveGameHelper.Special_Count = 1;

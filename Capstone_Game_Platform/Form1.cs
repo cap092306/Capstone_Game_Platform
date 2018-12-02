@@ -14,14 +14,16 @@ namespace Capstone_Game_Platform
 {
     public partial class Form1 : Form
     {
-		bool shot = false; //used to track shot
+        bool shot = false; //used to track shot
 		bool shotRight = false; //used to shoot right
 		bool shotLeft = false; //used to shoot left
         bool moveLeft = false; // used to control player moving left
         bool moveRight = false; // used to control player moving right
         bool blnJump = false; // used to check if player is blnJump or not
         bool blnHasKey = false; // used to determine if the player possesses the key
-		int boltScore = 0; //used to track bolts killed
+        public static bool deathByBolt = false; //used to determine if the player died by lightening bolt
+        public static bool deathByBlackHole = false; //used to determine if the player died by falling in a Black hole
+		public static int boltScore = 0; //used to track bolts killed
         int jumpSpd = 8; // jump speed integer
         int force = 6; // jump force
         public static int score = 0; // resets the score to 0 upon entering a level
@@ -181,6 +183,7 @@ namespace Capstone_Game_Platform
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
                         {
+                            deathByBolt = true;
                             DeathSound.Play();
                             gameTimer.Stop(); // stop the timer
                             DeathBox DeathBox = new DeathBox();
@@ -218,6 +221,7 @@ namespace Capstone_Game_Platform
             // if the player goes below the forms height then we will end the game
             if (player.Top + player.Height > this.ClientSize.Height + 35)
             {
+                deathByBlackHole = true;
                 DeathSound.Play();
 				gameTimer.Stop(); // stop the timer
                 DeathBox DeathBox = new DeathBox();
@@ -291,7 +295,7 @@ namespace Capstone_Game_Platform
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            StartScreen.LevelTryCounter += 1; 
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)

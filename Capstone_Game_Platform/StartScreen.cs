@@ -22,6 +22,8 @@ namespace Capstone_Game_Platform
         }
         SoundPlayer Theme = new SoundPlayer(Resource1.looperman_l_1804190_0133365_trippy_psychedelic_8_bit_sample_meltdown);
         public static int PlayerID = 1;// gives us the ability to allow for more than player
+        public static int LevelTryCounter = 0; //player counter level tries
+        public static int char_level = 1; //player char level
 
         private void button1_Click(object sender, EventArgs e)
         {

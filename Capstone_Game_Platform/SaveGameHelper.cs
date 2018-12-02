@@ -8,11 +8,10 @@ namespace Capstone_Game_Platform
     public class SaveGameHelper
     {
         public int Player_ID { get; set; }
-        public string Player_Name { get; set; }
+        //public string Player_Name { get; set; }
         public int Char_Level { get; set; }
         public int Char_Points { get; set; }
         public int Level_ID { get; set; }
-        public int Life_Count { get; set; }
         public int Level_Score { get; set; }
         public int Level_Time { get; set; } //second count
         public int Monster_Count { get; set; } //monsters killed
@@ -21,6 +20,7 @@ namespace Capstone_Game_Platform
         public Achievements Player_Achievement { get; set; }
         public int Achievement_Data { get; set; }
 
+        private const int LevelUp = 500;
         private XMLUtils xmlUtils;
         private DataSet ds;
         //XML tables managed in this helper
@@ -29,13 +29,12 @@ namespace Capstone_Game_Platform
         public enum PlayerHistoryTbl : int {player_ID = 0, level_ID = 1, life_count = 2, points = 3, level_time = 4,
             special_count = 5, monster_count = 6, last_played = 7, completed = 8, level_attempts = 9}
         public enum PlayerAchievementsTbl : int { player_ID = 0, achievement_ID = 1, achievement_data = 2, achievement_date = 3}
+        public enum PlayerTbl : int { player_ID = 0, char_level = 1, char_points = 2}
         //achievements
-        public enum Achievement_Counters : int { Stars = 1000, Lighting = 100}
-        public enum Achievements : int {Defeat_Moon = 1, Star_Power = 2, Star_Light = 3, Light_Speed_1 = 4,
-            Light_Speed_2 = 5, Light_Speed_3 = 6, Specials_1 = 7, Specials_2 = 8, Specials_3 = 9,
-            Shocked = 10, Electrocuted = 11, Kills_1 = 12, Kills_2 = 13, Kills_3 = 14, Hopper = 15, Surfer = 16,
-            Head = 17, Black_Hole = 18, Skipper = 19, Jump = 20, Sacrifice = 21, Rider = 22, Chaser = 23,
-            Portal_1 = 24, Portal_2 = 25}
+        public enum Achievement_Counters : int { Stars = 1000, Lighting = 500, Kill_1 = 6, Kill_2 = 12, Kill_3 = 18}
+        public enum Achievements : int { Star_Power = 1, Star_Light = 2, Light_Speed_1 = 3, Light_Speed_2 = 4, Light_Speed_3 = 5, 
+            Shocked = 6, Electrocuted = 7, Kills_1 = 8, Kills_2 = 9, Kills_3 = 10, Black_Hole = 11, Skipper = 12, Portal_1 = 13,
+            Portal_2 = 14, Defeat_Moon = 15, Sacrifice = 16}
 
         public  SaveGameHelper(){
             LoadXMLUtils();
@@ -123,14 +122,6 @@ namespace Capstone_Game_Platform
                                     && row.Field<string>("level_ID") == Level_ID.ToString() //level1
                               select row).SingleOrDefault();
             result.BeginEdit();
-            // save best stats
-            int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.life_count].ToString(), out int life_count);
-            if (Life_Count > life_count)
-            {
-                result[(int)PlayerHistoryTbl.life_count] = Life_Count.ToString(); 
-                // finished level with this many lives left
-            }
-
             int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.points].ToString(), out int level_score);
             if (Level_Score > level_score)
             {
@@ -174,6 +165,28 @@ namespace Capstone_Game_Platform
             result.AcceptChanges();
             xmlUtils.UpdateXMLfile(ds);
 
+            //player character update
+            result = (from row in ds.Tables[(int)XMLTbls.player].AsEnumerable()
+                              where row.Field<string>("player_ID") == Player_ID.ToString() //player1
+                              select row).SingleOrDefault();
+            result.BeginEdit();
+
+            int.TryParse(result.ItemArray[(int)PlayerTbl.char_points].ToString(), out int char_points);
+            int.TryParse(result.ItemArray[(int)PlayerTbl.char_level].ToString(), out int char_level);
+            decimal points = char_points + Char_Points;
+            int count = 0;
+            if(char_points >= LevelUp)
+            {
+                points = points / LevelUp;
+                count = (int)Math.Round(points);
+            }
+            result[(int)PlayerTbl.char_level] = char_level + count;
+            result[(int)PlayerTbl.char_points] = char_points - (count * LevelUp);
+
+            result.EndEdit();
+            result.AcceptChanges();
+            xmlUtils.UpdateXMLfile(ds);
+
             return true;
         }
 
@@ -204,9 +217,39 @@ namespace Capstone_Game_Platform
                     result[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString();
                 }
             }
-            
+
+            if(Player_Achievement == Achievements.Kills_1)
+            {
+                result.ItemArray[(int)PlayerAchievementsTbl.achievement_data] = (Achievement_Data + achievementCount).ToString();
+                if (Achievement_Data >= (int)Achievement_Counters.Kill_1)
+                {
+                    result[(int)PlayerAchievementsTbl.achievement_data] = 1;
+                    result[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString(); // record date of first achievement 
+                }
+            }
+
+            if (Player_Achievement == Achievements.Kills_2)
+            {
+                result.ItemArray[(int)PlayerAchievementsTbl.achievement_data] = (Achievement_Data + achievementCount).ToString();
+                if (Achievement_Data >= (int)Achievement_Counters.Kill_2)
+                {
+                    result[(int)PlayerAchievementsTbl.achievement_data] = 1;
+                    result[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString(); // record date of first achievement 
+                }
+            }
+
+            if (Player_Achievement == Achievements.Kills_3)
+            {
+                result.ItemArray[(int)PlayerAchievementsTbl.achievement_data] = (Achievement_Data + achievementCount).ToString();
+                if (Achievement_Data >= (int)Achievement_Counters.Kill_3)
+                {
+                    result[(int)PlayerAchievementsTbl.achievement_data] = 1;
+                    result[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString(); // record date of first achievement 
+                }
+            }
+
             // All other achievements are true or false data types, save as 1, to change from default of 0
-            if(result.ItemArray[(int)PlayerAchievementsTbl.achievement_date].ToString() == string.Empty)
+            if (result.ItemArray[(int)PlayerAchievementsTbl.achievement_date].ToString() == string.Empty)
             {
                 result[(int)PlayerAchievementsTbl.achievement_data] = 1;
                 result[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString(); // record date of first achievement 

@@ -82,7 +82,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Continue";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -95,7 +95,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Exit Game";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button3
             // 
@@ -106,8 +106,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 32);
             this.button3.TabIndex = 10;
-            this.button3.Text = "Continue";
+            this.button3.Text = "Save Game";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // label4
             // 

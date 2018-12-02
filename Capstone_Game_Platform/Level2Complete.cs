@@ -7,6 +7,7 @@ namespace Capstone_Game_Platform
     {
         private int star = 10;
         private int minute = 60;
+        private int achieved = 1;
         public Level2Complete()
         {
             InitializeComponent();
@@ -49,7 +50,7 @@ namespace Capstone_Game_Platform
             if (Form2.score == 0)
             {
                 saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Skipper;
-                saveGameHelper.Achievement_Data = 1;
+                saveGameHelper.Achievement_Data = achieved;
                 saveGameHelper.SaveAchievement();
             }
             else
@@ -66,8 +67,15 @@ namespace Capstone_Game_Platform
                 saveGameHelper.SaveAchievement();
             }
 
+            if (Form2.boltScore > 0)
+            {
+                saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Kills_2;
+                saveGameHelper.Achievement_Data = Form3.boltScore;
+                saveGameHelper.SaveAchievement();
+            }
+
             saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Portal_2;
-            saveGameHelper.Achievement_Data = 1;
+            saveGameHelper.Achievement_Data = achieved;
             saveGameHelper.SaveAchievement();
             StartScreen.char_level = saveGameHelper.Char_Level;
             label4.Visible = true;

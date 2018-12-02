@@ -5,6 +5,7 @@ namespace Capstone_Game_Platform
 {
     public partial class DeathBox : Form
     {
+        private int achieved = 1;
         public DeathBox()
         {
             InitializeComponent();
@@ -41,13 +42,13 @@ namespace Capstone_Game_Platform
             if (Form1.deathByBlackHole)
             {
                 saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Black_Hole;
-                saveGameHelper.Achievement_Data = 1;
+                saveGameHelper.Achievement_Data = achieved;
                 saveGameHelper.SaveAchievement();
             }
             else if (Form1.deathByBolt)
             {
                 saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Electrocuted;
-                saveGameHelper.Achievement_Data = 1;
+                saveGameHelper.Achievement_Data = achieved;
                 saveGameHelper.SaveAchievement();
             }
 

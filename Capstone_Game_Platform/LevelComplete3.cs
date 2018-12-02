@@ -5,6 +5,9 @@ namespace Capstone_Game_Platform
 {
     public partial class LevelComplete3 : Form
     {
+        private int star = 10;
+        private int minute = 60;
+        private int achieved = 1;
         public LevelComplete3()
         {
             InitializeComponent();
@@ -29,15 +32,46 @@ namespace Capstone_Game_Platform
                 Player_ID = StartScreen.PlayerID,
                 Level_Score = Form3.score,
                 Special_Count = 1, //wind + 
-                Monster_Count = 3, //lightbolt kills
+                Monster_Count = Form3.boltScore + 1, //lightbolt kills + Moon
                 Level_Time = int.Parse(Form3.time), // time to complete level in seconds
-                Level_Attempts = 1 // how many attempts before completing level
+                Level_Attempts = StartScreen.LevelTryCounter, // how many attempts before completing level
+                Char_Points = Form3.score
             };
             saveGameHelper.SaveLevel();
 
-            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Light;
-            saveGameHelper.Achievement_Data = Form3.score / 10;
+            if (Form1.score == 0)
+            {
+                saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Skipper;
+                saveGameHelper.Achievement_Data = achieved;
+                saveGameHelper.SaveAchievement();
+            }
+            else
+            {
+                saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Light;
+                saveGameHelper.Achievement_Data = Form1.score / star;
+                saveGameHelper.SaveAchievement();
+            }
+
+            if (int.Parse(Form1.time) <= minute)
+            {
+                saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Light_Speed_3;
+                saveGameHelper.Achievement_Data = int.Parse(Form1.time);
+                saveGameHelper.SaveAchievement();
+            }
+
+            if(Form3.boltScore > 0)
+            {
+                saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Kills_3;
+                saveGameHelper.Achievement_Data = Form3.boltScore;
+                saveGameHelper.SaveAchievement();
+            }
+
+            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Defeat_Moon;
+            saveGameHelper.Achievement_Data = achieved;
             saveGameHelper.SaveAchievement();
+
+            StartScreen.char_level = saveGameHelper.Char_Level;
+            StartScreen.LevelTryCounter = 0;
             label4.Visible = true;
         }
     }

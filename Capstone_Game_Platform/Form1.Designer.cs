@@ -500,7 +500,7 @@
 			// 
 			// player
 			// 
-			this.player.BackColor = System.Drawing.Color.LightSkyBlue;
+			this.player.BackColor = System.Drawing.SystemColors.ControlDarkDark;
 			this.player.Image = global::Capstone_Game_Platform.Properties.Resources.Raindrop1;
 			this.player.Location = new System.Drawing.Point(14, 374);
 			this.player.Name = "player";

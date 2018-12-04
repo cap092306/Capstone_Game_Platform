@@ -201,7 +201,7 @@ namespace Capstone_Game_Platform
 				//The line below gave me an error so i commented it out until i can figure out what was wrong with it.
 				//door.Image = Properties.Resources.door_open;
 				// and we stop the timer
-				time = levelTime.Elapsed.Seconds.ToString();
+				 time = levelTime.Elapsed.Seconds.ToString();
 				gameTimer.Stop();
                 LevelComplete LevelComplete = new LevelComplete();
                 LevelComplete.Show();

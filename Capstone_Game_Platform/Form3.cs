@@ -64,6 +64,9 @@ namespace Capstone_Game_Platform
                 // else change the jump speed to 10
                 jumpSpd = 10;
             }
+
+
+
             // if go left is true and players left is greater than 100 pixels
             // only then move player towards left of the
             if (moveLeft && player.Left > 25)

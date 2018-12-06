@@ -25,8 +25,26 @@ namespace Capstone_Game_Platform
                 FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
             ds = xmlUtils.ReadXMLfile();
+            LoadPlayerCharacter();
             LoadPlayerHistory();
             LoadPlayerAchievements();
+        }
+
+        private void LoadPlayerCharacter()
+        {
+            DataTable dt = ds.Tables[(int)SaveGameHelper.XMLTbls.player];
+            int count = dt.AsEnumerable()
+                .Where(i => i.Field<string>("player_ID") == StartScreen.PlayerID.ToString())
+                .Count();
+            if(count > 0)
+            {
+                DataRow result = (from row in ds.Tables[(int)SaveGameHelper.XMLTbls.player].AsEnumerable()
+                                  where row.Field<string>("player_ID") == StartScreen.PlayerID.ToString()
+                                  select row).SingleOrDefault();
+
+                label6.Text = result.ItemArray[(int)SaveGameHelper.PlayerTbl.char_level].ToString();
+                label8.Text = result.ItemArray[(int)SaveGameHelper.PlayerTbl.char_points].ToString();
+            }
         }
 
         private void LoadPlayerHistory()

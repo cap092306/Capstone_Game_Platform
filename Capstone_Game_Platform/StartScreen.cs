@@ -3,6 +3,8 @@ using System.Media;
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing;
+using System.Data;
+using System.Linq;
 
 namespace Capstone_Game_Platform
 {
@@ -15,18 +17,47 @@ namespace Capstone_Game_Platform
             {
                 FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
+            ValidateXMLFile(xmlUtils);
+            //to make game multiplayer we would have to add a screen to select the player or add a new player 
+            // which would set the player id and then the set the char level using the Get Player info
+            GetPlayerInfo(xmlUtils);
+        }
+        SoundPlayer Theme = new SoundPlayer(Resource1.looperman_l_1804190_0133365_trippy_psychedelic_8_bit_sample_meltdown);
+        public static int PlayerID = 1;// gives us the ability to allow for more than one player
+        public static int LevelTryCounter = 0; //player counter level tries
+        public static int char_level = 1; //player char level
+		public static int tickCount = 0;
+
+        private void ValidateXMLFile(XMLUtils xmlUtils)
+        {
             if (!xmlUtils.ValidateXmlFile())
             {
                 xmlUtils.DeleteXMLfile();
                 xmlUtils.CreateXMLfile();
             }
         }
-        SoundPlayer Theme = new SoundPlayer(Resource1.looperman_l_1804190_0133365_trippy_psychedelic_8_bit_sample_meltdown);
-        public static int PlayerID = 1;// gives us the ability to allow for more than player
-        public static int LevelTryCounter = 0; //player counter level tries
-        public static int char_level = 1; //player char level
-		public static int tickCount = 0;
-		private void button1_Click(object sender, EventArgs e)
+
+        private void GetPlayerInfo(XMLUtils xmlUtils)
+        {
+            DataSet ds = xmlUtils.ReadXMLfile();
+            DataTable dt = ds.Tables[(int)SaveGameHelper.XMLTbls.player];
+            int count = dt.AsEnumerable()
+                .Where(i => i.Field<string>("player_ID") == PlayerID.ToString())
+                .Count();
+
+            if (count > 0)
+            {
+                DataRow result = (from row in ds.Tables[(int)SaveGameHelper.XMLTbls.player].AsEnumerable()
+                                  where row.Field<string>("player_ID") == PlayerID.ToString()
+                                  select row).SingleOrDefault();
+
+                int.TryParse(result.ItemArray[(int)SaveGameHelper.PlayerTbl.char_level].ToString(), out int char_lvl);
+                char_level = char_lvl;
+            }
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
         {
             Form Form4 = new Form4();
             Form4.Show();

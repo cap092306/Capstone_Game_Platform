@@ -108,13 +108,13 @@
             // btnBack
             // 
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnBack.Font = new System.Drawing.Font("Showcard Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(18, 527);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(65, 30);
             this.btnBack.TabIndex = 0;
-            this.btnBack.Text = "BACK";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // btnNext
@@ -122,13 +122,13 @@
             this.btnNext.BackColor = System.Drawing.Color.White;
             this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnNext.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnNext.Font = new System.Drawing.Font("Showcard Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnNext.Location = new System.Drawing.Point(693, 527);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(54, 30);
             this.btnNext.TabIndex = 1;
-            this.btnNext.Text = "NEXT";
+            this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
@@ -150,7 +150,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserManual";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cloud 9 - User Manual";
+            this.Text = "User Manual";
             this.Load += new System.EventHandler(this.UserManual_Load);
             this.ResumeLayout(false);
 

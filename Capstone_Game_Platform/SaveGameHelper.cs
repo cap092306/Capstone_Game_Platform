@@ -116,77 +116,93 @@ namespace Capstone_Game_Platform
 
         public bool SaveLevel()
         {
-            //player_history
-            DataRow result = (from row in ds.Tables[(int)XMLTbls.player_history].AsEnumerable()
-                              where row.Field<string>("player_ID") == Player_ID.ToString() //player1
-                                    && row.Field<string>("level_ID") == Level_ID.ToString() //level1
-                              select row).SingleOrDefault();
-            result.BeginEdit();
-            int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.points].ToString(), out int level_score);
-            if (Level_Score > level_score)
+            DataTable dt = ds.Tables[(int)XMLTbls.player_history];
+            int count = dt.AsEnumerable()
+                .Where(i => i.Field<string>("player_ID") == StartScreen.PlayerID.ToString())
+                .Count();
+
+            if (count > 0)
             {
-                result[(int)PlayerHistoryTbl.points] = Level_Score.ToString(); // final score of the level
+                //player_history
+                DataRow result = (from row in ds.Tables[(int)XMLTbls.player_history].AsEnumerable()
+                                  where row.Field<string>("player_ID") == Player_ID.ToString() //player1
+                                        && row.Field<string>("level_ID") == Level_ID.ToString() //level1
+                                  select row).SingleOrDefault();
+                result.BeginEdit();
+                int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.points].ToString(), out int level_score);
+                if (Level_Score > level_score)
+                {
+                    result[(int)PlayerHistoryTbl.points] = Level_Score.ToString(); // final score of the level
+                }
+
+                int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.level_time].ToString(), out int level_time);
+                if (Level_Time < level_time)
+                {
+                    result[(int)PlayerHistoryTbl.level_time] = Level_Time;
+                    // how long it took to complete the level in seconds
+                }
+
+                int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.special_count].ToString(), out int special_count);
+                if (Special_Count > special_count)
+                {
+                    result[(int)PlayerHistoryTbl.special_count] = Special_Count;
+                    // how many special items were found in the level-default is one if the player finished the level
+                }
+
+                int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.monster_count].ToString(), out int monster_count);
+                if (Monster_Count > monster_count)
+                {
+                    result[(int)PlayerHistoryTbl.monster_count] = Monster_Count; // how many bad guys were defeated
+                }
+
+                result[(int)PlayerHistoryTbl.last_played] = DateTime.Now.ToString(); //last played
+
+                if (result.ItemArray[(int)PlayerHistoryTbl.completed].ToString() == string.Empty)
+                {
+                    result[(int)PlayerHistoryTbl.completed] = DateTime.Now.ToString(); //completed the first time
+                }
+
+                int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.level_attempts].ToString(), out int level_attempts);
+                if (Level_Attempts < level_attempts)
+                {
+                    result[(int)PlayerHistoryTbl.level_attempts] = Level_Attempts.ToString();
+                    // how many times the level has been played
+                }
+                result.EndEdit();
+                result.AcceptChanges();
+                xmlUtils.UpdateXMLfile(ds);
             }
 
-            int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.level_time].ToString(), out int level_time);
-            if (Level_Time < level_time)
-            { 
-                result[(int)PlayerHistoryTbl.level_time] = Level_Time; 
-                // how long it took to complete the level in seconds
-            }
+            dt = ds.Tables[(int)XMLTbls.player];
+            count = dt.AsEnumerable()
+                .Where(i => i.Field<string>("player_ID") == StartScreen.PlayerID.ToString())
+                .Count();
 
-            int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.special_count].ToString(), out int special_count);
-            if (Special_Count > special_count)
+            if (count > 0)
             {
-                result[(int)PlayerHistoryTbl.special_count] = Special_Count; 
-                // how many special items were found in the level-default is one if the player finished the level
+                //player character update
+                DataRow result = (from row in ds.Tables[(int)XMLTbls.player].AsEnumerable()
+                                  where row.Field<string>("player_ID") == Player_ID.ToString() //player1
+                                  select row).SingleOrDefault();
+                result.BeginEdit();
+
+                int.TryParse(result.ItemArray[(int)PlayerTbl.char_points].ToString(), out int char_points);
+                int.TryParse(result.ItemArray[(int)PlayerTbl.char_level].ToString(), out int char_level);
+                decimal points = char_points + Char_Points;
+                int lvl = 0;
+                if (char_points >= LevelUp)
+                {
+                    points = points / LevelUp;
+                    lvl = (int)Math.Round(points);
+                }
+                result[(int)PlayerTbl.char_level] = char_level + lvl;
+                Char_Level = char_level + lvl;
+                result[(int)PlayerTbl.char_points] = char_points - (lvl * LevelUp);
+
+                result.EndEdit();
+                result.AcceptChanges();
+                xmlUtils.UpdateXMLfile(ds);
             }
-
-            int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.monster_count].ToString(), out int monster_count);
-            if (Monster_Count > monster_count)
-            {
-                result[(int)PlayerHistoryTbl.monster_count] = Monster_Count; // how many bad guys were defeated
-            }
-
-            result[(int)PlayerHistoryTbl.last_played] = DateTime.Now.ToString(); //last played
-
-            if (result.ItemArray[(int)PlayerHistoryTbl.completed].ToString() == string.Empty)
-            {
-                result[(int)PlayerHistoryTbl.completed] = DateTime.Now.ToString(); //completed the first time
-            }
-
-            int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.level_attempts].ToString(), out int level_attempts);
-            if (Level_Attempts < level_attempts)
-            {
-                result[(int)PlayerHistoryTbl.level_attempts] = Level_Attempts.ToString(); 
-                // how many times the level has been played
-            }
-            result.EndEdit();
-            result.AcceptChanges();
-            xmlUtils.UpdateXMLfile(ds);
-
-            //player character update
-            result = (from row in ds.Tables[(int)XMLTbls.player].AsEnumerable()
-                              where row.Field<string>("player_ID") == Player_ID.ToString() //player1
-                              select row).SingleOrDefault();
-            result.BeginEdit();
-
-            int.TryParse(result.ItemArray[(int)PlayerTbl.char_points].ToString(), out int char_points);
-            int.TryParse(result.ItemArray[(int)PlayerTbl.char_level].ToString(), out int char_level);
-            decimal points = char_points + Char_Points;
-            int count = 0;
-            if(char_points >= LevelUp)
-            {
-                points = points / LevelUp;
-                count = (int)Math.Round(points);
-            }
-            result[(int)PlayerTbl.char_level] = char_level + count;
-            Char_Level = char_level + count;
-            result[(int)PlayerTbl.char_points] = char_points - (count * LevelUp);
-
-            result.EndEdit();
-            result.AcceptChanges();
-            xmlUtils.UpdateXMLfile(ds);
 
             return true;
         }

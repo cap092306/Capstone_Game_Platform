@@ -135,31 +135,24 @@
     <achievement_date></achievement_date>
   </player_achievement>
   <level>
-    <level_ID>1</level_ID>
+    <level_ID>0</level_ID>
     <level_Order>1</level_Order>
+    <level_name>How the story begins.</level_name>
+  </level>
+  <level>
+    <level_ID>1</level_ID>
+    <level_Order>2</level_Order>
     <level_name>The quest begins here.</level_name>
-    <level_life_max>5</level_life_max>
-    <level_mana_max>5</level_mana_max>
-    <level_monster_count>10</level_monster_count>
-    <level_special_count>5</level_special_count>
   </level>
   <level>
     <level_ID>2</level_ID>
-    <level_Order>2</level_Order>
+    <level_Order>3</level_Order>
     <level_name>The quest continues...</level_name>
-    <level_life_max>4</level_life_max>
-    <level_mana_max>7</level_mana_max>
-    <level_monster_count>15</level_monster_count>
-    <level_special_count>7</level_special_count>
   </level>
   <level>
     <level_ID>3</level_ID>
-    <level_Order>3</level_Order>
-    <level_name>Do or Die.</level_name>
-    <level_life_max>3</level_life_max>
-    <level_mana_max>10</level_mana_max>
-    <level_monster_count>25</level_monster_count>
-    <level_special_count>10</level_special_count>
+    <level_Order>4</level_Order>
+    <level_name>Time to Do or Die.</level_name>
   </level>
   <achievement>
     <achievement_ID>1</achievement_ID>

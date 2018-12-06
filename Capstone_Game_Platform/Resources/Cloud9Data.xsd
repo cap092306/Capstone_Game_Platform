@@ -15,10 +15,6 @@
   <xs:element name="achievement_date" type="xs:date"/>
   <xs:element name="level_Order" type="xs:integer"/>
   <xs:element name="level_name" type="xs:string"/>
-  <xs:element name="level_life_max" type="xs:integer"/>
-  <xs:element name="level_mana_max" type="xs:integer"/>
-  <xs:element name="level_monster_count" type="xs:integer"/>
-  <xs:element name="level_special_count" type="xs:integer"/>
   <xs:element name="achievement_name" type="xs:string"/>
   <xs:element name="achievement_desc" type="xs:string"/>
   <xs:element name="badge" type="xs:string"/>
@@ -63,10 +59,6 @@
         <xs:element name="level_ID"/>
         <xs:element name="level_Order"/>
         <xs:element name="level_name"/>
-        <xs:element name="level_life_max"/>
-        <xs:element name="level_mana_max"/>
-        <xs:element name="level_monster_count"/>
-        <xs:element name="level_special_count"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>

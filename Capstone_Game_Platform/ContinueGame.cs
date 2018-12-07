@@ -23,6 +23,9 @@ namespace Capstone_Game_Platform
             };
             DataSet ds = xmlUtils.ReadXMLfile();
             DataTable dt = ds.Tables[(int)SaveGameHelper.XMLTbls.player_history];
+            string maxLvl = ds.Tables[(int)SaveGameHelper.XMLTbls.level].AsEnumerable()
+                   .OrderByDescending(k => k.Field<string>("level_ID"))
+                   .First().Field<string>("level_ID").ToString();
 
             int count = dt.AsEnumerable()
                 .Where(i => i.Field<string>("player_ID") == StartScreen.PlayerID.ToString() 
@@ -42,10 +45,6 @@ namespace Capstone_Game_Platform
                 string maxPlayerLvl = lvlsCompleted.AsEnumerable()
                     .OrderByDescending(j => j.Field<string>("level_ID"))
                     .First().Field<string>("level_ID").ToString();
-
-                string maxLvl = ds.Tables[(int)SaveGameHelper.XMLTbls.level].AsEnumerable()
-                    .OrderByDescending(k => k.Field<string>("level_ID"))
-                    .First().Field<string>("level_ID").ToString();
                 
                 if (maxPlayerLvl != maxLvl)
                 {
@@ -58,18 +57,20 @@ namespace Capstone_Game_Platform
             count = dt.AsEnumerable()
                 .Where(i => i.Field<string>("player_ID") == StartScreen.PlayerID.ToString() 
                     && !string.IsNullOrWhiteSpace(i.Field<string>("last_played"))
-                    && i.Field<string>("last_played") == dt.AsEnumerable()
+                    && i.Field<string>("level_id") == dt.AsEnumerable()
                         .OrderByDescending(t => t.Field<string>("last_played"))
-                        .First().Field<string>("last_played").ToString())
+                        .OrderByDescending(k => k.Field<string>("level_ID"))
+                        .First().Field<string>("level_id").ToString())
                 .Count();
 
             if(count > 0)
             {
                 DataRow lastPlayed = (from lp in dt.AsEnumerable()
                     where lp.Field<string>("player_ID") == StartScreen.PlayerID.ToString() &&
-                        lp.Field<string>("last_played") == dt.AsEnumerable()
+                        lp.Field<string>("level_id") == dt.AsEnumerable()
                             .OrderByDescending(t => t.Field<string>("last_played"))
-                            .First().Field<string>("last_played").ToString()
+                            .OrderByDescending(k => k.Field<string>("level_ID"))
+                            .First().Field<string>("level_id").ToString()
                     select lp).SingleOrDefault();
 
                 DisplayLastLevel(lastPlayed);
@@ -78,14 +79,14 @@ namespace Capstone_Game_Platform
 
         private void DisplayLevels(DataTable dt)
         {
-            string TargetBtnName = "btnLvl";
+            string TargetBtnName = string.Empty;
             Button TargetBtn;
 
             if (dt != null && dt.Columns.Count > 0)
             {
                 foreach (DataRow dr in dt.Rows)
                 {
-                    TargetBtnName += dr.Field<string>("level_id").ToString();
+                    TargetBtnName = "btnLvl" + dr.Field<string>("level_id").ToString();
                     TargetBtn = (Button)Controls[TargetBtnName];
                     TargetBtn.Enabled = true;
                     TargetBtn.ForeColor = System.Drawing.Color.White;

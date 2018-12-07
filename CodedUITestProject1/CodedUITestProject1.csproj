@@ -53,13 +53,23 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodedUITest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIMap.cs">
+      <DependentUpon>UIMap.uitest</DependentUpon>
+    </Compile>
+    <Compile Include="UIMap.Designer.cs">
+      <DependentUpon>UIMap.uitest</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capstone_Game_Platform\Capstone_Game_Platform.csproj">
       <Project>{24b958e0-13d5-4801-9b71-fd326498211b}</Project>
       <Name>Capstone_Game_Platform</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIMap.uitest" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

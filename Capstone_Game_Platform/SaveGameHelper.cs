@@ -23,6 +23,7 @@ namespace Capstone_Game_Platform
         private const int LevelUp = 500;
         private XMLUtils xmlUtils;
         private DataSet ds;
+        private int achieved = 1;
         //XML tables managed in this helper
 
         public enum XMLTbls : int {player = 0, player_history = 1, player_achievement = 2, level = 3, achievement = 4}
@@ -136,7 +137,7 @@ namespace Capstone_Game_Platform
                 }
 
                 int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.level_time].ToString(), out int level_time);
-                if (Level_Time < level_time)
+                if (Level_Time < level_time || level_time == 0)
                 {
                     result[(int)PlayerHistoryTbl.level_time] = Level_Time;
                     // how long it took to complete the level in seconds
@@ -163,7 +164,7 @@ namespace Capstone_Game_Platform
                 }
 
                 int.TryParse(result.ItemArray[(int)PlayerHistoryTbl.level_attempts].ToString(), out int level_attempts);
-                if (Level_Attempts < level_attempts)
+                if (Level_Attempts < level_attempts || level_attempts == 0)
                 {
                     result[(int)PlayerHistoryTbl.level_attempts] = Level_Attempts.ToString();
                     // how many times the level has been played
@@ -190,7 +191,7 @@ namespace Capstone_Game_Platform
                 int.TryParse(result.ItemArray[(int)PlayerTbl.char_level].ToString(), out int char_level);
                 decimal points = char_points + Char_Points;
                 int lvl = 0;
-                if (char_points >= LevelUp)
+                if (points >= LevelUp)
                 {
                     points = points / LevelUp;
                     lvl = (int)Math.Round(points);
@@ -215,19 +216,45 @@ namespace Capstone_Game_Platform
                       select row).SingleOrDefault();
             result.BeginEdit();
 
-            int.TryParse(result.ItemArray[(int)PlayerAchievementsTbl.achievement_data].ToString(), out int achievementCount);
+            int.TryParse(result.ItemArray[(int)PlayerAchievementsTbl.achievement_data].ToString(), out int achievementCount); //current player achievement count
 
             if (Player_Achievement == Achievements.Star_Light) // Star Collection is a counter
-            {   // if we add a second level of star collection add logic to handle it here
+            {
+                if (achievementCount == 0) // record first level achievement
+                {
+                    DataRow r = (from row in ds.Tables[(int)XMLTbls.player_achievement].AsEnumerable()
+                                 where row.Field<string>("player_ID") == Player_ID.ToString()
+                                 && row.Field<string>("achievement_ID") == ((int)Achievements.Star_Power).ToString()
+                                 select row).SingleOrDefault();
+                    r.BeginEdit();
+                    r[(int)PlayerAchievementsTbl.achievement_data] = achieved.ToString();
+                    r[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString(); //record date of achievement
+                    r.EndEdit();
+                    r.AcceptChanges();
+                    xmlUtils.UpdateXMLfile(ds);
+                }
                 result.ItemArray[(int)PlayerAchievementsTbl.achievement_data] = (Achievement_Data + achievementCount).ToString();
                 if ((Achievement_Data + achievementCount) >= (int)Achievement_Counters.Stars && result.ItemArray[(int)PlayerAchievementsTbl.achievement_date].ToString() == string.Empty)
                 {
-                    result[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString();
+                    result[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString(); //record date of achievement
                 }
             }
 
             if (Player_Achievement == Achievements.Electrocuted) // Death by Lighting is a counter
-            {   // if we add a second level of electrocutions add logic to handle it here
+            {
+                if (achievementCount == 0) // record first level achievement
+                {
+                    DataRow r = (from row in ds.Tables[(int)XMLTbls.player_achievement].AsEnumerable()
+                                 where row.Field<string>("player_ID") == Player_ID.ToString()
+                                 && row.Field<string>("achievement_ID") == ((int)Achievements.Shocked).ToString()
+                                 select row).SingleOrDefault();
+                    r.BeginEdit();
+                    r[(int)PlayerAchievementsTbl.achievement_data] = achieved.ToString();
+                    r[(int)PlayerAchievementsTbl.achievement_date] = DateTime.Now.ToString(); //record date of achievement
+                    r.EndEdit();
+                    r.AcceptChanges();
+                    xmlUtils.UpdateXMLfile(ds);
+                }
                 result.ItemArray[(int)PlayerAchievementsTbl.achievement_data] = (Achievement_Data + achievementCount).ToString();
                 if ((Achievement_Data + achievementCount) >= (int)Achievement_Counters.Lighting && result.ItemArray[(int)PlayerAchievementsTbl.achievement_date].ToString() == string.Empty)
                 {

@@ -23,18 +23,18 @@ namespace UnitTestProject
             {
                 Level_ID = 1,
                 Player_ID = 1,
-                Level_Score = 250,
+                Level_Score = 600,
                 Special_Count = 1, //wind + 
-                Monster_Count = 1, //lightbolt kills
+                Monster_Count = 10, //lightbolt kills
                 Level_Time = 1000, // time to complete level in seconds
-                Level_Attempts = 1, // how many attempts before completing level
-                Char_Points = 250
+                Level_Attempts = 10, // how many attempts before completing level
+                Char_Points = 600
             };
             saveGameHelper.SaveLevel();
 
             DataSet ds = xmlUtils.ReadXMLfile();
             DataRow rows = (from row in ds.Tables[(int)SaveGameHelper.XMLTbls.player_history].AsEnumerable()
-                            where row.Field<string>("player_ID") == StartScreen.PlayerID.ToString() //player1
+                            where row.Field<string>("player_ID") == StartScreen.PlayerID.ToString()
                                   && !String.IsNullOrWhiteSpace(row.Field<string>("completed").ToString())
                             select row).SingleOrDefault();
 
@@ -60,14 +60,30 @@ namespace UnitTestProject
                 Monster_Count = 1, //lightbolt kills
                 Level_Time = 1000, // time to complete level in seconds
                 Level_Attempts = 1, // how many attempts before completing level
-                Char_Points = 250
+                Char_Points = 2050
             };
             saveGameHelper.SaveLevel();
 
             saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Star_Light;
-            saveGameHelper.Achievement_Data = 250 / 10;
+            saveGameHelper.Achievement_Data = 25000 / 10;
             saveGameHelper.SaveAchievement();
-         
+
+            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Electrocuted;
+            saveGameHelper.Achievement_Data = 600;
+            saveGameHelper.SaveAchievement();
+
+            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Kills_1;
+            saveGameHelper.Achievement_Data = 10;
+            saveGameHelper.SaveAchievement();
+
+            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Kills_2;
+            saveGameHelper.Achievement_Data = 20;
+            saveGameHelper.SaveAchievement();
+
+            saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Kills_3;
+            saveGameHelper.Achievement_Data = 30;
+            saveGameHelper.SaveAchievement();
+
             saveGameHelper.Player_Achievement = SaveGameHelper.Achievements.Light_Speed_1;
             saveGameHelper.Achievement_Data = 1000;
             saveGameHelper.SaveAchievement();

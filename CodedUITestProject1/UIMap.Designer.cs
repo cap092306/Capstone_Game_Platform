@@ -27,10 +27,9 @@ namespace CodedUITestProject1
     
     [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
     public partial class UIMap
-    {
-        
+    {     
         /// <summary>
-        /// Open Help flip through screens
+        /// Help
         /// </summary>
         public void Help()
         {
@@ -38,38 +37,73 @@ namespace CodedUITestProject1
             WinButton uIHelpButton = this.UICloud9MainMenuWindow.UIHelpWindow.UIHelpButton;
             WinButton uINextButton = this.UIUserManualWindow.UINextWindow.UINextButton;
             WinButton uIBackButton = this.UIUserManualWindow.UIBackWindow.UIBackButton;
+            WinButton uICloseButton = this.UIUserManualWindow.UIUserManualTitleBar.UICloseButton;
             #endregion
 
             // Click 'Help' button
-            Mouse.Click(uIHelpButton, new Point(60, 21));
+            Mouse.Click(uIHelpButton, new Point(43, 19));
 
             // Click 'Next' button
-            Mouse.Click(uINextButton, new Point(38, 22));
+            Mouse.Click(uINextButton, new Point(36, 10));
+
+            // Double-Click 'Next' button
+            Mouse.DoubleClick(uINextButton, new Point(30, 16));
 
             // Click 'Next' button
-            Mouse.Click(uINextButton, new Point(36, 22));
+            Mouse.Click(uINextButton, new Point(26, 17));
+
+            // Click 'Next' button
+            Mouse.Click(uINextButton, new Point(23, 17));
+
+            // Click 'Next' button
+            Mouse.Click(uINextButton, new Point(20, 17));
+
+            // Double-Click 'Back' button
+            Mouse.DoubleClick(uIBackButton, new Point(30, 18));
+
+            // Double-Click 'Back' button
+            Mouse.DoubleClick(uIBackButton, new Point(30, 17));
 
             // Click 'Back' button
-            Mouse.Click(uIBackButton, new Point(35, 26));
+            Mouse.Click(uIBackButton, new Point(27, 16));
 
             // Click 'Back' button
-            Mouse.Click(uIBackButton, new Point(35, 26));
+            Mouse.Click(uIBackButton, new Point(28, 16));
+
+            // Click 'Close' button
+            Mouse.Click(uICloseButton, new Point(22, 16));
         }
         
         /// <summary>
-        /// Open Player Stats
+        /// PlayerStats_NoAchievements
         /// </summary>
-        public void PlayerStats()
+        public void PlayerStats_NoAchievements()
         {
             #region Variable Declarations
             WinButton uIPlayerStatsButton = this.UICloud9MainMenuWindow.UIPlayerStatsWindow.UIPlayerStatsButton;
+            WinButton uICloseButton = this.UIPlayerStatsWindow.UIPlayerStatsTitleBar.UICloseButton;
             #endregion
 
             // Click 'Player Stats' button
-            Mouse.Click(uIPlayerStatsButton, new Point(77, 13));
+            Mouse.Click(uIPlayerStatsButton, new Point(35, 16));
+
+            // Click 'Close' button
+            Mouse.Click(uICloseButton, new Point(28, 19));
         }
         
         #region Properties
+        public UICUserssonyaDocumentsWindow UICUserssonyaDocumentsWindow
+        {
+            get
+            {
+                if ((this.mUICUserssonyaDocumentsWindow == null))
+                {
+                    this.mUICUserssonyaDocumentsWindow = new UICUserssonyaDocumentsWindow();
+                }
+                return this.mUICUserssonyaDocumentsWindow;
+            }
+        }
+        
         public UICloud9MainMenuWindow UICloud9MainMenuWindow
         {
             get
@@ -93,12 +127,134 @@ namespace CodedUITestProject1
                 return this.mUIUserManualWindow;
             }
         }
+        
+        public UIPlayerStatsWindow1 UIPlayerStatsWindow
+        {
+            get
+            {
+                if ((this.mUIPlayerStatsWindow == null))
+                {
+                    this.mUIPlayerStatsWindow = new UIPlayerStatsWindow1();
+                }
+                return this.mUIPlayerStatsWindow;
+            }
+        }
         #endregion
         
         #region Fields
+        private UICUserssonyaDocumentsWindow mUICUserssonyaDocumentsWindow;
+        
         private UICloud9MainMenuWindow mUICloud9MainMenuWindow;
         
         private UIUserManualWindow mUIUserManualWindow;
+        
+        private UIPlayerStatsWindow1 mUIPlayerStatsWindow;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UICUserssonyaDocumentsWindow : WinWindow
+    {
+        
+        public UICUserssonyaDocumentsWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "C:\\Users\\sonya\\Documents\\GitHub\\Capstone_Game_Platform\\Capstone_Game_Platform\\bin" +
+                "\\Debug";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "CabinetWClass";
+            this.WindowTitles.Add("C:\\Users\\sonya\\Documents\\GitHub\\Capstone_Game_Platform\\Capstone_Game_Platform\\bin" +
+                    "\\Debug");
+            #endregion
+        }
+        
+        #region Properties
+        public UIItemWindow UIItemWindow
+        {
+            get
+            {
+                if ((this.mUIItemWindow == null))
+                {
+                    this.mUIItemWindow = new UIItemWindow(this);
+                }
+                return this.mUIItemWindow;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIItemWindow mUIItemWindow;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIItemWindow : WinWindow
+    {
+        
+        public UIItemWindow(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.AccessibleName] = "Items View";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "DirectUIHWND";
+            this.WindowTitles.Add("C:\\Users\\sonya\\Documents\\GitHub\\Capstone_Game_Platform\\Capstone_Game_Platform\\bin" +
+                    "\\Debug");
+            #endregion
+        }
+        
+        #region Properties
+        public UICapstone_Game_PlatfoListItem UICapstone_Game_PlatfoListItem
+        {
+            get
+            {
+                if ((this.mUICapstone_Game_PlatfoListItem == null))
+                {
+                    this.mUICapstone_Game_PlatfoListItem = new UICapstone_Game_PlatfoListItem(this);
+                }
+                return this.mUICapstone_Game_PlatfoListItem;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UICapstone_Game_PlatfoListItem mUICapstone_Game_PlatfoListItem;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UICapstone_Game_PlatfoListItem : WinListItem
+    {
+        
+        public UICapstone_Game_PlatfoListItem(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinListItem.PropertyNames.Name] = "Capstone_Game_Platform.exe";
+            this.WindowTitles.Add("C:\\Users\\sonya\\Documents\\GitHub\\Capstone_Game_Platform\\Capstone_Game_Platform\\bin" +
+                    "\\Debug");
+            #endregion
+        }
+        
+        #region Properties
+        public WinEdit UINameEdit
+        {
+            get
+            {
+                if ((this.mUINameEdit == null))
+                {
+                    this.mUINameEdit = new WinEdit(this);
+                    #region Search Criteria
+                    this.mUINameEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Name";
+                    this.mUINameEdit.WindowTitles.Add("C:\\Users\\sonya\\Documents\\GitHub\\Capstone_Game_Platform\\Capstone_Game_Platform\\bin" +
+                            "\\Debug");
+                    #endregion
+                }
+                return this.mUINameEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinEdit mUINameEdit;
         #endregion
     }
     
@@ -257,12 +413,26 @@ namespace CodedUITestProject1
                 return this.mUIBackWindow;
             }
         }
+        
+        public UIUserManualTitleBar UIUserManualTitleBar
+        {
+            get
+            {
+                if ((this.mUIUserManualTitleBar == null))
+                {
+                    this.mUIUserManualTitleBar = new UIUserManualTitleBar(this);
+                }
+                return this.mUIUserManualTitleBar;
+            }
+        }
         #endregion
         
         #region Fields
         private UINextWindow mUINextWindow;
         
         private UIBackWindow mUIBackWindow;
+        
+        private UIUserManualTitleBar mUIUserManualTitleBar;
         #endregion
     }
     
@@ -335,6 +505,108 @@ namespace CodedUITestProject1
         
         #region Fields
         private WinButton mUIBackButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIUserManualTitleBar : WinTitleBar
+    {
+        
+        public UIUserManualTitleBar(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.WindowTitles.Add("User Manual");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UICloseButton
+        {
+            get
+            {
+                if ((this.mUICloseButton == null))
+                {
+                    this.mUICloseButton = new WinButton(this);
+                    #region Search Criteria
+                    this.mUICloseButton.SearchProperties[WinButton.PropertyNames.Name] = "Close";
+                    this.mUICloseButton.WindowTitles.Add("User Manual");
+                    #endregion
+                }
+                return this.mUICloseButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUICloseButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIPlayerStatsWindow1 : WinWindow
+    {
+        
+        public UIPlayerStatsWindow1()
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "PlayerStats";
+            this.SearchProperties.Add(new PropertyExpression(WinWindow.PropertyNames.ClassName, "WindowsForms10.Window", PropertyExpressionOperator.Contains));
+            this.WindowTitles.Add("PlayerStats");
+            #endregion
+        }
+        
+        #region Properties
+        public UIPlayerStatsTitleBar UIPlayerStatsTitleBar
+        {
+            get
+            {
+                if ((this.mUIPlayerStatsTitleBar == null))
+                {
+                    this.mUIPlayerStatsTitleBar = new UIPlayerStatsTitleBar(this);
+                }
+                return this.mUIPlayerStatsTitleBar;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIPlayerStatsTitleBar mUIPlayerStatsTitleBar;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIPlayerStatsTitleBar : WinTitleBar
+    {
+        
+        public UIPlayerStatsTitleBar(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.WindowTitles.Add("PlayerStats");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UICloseButton
+        {
+            get
+            {
+                if ((this.mUICloseButton == null))
+                {
+                    this.mUICloseButton = new WinButton(this);
+                    #region Search Criteria
+                    this.mUICloseButton.SearchProperties[WinButton.PropertyNames.Name] = "Close";
+                    this.mUICloseButton.WindowTitles.Add("PlayerStats");
+                    #endregion
+                }
+                return this.mUICloseButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUICloseButton;
         #endregion
     }
 }

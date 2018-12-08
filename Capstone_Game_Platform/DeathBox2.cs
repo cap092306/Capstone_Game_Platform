@@ -34,7 +34,7 @@ namespace Capstone_Game_Platform
                 Level_Score = Form1.score,
                 Special_Count = 0, //wind + 
                 Monster_Count = Form2.boltScore, //lightbolt kills
-                Level_Time = int.Parse(Form2.time), // time to complete level in seconds
+                Level_Time = 0, // time to complete level in seconds
                 Level_Attempts = StartScreen.LevelTryCounter, // how many attempts before completing level
                 Char_Points = Form2.score
             };

@@ -16,9 +16,9 @@ namespace CodedUITestProject1
     /// Summary description for CodedUITest1
     /// </summary>
     [CodedUITest]
-    public class CodedUITest1
+    public class StartGame
     {
-        public CodedUITest1()
+        public StartGame()
         {
         }
 
@@ -27,7 +27,7 @@ namespace CodedUITestProject1
         {
             // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
             this.UIMap.Help();
-            this.UIMap.PlayerStats();
+            this.UIMap.PlayerStats_NoAchievements();
         }
 
         #region Additional test attributes

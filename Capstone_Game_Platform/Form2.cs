@@ -204,6 +204,7 @@ namespace Capstone_Game_Platform
 				gameTimer.Stop();
                 Level2Complete Level2Complete = new Level2Complete();
                 Level2Complete.Show();
+				this.Close();
                 //MessageBox.Show("You Completed the level!!"); // show the message box
             }
             // if the player collides with the key picture box

@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Capstone_Game_Platform;
 using System.IO;
 using System.Data;
@@ -7,10 +7,10 @@ using System.Linq;
 
 namespace UnitTestProject
 {
-    [TestClass]
+    [TestFixture]
     public class UnitTest_SaveGameHelper
     {
-        [TestMethod]
+        [Test]
         public void SaveLevel_TestMethod()
         {
             XMLUtils xmlUtils = new XMLUtils
@@ -42,7 +42,7 @@ namespace UnitTestProject
             Assert.IsTrue(!String.IsNullOrWhiteSpace(rows.Field<string>("last_played")));
         }
 
-        [TestMethod]
+        [Test]
         public void SaveAchievement_TestMethod()
         {
             XMLUtils xmlUtils = new XMLUtils

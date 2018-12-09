@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Data;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Capstone_Game_Platform;
 using System.IO;
 
 namespace UnitTestProject
 {
-    [TestClass]
+    [TestFixture]
     public class UnitTest_XMLUtils
     {
-        [TestMethod]
+        [Test]
         public void CreateXMLFile_TestMethod()
         {
             XMLUtils xmlUtils = new XMLUtils
@@ -21,7 +21,7 @@ namespace UnitTestProject
             Assert.IsTrue(result, $"Expected true if file was created");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateXMLFile_False_TestMethod()
         {
             XMLUtils xmlUtils = new XMLUtils
@@ -34,7 +34,7 @@ namespace UnitTestProject
             Assert.IsFalse(result, $"Excepected false file has already been created");
         }
 
-        [TestMethod]
+        [Test]
         public void CreateXMLFile_Exception_TestMethod()
         {
             Exception expectedExcetpion = null;
@@ -54,7 +54,7 @@ namespace UnitTestProject
             Assert.IsNotNull(expectedExcetpion);
         }
 
-        [TestMethod]
+        [Test]
         public void ReadXMLFile_TestMethod()
         {
             XMLUtils xmlUtils = new XMLUtils
@@ -67,7 +67,7 @@ namespace UnitTestProject
             Assert.AreEqual(5, tblCount, $"Expects 5 tables to be in default XML file.");
         }
 
-        [TestMethod]
+        [Test]
         public void ReadXMLFile_Exception_TestMethod()
         {
             Exception expectedExcetpion = null;
@@ -86,7 +86,7 @@ namespace UnitTestProject
             Assert.IsNotNull(expectedExcetpion);
         }
 
-        [TestMethod]
+        [Test]
         public void UpdateXMLFile_TestMethod()
         {
             XMLUtils xmlUtils = new XMLUtils
@@ -108,7 +108,7 @@ namespace UnitTestProject
             Assert.AreNotEqual(orginalVal, savedVal, $"Expects the new saved value to be different.");
         }
 
-        [TestMethod]
+        [Test]
         public void UpdateXMLFile_Exception_TestMethod()
         {
             Exception expectedExcetpion = null;
@@ -129,17 +129,18 @@ namespace UnitTestProject
             Assert.IsNotNull(expectedExcetpion);
         }
 
-        [TestMethod]
+        [Test]
         public void DeleteXMLFile_TestMethod()
         {
             XMLUtils xmlUtils = new XMLUtils
             {
                 FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
             };
+            xmlUtils.CreateXMLfile();
             Assert.IsTrue(xmlUtils.DeleteXMLfile());
         }
 
-        [TestMethod]
+        [Test]
         public void DeleteXMLFile_False_TestMethod()
         {
             XMLUtils xmlUtils = new XMLUtils
@@ -150,7 +151,7 @@ namespace UnitTestProject
             Assert.IsFalse(xmlUtils.DeleteXMLfile());
         }
 
-        [TestMethod]
+        [Test]
         public void ValidateXMLFile_TestMethod()
         {
             XMLUtils xmlUtils = new XMLUtils

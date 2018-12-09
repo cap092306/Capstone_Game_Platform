@@ -6,7 +6,7 @@ using System.Xml.Linq;
 
 namespace Capstone_Game_Platform
 {
-    public class XMLUtils
+    internal class XMLUtils
     {
         /// <summary>
         /// Path to XML File

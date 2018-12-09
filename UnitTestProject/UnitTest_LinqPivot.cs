@@ -1,16 +1,15 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Capstone_Game_Platform;
 using System.IO;
 using System.Data;
-using System.Linq;
 
 namespace UnitTestProject
 {
-    [TestClass]
+    [TestFixture]
     public class UnitTest_LinqPivot
     {
-        [TestMethod]
+        [Test]
         public void Pivot_TestMethod()
         {
             XMLUtils xmlUtils = new XMLUtils

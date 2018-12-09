@@ -61,6 +61,15 @@ namespace UnitTestProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Capstone_Game_Platform.exe.
+        /// </summary>
+        internal static string AppExeName {
+            get {
+                return ResourceManager.GetString("AppExeName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cloud9Data.xml.
         /// </summary>
         internal static string XMLDBName {

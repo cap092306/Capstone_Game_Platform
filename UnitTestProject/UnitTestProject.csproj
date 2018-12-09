@@ -48,6 +48,9 @@
     <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="NUnitReporter.EventReport.NUnit3, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nure.EventReport.NUnit3.1.0.0-beta-1\lib\net40\NUnitReporter.EventReport.NUnit3.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -74,6 +77,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="UIBaseTestClass.cs" />
+    <Compile Include="UnitTest_Level_3_Lost_Quit.cs" />
+    <Compile Include="UnitTest_Level_3_Lost_Continue.cs" />
+    <Compile Include="UnitTest_Level_2_Lost_Quit.cs" />
+    <Compile Include="UnitTest_Level_2_Lost_Continue.cs" />
+    <Compile Include="UnitTest_Cont_3.cs" />
+    <Compile Include="UnitTest_Cont_2.cs" />
+    <Compile Include="UnitTest_Level_1_Lost_Continue.cs" />
+    <Compile Include="UnitTest_Level_1_Lost_Quit.cs" />
+    <Compile Include="UnitTest_Cont_1.cs" />
+    <Compile Include="UnitTest_PlayerStats_WithData.cs" />
+    <Compile Include="UnitTest_PlayerStats_WithNoData.cs" />
     <Compile Include="UnitTest_UserGuide.cs" />
     <Compile Include="UnitTest_LinqPivot.cs" />
     <Compile Include="UnitTest_SaveGameHelper.cs" />

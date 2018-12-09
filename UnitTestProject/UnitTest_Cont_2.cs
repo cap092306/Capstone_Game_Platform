@@ -1,0 +1,66 @@
+﻿using System;
+using System.IO;
+using NUnit.Framework;
+using TestStack.White;
+using TestStack.White.UIItems.Finders;
+using TestStack.White.UIItems.WindowItems;
+using TestStack.White.UIItems;
+using TestStack.White.Factory;
+using Capstone_Game_Platform;
+
+namespace UnitTestProject
+{
+    [TestFixture]
+    public class UnitTest_Cont_2 : UIBaseTestClass
+    {
+        [Test]
+        public void TestMethod1()
+        {
+            Application app = base.Application;
+
+            Window window = app.GetWindow(SearchCriteria.ByAutomationId("StartScreen"), InitializeOption.WithCache);
+            Add_Level_Data();
+            window.WaitWhileBusy();
+            //click the cont button
+            Button contBtn = window.Get<Button>(SearchCriteria.ByAutomationId("button2"));
+            window.WaitWhileBusy();
+            contBtn.Click();
+            window.WaitWhileBusy();
+            // get cont window
+            Window cont = app.GetWindow(SearchCriteria.ByAutomationId("ContinueGame"), InitializeOption.WithCache);
+            cont.WaitWhileBusy();
+
+            IUIItem[] children1 = cont.GetMultiple(SearchCriteria.All);
+            //get lvl 1 button
+            Button lvl2Btn = (Button)children1[2];
+            lvl2Btn.Click();
+            // get game window
+            Window game = app.GetWindow(SearchCriteria.ByAutomationId("Form2"), InitializeOption.WithCache);
+            game.Close();
+            app.Close();
+            app.Dispose();
+        }
+
+        private void Add_Level_Data()
+        {
+            XMLUtils xmlUtils = new XMLUtils
+            {
+                FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Resources.XMLDBName.ToString())
+            };
+            xmlUtils.DeleteXMLfile();
+
+            SaveGameHelper saveGameHelper = new SaveGameHelper
+            {
+                Level_ID = 1,
+                Player_ID = 1,
+                Level_Score = 250,
+                Special_Count = 1, //wind + 
+                Monster_Count = 1, //lightbolt kills
+                Level_Time = 1000, // time to complete level in seconds
+                Level_Attempts = 1, // how many attempts before completing level
+                Char_Points = 2050
+            };
+            saveGameHelper.SaveLevel();
+        }
+    }
+}

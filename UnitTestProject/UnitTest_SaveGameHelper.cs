@@ -8,7 +8,7 @@ using System.Linq;
 namespace UnitTestProject
 {
     [TestFixture]
-    public class UnitTest_SaveGameHelper
+    public class UnitTest_SaveGameHelper 
     {
         [Test]
         public void SaveLevel_TestMethod()

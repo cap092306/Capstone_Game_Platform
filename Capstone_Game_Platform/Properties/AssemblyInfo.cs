@@ -36,4 +36,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: InternalsVisibleTo("Capstone_Game_Platform.Tests")]
 [assembly: InternalsVisibleTo("Capstone_Game_Platform.Explorables")]
-
+[assembly: InternalsVisibleTo("UnitTestProject")]

@@ -26,15 +26,18 @@ namespace UnitTestProject
             helpBtn.Click();
             window.WaitWhileBusy();
 
-            //attached to new window
+            //attach to new window
             Window userGuide = app.GetWindow(SearchCriteria.ByAutomationId("UserManual"), InitializeOption.WithCache);
-           
             Button nextBtn = userGuide.Get<Button>(SearchCriteria.ByAutomationId("btnNext").AndIndex(0));
-            Button backBtn = userGuide.Get<Button>(SearchCriteria.ByAutomationId("btnBack").AndIndex(1));
-
             userGuide.WaitWhileBusy();//front-cover
             nextBtn.Click(); 
             userGuide.WaitWhileBusy(); // pages 1-2
+
+            userGuide.ReloadIfCached();
+            IUIItem[] children1 = userGuide.GetMultiple(SearchCriteria.All);
+            Button backBtn = (Button)children1[1];
+            nextBtn  = (Button)children1[2];
+           
             nextBtn.Click();
             userGuide.WaitWhileBusy();// pages 3-4
             nextBtn.Click(); 

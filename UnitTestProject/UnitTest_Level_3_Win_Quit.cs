@@ -13,7 +13,7 @@ using TestStack.White.InputDevices;
 namespace UnitTestProject
 {
     [TestFixture]
-    public class UnitTest_Level_3_Lost_Quit : UIBaseTestClass
+    public class UnitTest_Level_3_Win_Quit : UIBaseTestClass
     {
         [Test]
         public void TestMethod1()
@@ -36,19 +36,22 @@ namespace UnitTestProject
             lvl3Btn.Click();
             // get game window
             Window game = app.GetWindow(SearchCriteria.ByAutomationId("Form3"), InitializeOption.WithCache);
+            UIItemCollection items = game.Items;
+                        
+            
+            // put stuff here to win
 
-            AttachedKeyboard keyboard = game.Keyboard;
-            keyboard.HoldKey(KeyboardInput.SpecialKeys.RIGHT); //die by black hole
+
+
+
            
-            Window lost = app.GetWindow(SearchCriteria.ByAutomationId("DeathBox3"), InitializeOption.WithCache);
-            keyboard.LeaveKey(KeyboardInput.SpecialKeys.RIGHT);
-
-            lost.WaitWhileBusy();
-            children1 = lost.GetMultiple(SearchCriteria.All); //4-save 5-quit
+            Window win = app.GetWindow(SearchCriteria.ByAutomationId("LevelComplete3"), InitializeOption.WithCache);
+            win.WaitWhileBusy();
+            children1 = win.GetMultiple(SearchCriteria.All); //4-save 5-quit
 
             Button saveBtn = (Button)children1[4];
             saveBtn.Click();
-            lost.WaitWhileBusy();
+            win.WaitWhileBusy();
 
             Button quitBtn = (Button)children1[5];
             quitBtn.Click();

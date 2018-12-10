@@ -13,7 +13,7 @@ using System.IO;
 namespace UnitTestProject
 {
     [TestFixture]
-    public class UnitTest_Level_1_Lost_Quit : UIBaseTestClass
+    public class UnitTest_Level_1_Win_Quit : UIBaseTestClass
     {
         [Test]
         public void TestMethod1()
@@ -38,17 +38,22 @@ namespace UnitTestProject
             Window game = app.GetWindow(SearchCriteria.ByAutomationId("Form1"), InitializeOption.WithCache);
             
             AttachedKeyboard keyboard = game.Keyboard;
-            keyboard.HoldKey(KeyboardInput.SpecialKeys.RIGHT);  //die by black hole
-            //keyboard.LeaveKey(KeyboardInput.SpecialKeys.RIGHT);
-
-            Window lost = app.GetWindow(SearchCriteria.ByAutomationId("DeathBox"), InitializeOption.WithCache);
+            keyboard.HoldKey(KeyboardInput.SpecialKeys.RIGHT);
             keyboard.LeaveKey(KeyboardInput.SpecialKeys.RIGHT);
-            lost.WaitWhileBusy();
-            children1 = lost.GetMultiple(SearchCriteria.All); //35
+
+            //put stuff here to win
+
+
+
+
+            Window win = app.GetWindow(SearchCriteria.ByAutomationId("LevelComplete"), InitializeOption.WithCache);
+            
+            win.WaitWhileBusy();
+            children1 = win.GetMultiple(SearchCriteria.All); //35
 
             Button saveBtn = (Button)children1[4];
             saveBtn.Click();
-            lost.WaitWhileBusy();
+            win.WaitWhileBusy();
 
             Button quitBtn = (Button)children1[5];
             quitBtn.Click();

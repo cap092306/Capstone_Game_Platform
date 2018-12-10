@@ -5,15 +5,13 @@ using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.WindowItems;
 using TestStack.White.UIItems;
 using TestStack.White.Factory;
-using TestStack.White.InputDevices;
-using TestStack.White.WindowsAPI;
 using Capstone_Game_Platform;
 using System.IO;
 
 namespace UnitTestProject
 {
     [TestFixture]
-    public class UnitTest_Level_1_Lost_Quit : UIBaseTestClass
+    public class UnitTest_Level_1_Win_Continue : UIBaseTestClass
     {
         [Test]
         public void TestMethod1()
@@ -36,27 +34,31 @@ namespace UnitTestProject
             lvl1Btn.Click();
             // get game window
             Window game = app.GetWindow(SearchCriteria.ByAutomationId("Form1"), InitializeOption.WithCache);
-            
-            AttachedKeyboard keyboard = game.Keyboard;
-            keyboard.HoldKey(KeyboardInput.SpecialKeys.RIGHT);  //die by black hole
-            //keyboard.LeaveKey(KeyboardInput.SpecialKeys.RIGHT);
+            game.WaitWhileBusy(); //wait till lightening kills player
 
-            Window lost = app.GetWindow(SearchCriteria.ByAutomationId("DeathBox"), InitializeOption.WithCache);
-            keyboard.LeaveKey(KeyboardInput.SpecialKeys.RIGHT);
-            lost.WaitWhileBusy();
-            children1 = lost.GetMultiple(SearchCriteria.All); //35
+            //put in stuff here to win
+
+
+
+
+            Window win = app.GetWindow(SearchCriteria.ByAutomationId("LevelComplete"), InitializeOption.WithCache);
+            win.WaitWhileBusy();
+            children1 = win.GetMultiple(SearchCriteria.All); //345
 
             Button saveBtn = (Button)children1[4];
             saveBtn.Click();
-            lost.WaitWhileBusy();
+            win.WaitWhileBusy();
 
-            Button quitBtn = (Button)children1[5];
-            quitBtn.Click();
-            
+            contBtn = (Button)children1[3];
+            contBtn.Click();
+
+            game = app.GetWindow(SearchCriteria.ByAutomationId("Form1"), InitializeOption.WithCache);
+            game.Close();
+
+
             app.Close();
             app.Dispose();
         }
-
         private void Delete_LevelData()
         {
             XMLUtils xmlUtils = new XMLUtils

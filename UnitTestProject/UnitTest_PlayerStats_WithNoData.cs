@@ -20,7 +20,7 @@ namespace UnitTestProject
 
             Application app = base.Application;
             Window window = app.GetWindow(SearchCriteria.ByAutomationId("StartScreen"), InitializeOption.WithCache);
-            Add_AchievementData();
+            Delete_AchievementData();
             window.WaitWhileBusy();
             //click the stats button
             Button statsBtn = window.Get<Button>(SearchCriteria.ByAutomationId("button4"));
@@ -35,7 +35,7 @@ namespace UnitTestProject
             app.Close();
             app.Dispose();
         }
-        private void Add_AchievementData()
+        private void Delete_AchievementData()
         {
             XMLUtils xmlUtils = new XMLUtils
             {

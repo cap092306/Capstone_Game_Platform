@@ -77,6 +77,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="UIBaseTestClass.cs" />
+    <Compile Include="UnitTest_Level_1_Win_Quit.cs" />
+    <Compile Include="UnitTest_Level_1_Win_Continue.cs" />
+    <Compile Include="UnitTest_Level_2_Win_Quit.cs" />
+    <Compile Include="UnitTest_Level_2_Win_Continue.cs" />
+    <Compile Include="UnitTest_Level_3_Win_Quit.cs" />
+    <Compile Include="UnitTest_NewGame .cs" />
     <Compile Include="UnitTest_Level_3_Lost_Quit.cs" />
     <Compile Include="UnitTest_Level_3_Lost_Continue.cs" />
     <Compile Include="UnitTest_Level_2_Lost_Quit.cs" />

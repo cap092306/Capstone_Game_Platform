@@ -5,10 +5,10 @@ using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.WindowItems;
 using TestStack.White.UIItems;
 using TestStack.White.Factory;
-using TestStack.White.InputDevices;
-using TestStack.White.WindowsAPI;
 using Capstone_Game_Platform;
 using System.IO;
+using Button = TestStack.White.UIItems.Button;
+using System.Windows.Forms;
 
 namespace UnitTestProject
 {
@@ -18,7 +18,7 @@ namespace UnitTestProject
         [Test]
         public void TestMethod1()
         {
-            Application app = base.Application;
+            TestStack.White.Application app = base.Application;
             Window window = app.GetWindow(SearchCriteria.ByAutomationId("StartScreen"), InitializeOption.WithCache);
             Delete_LevelData();
             window.WaitWhileBusy();
@@ -35,15 +35,60 @@ namespace UnitTestProject
             Button lvl1Btn = (Button)children1[1];
             lvl1Btn.Click();
             // get game window
-            Window game = app.GetWindow(SearchCriteria.ByAutomationId("Form1"), InitializeOption.WithCache);
-            
-            AttachedKeyboard keyboard = game.Keyboard;
-            keyboard.HoldKey(KeyboardInput.SpecialKeys.RIGHT);
-            keyboard.LeaveKey(KeyboardInput.SpecialKeys.RIGHT);
+            Window game = app.GetWindow(SearchCriteria.ByAutomationId("Form1"), InitializeOption.NoCache);
+            game.Focus();
 
-            //put stuff here to win
+            UIItemCollection items = game.Items;
+            items[24].Focus();
+
+            SendKeys.Send("{SPACE}");
 
 
+
+
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.RIGHT);//winElem14.SendKeys(Keys.Right);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.RIGHT);//winElem14.SendKeys(Keys.Right);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.RIGHT);//winElem14.SendKeys(Keys.Right);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.RIGHT);//winElem14.SendKeys(Keys.Right);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.RIGHT);//winElem14.SendKeys(Keys.Right);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.RIGHT);//winElem14.SendKeys(Keys.Right);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.RIGHT);//winElem14.SendKeys(Keys.Right);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.LEFT);//winElem14.SendKeys(Keys.Left);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.LEFT);//winElem14.SendKeys(Keys.Left);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.LEFT);//winElem14.SendKeys(Keys.Left);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.LEFT);//winElem14.SendKeys(Keys.Left);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.LEFT);//winElem14.SendKeys(Keys.Left);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.LEFT);//winElem14.SendKeys(Keys.Left);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.LEFT);//winElem14.SendKeys(Keys.Left);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.LEFT);//winElem14.SendKeys(Keys.Left);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.RIGHT);//winElem14.SendKeys(Keys.Right);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.LEFT);//winElem14.SendKeys(Keys.Left);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.LEFT);//winElem14.SendKeys(Keys.Left);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);//winElem14.SendKeys(Keys.Space);
+            //input.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.LEFT);//winElem14.SendKeys(Keys.Left);
 
 
             Window win = app.GetWindow(SearchCriteria.ByAutomationId("LevelComplete"), InitializeOption.WithCache);

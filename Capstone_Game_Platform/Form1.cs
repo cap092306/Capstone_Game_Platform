@@ -332,6 +332,11 @@ namespace Capstone_Game_Platform
             else
             { Bolt_L1.Location = new Point(Bolt_L1.Location.X + 50, Bolt_L1.Location.Y); }
         }
+
+        protected override void OnActivated(EventArgs e)
+        {
+            base.OnActivated(e);
+        }
     }
     }
 

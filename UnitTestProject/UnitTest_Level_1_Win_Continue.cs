@@ -7,6 +7,8 @@ using TestStack.White.UIItems;
 using TestStack.White.Factory;
 using Capstone_Game_Platform;
 using System.IO;
+using TestStack.White.InputDevices;
+using TestStack.White.WindowsAPI;
 
 namespace UnitTestProject
 {
@@ -33,12 +35,52 @@ namespace UnitTestProject
             Button lvl1Btn = (Button)children1[1];
             lvl1Btn.Click();
             // get game window
-            Window game = app.GetWindow(SearchCriteria.ByAutomationId("Form1"), InitializeOption.WithCache);
-            game.WaitWhileBusy(); //wait till lightening kills player
-
-            //put in stuff here to win
-
-
+            Window game = app.GetWindow(SearchCriteria.ByAutomationId("Form1"), InitializeOption.NoCache);
+            
+            AttachedKeyboard keyboard = game.Keyboard;
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.RIGHT); //winElem14.SendKeys(Keys.Right);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); //winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); // winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.RIGHT); //winElem14.SendKeys(Keys.Right);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); //winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); // winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.RIGHT); //winElem14.SendKeys(Keys.Right);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); //winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); // winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.RIGHT); //winElem14.SendKeys(Keys.Right);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); //winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); // winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.RIGHT); //winElem14.SendKeys(Keys.Right);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.RIGHT); //winElem14.SendKeys(Keys.Right);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); //winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); // winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.RIGHT); //winElem14.SendKeys(Keys.Right);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.LEFT); //winElem14.SendKeys(Keys.Left);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); //winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); // winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.LEFT); //winElem14.SendKeys(Keys.Left);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); //winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); // winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.LEFT); //winElem14.SendKeys(Keys.Left);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); //winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); // winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.LEFT); //winElem14.SendKeys(Keys.Left);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); //winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); // winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.LEFT); //winElem14.SendKeys(Keys.Left);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); //winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); // winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.LEFT); //winElem14.SendKeys(Keys.Left);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); //winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); // winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.LEFT); //winElem14.SendKeys(Keys.Left);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.LEFT); //winElem14.SendKeys(Keys.Left);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.RIGHT); //winElem14.SendKeys(Keys.Right);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.LEFT); //winElem14.SendKeys(Keys.Left);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.LEFT); //winElem14.SendKeys(Keys.Left);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); //winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.SPACE); // winElem14.SendKeys(Keys.Space);
+            keyboard.PressSpecialKey(KeyboardInput.SpecialKeys.LEFT); //winElem14.SendKeys(Keys.Left);
 
 
             Window win = app.GetWindow(SearchCriteria.ByAutomationId("LevelComplete"), InitializeOption.WithCache);
